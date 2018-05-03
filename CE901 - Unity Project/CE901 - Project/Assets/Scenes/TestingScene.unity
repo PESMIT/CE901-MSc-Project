@@ -850,8 +850,8 @@ MonoBehaviour:
   axes: 1
   minimumVert: -45
   maximumVert: 45
-  sensHorizontal: 5
-  sensVertical: 5
+  sensHorizontal: 3
+  sensVertical: 3
   _rotationX: 0
 --- !u!143 &1667521357
 CharacterController:
