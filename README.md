@@ -89,29 +89,29 @@ This is an expanded consideration on the use of video games, and the application
 	- Major Product Development 
 	- Finalize Project Build
 	
-## Sprint 12: 24/07/18 - 31/07/18
+## Sprint 12: 31/07/18 - 07/08/18
 	- Major Product Development 
 	- Perform Unit Testing 
 	- Implementation Testing
 	- Functional Testing on Finalized Project Build.
 
-## Sprint 13: 31/07/18 - 07/08/18
+## Sprint 13: 07/08/18 - 14/08/18
 	- Major Product Development
 	- Continue Testing / Garner Feedback on previous build.
 
 # Documentation
 
-## Sprint 14: 07/08/18 - 14/08/18
+## Sprint 14: 14/08/18 - 18/08/18
 	- Initial Template Design
 	- Submit Template Draft for Supervisor
 	- Weekly Meetings - Here on in.
 	- Produce First Draft of Work
 
-## Sprint 15: 14/08/18 - 21/08/18
+## Sprint 15: 18/08/18 - 22/08/18
 	- Continue work on Dissertation Document
 	- Produce Second Draft
 	
-## Sprint 16: 21/08/18 - 28/08/18
+## Sprint 16: 22/08/18 - 26/08/18
 	- Finalize Draft
 	- Confirm Draft Content for Final Submission
 	- Submit Final Draft as Final Version.
