@@ -5,12 +5,16 @@ using UnityEngine;
 public class Collection_Trigger : MonoBehaviour {
 
 	GameObject platformBody1, platformBody2;
+	CanvasScript csScript;
 	Light platformLight1, platformLight2;
 	private bool platform2Exists;
 	public bool platform1Chosen, platform2Chosen;
 
 	// Use this for initialization
 	void Start () {
+
+		csScript = GameObject.Find ("Player").GetComponent<CanvasScript> ();
+
 		if (GameObject.Find ("Platform_1")!= null) {
 			platformBody1 = GameObject.Find ("Platform_1");
 			platformLight1 = platformBody1.GetComponentInChildren<Light> ();
@@ -47,6 +51,7 @@ public class Collection_Trigger : MonoBehaviour {
 
 	void OnTriggerExit(Collider other){
 		if (other.tag == "Objects") {
+			csScript.RemoveTeleporterCanvas ();
 			platformLight1.color = Color.white;
 			platform1Chosen = false;
 			if (platform2Exists) {

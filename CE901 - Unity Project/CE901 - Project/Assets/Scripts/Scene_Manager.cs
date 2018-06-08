@@ -12,9 +12,13 @@ public class Scene_Manager : MonoBehaviour {
 
 	public void onClick(int level){
 		if (level == 0) {
-			SceneManager.LoadScene ("FirstScenario");
+			SceneManager.LoadSceneAsync ("MainMenu");
+		} else if (level == 1) {
+			SceneManager.LoadSceneAsync ("SurveySelection");
+		} else if (level == 2) {
+			SceneManager.LoadSceneAsync ("FirstScenario");
 		} else {
-			Debug.Log ("Incorrect Scene Number to load");
+			Debug.Log ("No Scene Number matches that input");
 		}
 	}
 

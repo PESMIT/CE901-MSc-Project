@@ -1,7 +1,10 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Patrick/Dropbox/MSc Folder/CE901 - MSc Project/CE901-MSc-Project/CE901 - Unity Project/Executables/Sprint Session 2/EXE 1 - Mouse and Rotation Pickups/EXE 1 - Mouse and Rotation Pickups.exe
+C:/Users/Patrick/Dropbox/MSc Folder/CE901 - MSc Project/CE901-MSc-Project/CE901 - Unity Project/Executables/Sprint Session 4/Exe 2 - Fixed Canvas Messages/Exe 2 - Fixed Canvas Messages.exe
 SceneListBegin?
+Assets/Scenes/MainMenu.unity
+Assets/Scenes/SurveySelection.unity
+Assets/Scenes/FirstScenario.unity
 Assets/Scenes/TestingScene.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -107,6 +110,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Scene_Manager
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
@@ -138,6 +142,7 @@ f02726adeff0a3ec5905565234b372da UnityEngine.TestRunner.dll:UnityEngine.TestTool
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
+61253d546a17ea25636b368fcd4dd8ab Assembly-CSharp.dll:.Collection_Trigger
 9e0ef5bf862444b5dc48b5a99554ce7c UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
@@ -149,4 +154,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.Sphere_Movement
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-1639577ec797869a5cf310b9ef3390cd Assembly-CSharp.dll:.Camera_Control
+35bd31e8ec371c2707174335225aea12 Assembly-CSharp.dll:.Camera_Control
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Teleporter_Script
+1b5175bc83f21a0b1f38ad0455e8e9eb Assembly-CSharp.dll:.CanvasScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PauseMenuScript
