@@ -4,10 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CanvasScript : MonoBehaviour {
+	// Canvas
 	Text welcomeText, controlsText, controlsTextCont, objectiveText, objectiveTextCont, teleporterCorrectText, teleporterCorrectTextCont, teleporterIncorrectText, teleporterIncorrectTextCont;
+
+	//Objective Text
+	Text choiceText;
+
 	public bool tutorialTextOn = false;
 	public bool teleTextCorrect = false;
 	public bool teleTextIncorrect = false;
+	public bool choiceTextOn = false;
 
 
 	// Use this for initialization
@@ -18,12 +24,14 @@ public class CanvasScript : MonoBehaviour {
 		controlsTextCont = GameObject.Find("Controls Text Cont").GetComponent<Text> ();
 		objectiveText = GameObject.Find ("Objective Text").GetComponent<Text> ();
 		objectiveTextCont = GameObject.Find ("Objective Text Cont").GetComponent<Text> ();
+		choiceText = GameObject.Find ("Choice Text").GetComponent<Text> ();
 
 		teleporterCorrectText = GameObject.Find ("Teleporter Correct Text").GetComponent<Text> ();
 		teleporterCorrectTextCont = GameObject.Find ("Teleporter Correct Text Cont").GetComponent<Text> ();
 		teleporterIncorrectText = GameObject.Find ("Teleporter Incorrect Text").GetComponent<Text> ();
 		teleporterIncorrectTextCont = GameObject.Find ("Teleporter Incorrect Text Cont").GetComponent<Text> ();
 
+		Invoke ("RemoveChoiceText", 0.01f);
 		Invoke ("DisplayTutorialOne", 0.5f);
 	}
 	
@@ -31,6 +39,9 @@ public class CanvasScript : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.T)) {
 			Invoke ("DisplayTutorialOne", 0.5f);
+		}
+		if (Input.GetKeyDown (KeyCode.O)) {
+			Invoke ("DisplayChoiceText", 0.5f);
 		}
 	}
 
@@ -48,6 +59,17 @@ public class CanvasScript : MonoBehaviour {
 		Invoke ("RemoveTeleporterCanvas", 2.5f);
 	}
 
+	public void DisplayChoiceText(){
+		choiceTextOn = true;
+		choiceText.text = "Choose between Option A and Option B\n by placing a sphere on the respective platform.".ToUpper();
+		Invoke ("RemoveChoiceText", 2.5f);
+	}
+
+	public void RemoveChoiceText(){
+		choiceTextOn = false;
+		choiceText.text = "";
+	}
+
 	public void RemoveTeleporterCanvas(){
 		teleTextCorrect = false;
 		teleTextIncorrect = false;
@@ -57,7 +79,7 @@ public class CanvasScript : MonoBehaviour {
 		teleporterIncorrectTextCont.text = "";
 	}
 
-	void DisplayTutorialOne(){
+	public void DisplayTutorialOne(){
 		tutorialTextOn = true;
 		welcomeText.text = "WELCOME TO THE COLOUR SURVEY";
 		controlsText.text = "YOU CAN MOVE AROUND WITH THE W/A/S/D KEYS";
@@ -67,7 +89,7 @@ public class CanvasScript : MonoBehaviour {
 		Invoke ("RemoveTutorialOne", 5.0f);
 	}
 
-	void RemoveTutorialOne(){
+	public void RemoveTutorialOne(){
 		tutorialTextOn = false;
 		welcomeText.text = "";
 		controlsText.text = "";
