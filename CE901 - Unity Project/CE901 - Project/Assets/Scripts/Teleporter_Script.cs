@@ -40,6 +40,11 @@ public class Teleporter_Script : MonoBehaviour {
 	Collection_Trigger choice_R7_1, choice_R7_2;
 	bool tele_R7;
 
+	// Room EIGHT Assets
+	GameObject platform_R8_1, platform_R8_2,teleporterPad_R8_1, sphere_R8_1;
+	Collection_Trigger choice_R8_1, choice_R8_2;
+	bool tele_R8;
+
 	// Generic Assets
 	GameObject player;
 	CanvasScript playerCS;
@@ -51,6 +56,7 @@ public class Teleporter_Script : MonoBehaviour {
 	Material teleMaterial_R5_1;
 	Material teleMaterial_R6_1;
 	Material teleMaterial_R7_1;
+	Material teleMaterial_R8_1;
 
 	// Use this for initialization
 	void Start () {
@@ -135,6 +141,17 @@ public class Teleporter_Script : MonoBehaviour {
 		// Room Seven Teleporter Materia
 		teleMaterial_R7_1 = GameObject.Find("Teleporter_R7_1").GetComponent<Renderer> ().material;
 
+		// Room Eight Assets
+		platform_R8_1 = GameObject.Find("Platform_R8_1");
+		platform_R8_2 = GameObject.Find("Platform_R8_2");
+		teleporterPad_R8_1 = GameObject.Find ("TelePad_R8_1");
+		sphere_R8_1 = GameObject.Find ("Sphere_R8_1");
+		choice_R8_1 = platform_R8_1.GetComponent<Collection_Trigger> ();
+		choice_R8_2 = platform_R8_2.GetComponent<Collection_Trigger> ();
+
+		// Room Eight Teleporter Materia
+		teleMaterial_R8_1 = GameObject.Find("Teleporter_R8_1").GetComponent<Renderer> ().material;
+
 
 
 	}
@@ -190,6 +207,13 @@ public class Teleporter_Script : MonoBehaviour {
 			teleMaterial_R7_1.color = Color.green;
 		} 
 		else {teleMaterial_R7_1.color = Color.black;}
+
+		// TODO: Room Eight Assets - Material Updates
+		if(choice_R8_1.platform_R8_1_Chosen || choice_R8_1.platform_R8_2_Chosen || choice_R8_2.platform_R8_1_Chosen || choice_R8_2.platform_R8_2_Chosen) {
+			if (!playerCS.teleTextCorrect) {playerCS.DisplayTeleporterCorrect ();}
+			teleMaterial_R8_1.color = Color.green;
+		} 
+		else {teleMaterial_R8_1.color = Color.black;}
 	}
 
 	void OnTriggerEnter(Collider other){
@@ -379,6 +403,33 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCS.DisplayChoiceText ();
 				sphere_R7_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R7_1, 0.1f);
+			}
+		} else if (other.name == "Player_Position") {
+			if (!playerCS.teleTextIncorrect) {
+				playerCS.DisplayTeleporterIncorrect ();
+			}
+		}
+
+		// TODO : Room Eight Assets - Collision with Player Hitbox
+		if (choice_R8_1.platform_R8_1_Chosen && !choice_R8_2.platform_R8_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R8_1 Chosen - Now Teleporting");
+				playerCT.R8_Choice_1_Taken = true;
+				player.transform.position = teleporterPad_R8_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				playerCS.DisplayChoiceText ();
+				sphere_R8_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R8_1, 0.1f);
+			}
+		} else if (!choice_R8_1.platform_R8_1_Chosen && choice_R8_2.platform_R8_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R8_2 Chosen - Now Teleporting");
+				playerCT.R8_Choice_2_Taken = true;
+				player.transform.position = teleporterPad_R8_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				playerCS.DisplayChoiceText ();
+				sphere_R8_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R8_1, 0.1f);
 			}
 		} else if (other.name == "Player_Position") {
 			if (!playerCS.teleTextIncorrect) {

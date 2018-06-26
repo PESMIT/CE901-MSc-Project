@@ -49,6 +49,12 @@ public class Collection_Trigger : MonoBehaviour {
 	private bool platform_R7_2_Exists;
 	public bool platform_R7_1_Chosen, platform_R7_2_Chosen;
 
+	// ROOM EIGHT ASSETS
+	GameObject platformBody_R8_1, platformBody_R8_2;
+	Light platformLight_R8_1, platformLight_R8_2;
+	private bool platform_R8_2_Exists;
+	public bool platform_R8_1_Chosen, platform_R8_2_Chosen;
+
 	// Use this for initialization
 	void Start () {
 		csScript = GameObject.Find ("Player").GetComponent<CanvasScript> ();
@@ -154,6 +160,21 @@ public class Collection_Trigger : MonoBehaviour {
 			platformLight_R7_2 = platformBody_R7_2.GetComponentInChildren<Light> ();
 			platformLight_R7_2.color = Color.blue;
 			platform_R7_2_Exists = true;
+		}
+
+		// TODO: ROOM EIGHT ASSET REFERENCE
+		// Platform 1 - RIGHT SIDE
+		if(GameObject.Find("Platform_R8_1")!= null){
+			platformBody_R8_1 = GameObject.Find ("Platform_R8_1");
+			platformLight_R8_1 = platformBody_R8_1.GetComponentInChildren<Light> ();
+			platformLight_R8_1.color = Color.blue;
+		}
+		// Platform 2 - LEFT SIDE
+		if(GameObject.Find("Platform_R8_2")!= null){
+			platformBody_R8_2 = GameObject.Find ("Platform_R8_2");
+			platformLight_R8_2 = platformBody_R8_2.GetComponentInChildren<Light> ();
+			platformLight_R8_2.color = Color.blue;
+			platform_R8_2_Exists = true;
 		}
 
 			
@@ -307,6 +328,27 @@ public class Collection_Trigger : MonoBehaviour {
 				}
 			}
 		}
+
+		// TODO: ROOM EIGHT - TRIGGER COLLISIONS
+		if(other.tag == "Objects"){
+			if (this.gameObject.name == "Platform_R8_1") {
+				csScript.RemoveTutorialOne ();
+				platformLight_R8_1.color = Color.green;
+				platform_R8_1_Chosen = true;
+				if (platform_R8_2_Exists) {
+					platformLight_R8_2.color = Color.red;
+					platform_R8_2_Chosen = false;
+				}
+			} else if(this.gameObject.name == "Platform_R8_2"){
+				csScript.RemoveTutorialOne ();
+				platformLight_R8_1.color = Color.red;
+				platform_R8_1_Chosen = false;
+				if (platform_R8_2_Exists) {
+					platformLight_R8_2.color = Color.green;
+					platform_R8_2_Chosen = true;
+				}
+			}
+		}
 	}
 
 	void OnTriggerExit(Collider other){
@@ -385,6 +427,17 @@ public class Collection_Trigger : MonoBehaviour {
 			if (platform_R7_2_Exists) {
 				platformLight_R7_2.color = Color.white;
 				platform_R7_2_Chosen = false;
+			}
+		}
+
+		// TODO: ROOM EIGHT - TRIGGER EXITS
+		if(other.tag == "Objects" && this.gameObject.name == "Platform_R8_1" || this.gameObject.name == "Platform_R8_2"){
+			csScript.RemoveTeleporterCanvas ();
+			platformLight_R8_1.color = Color.white;
+			platform_R8_1_Chosen = false;
+			if (platform_R8_2_Exists) {
+				platformLight_R8_2.color = Color.white;
+				platform_R8_2_Chosen = false;
 			}
 		}
 	}
