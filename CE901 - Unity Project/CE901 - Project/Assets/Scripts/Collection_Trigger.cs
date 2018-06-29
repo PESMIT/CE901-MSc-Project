@@ -55,6 +55,18 @@ public class Collection_Trigger : MonoBehaviour {
 	private bool platform_R8_2_Exists;
 	public bool platform_R8_1_Chosen, platform_R8_2_Chosen;
 
+	// ROOM NINE ASSETS
+	GameObject platformBody_R9_1, platformBody_R9_2;
+	Light platformLight_R9_1, platformLight_R9_2;
+	private bool platform_R9_2_Exists;
+	public bool platform_R9_1_Chosen, platform_R9_2_Chosen;
+
+	// ROOM TEN ASSETS
+	GameObject platformBody_R10_1, platformBody_R10_2;
+	Light platformLight_R10_1, platformLight_R10_2;
+	private bool platform_R10_2_Exists;
+	public bool platform_R10_1_Chosen, platform_R10_2_Chosen;
+
 	// Use this for initialization
 	void Start () {
 		csScript = GameObject.Find ("Player").GetComponent<CanvasScript> ();
@@ -176,6 +188,38 @@ public class Collection_Trigger : MonoBehaviour {
 			platformLight_R8_2.color = Color.blue;
 			platform_R8_2_Exists = true;
 		}
+
+		// TODO: ROOM NINE ASSET REFERENCE
+		// Platform 1 - RIGHT SIDE
+		if(GameObject.Find("Platform_R9_1")!= null){
+			platformBody_R9_1 = GameObject.Find ("Platform_R9_1");
+			platformLight_R9_1 = platformBody_R9_1.GetComponentInChildren<Light> ();
+			platformLight_R9_1.color = Color.blue;
+		}
+		// Platform 2 - LEFT SIDE
+		if(GameObject.Find("Platform_R9_2")!= null){
+			platformBody_R9_2 = GameObject.Find ("Platform_R9_2");
+			platformLight_R9_2 = platformBody_R9_2.GetComponentInChildren<Light> ();
+			platformLight_R9_2.color = Color.blue;
+			platform_R9_2_Exists = true;
+		}
+
+		// TODO: ROOM TEN ASSET REFERENCE
+		// Platform 1 - RIGHT SIDE
+		if(GameObject.Find("Platform_R10_1")!= null){
+			platformBody_R10_1 = GameObject.Find ("Platform_R10_1");
+			platformLight_R10_1 = platformBody_R10_1.GetComponentInChildren<Light> ();
+			platformLight_R10_1.color = Color.blue;
+		}
+		// Platform 2 - LEFT SIDE
+		if(GameObject.Find("Platform_R10_2")!= null){
+			platformBody_R10_2 = GameObject.Find ("Platform_R10_2");
+			platformLight_R10_2 = platformBody_R10_2.GetComponentInChildren<Light> ();
+			platformLight_R10_2.color = Color.blue;
+			platform_R10_2_Exists = true;
+		}
+
+		// ROOMS 11-20 - TOWER OF ROOMS
 
 			
 	}
@@ -349,6 +393,52 @@ public class Collection_Trigger : MonoBehaviour {
 				}
 			}
 		}
+
+		// TODO: ROOM NINE - TRIGGER COLLISIONS
+		if(other.tag == "Objects"){
+			if (this.gameObject.name == "Platform_R9_1") {
+				csScript.RemoveTutorialOne ();
+				platformLight_R9_1.color = Color.green;
+				platform_R9_1_Chosen = true;
+				if (platform_R9_2_Exists) {
+					platformLight_R9_2.color = Color.red;
+					platform_R9_2_Chosen = false;
+				}
+			} else if(this.gameObject.name == "Platform_R9_2"){
+				csScript.RemoveTutorialOne ();
+				platformLight_R9_1.color = Color.red;
+				platform_R9_1_Chosen = false;
+				if (platform_R9_2_Exists) {
+					platformLight_R9_2.color = Color.green;
+					platform_R9_2_Chosen = true;
+				}
+			}
+		}
+
+		// TODO: ROOM TEN - TRIGGER COLLISIONS
+		if(other.tag == "Objects"){
+			if (this.gameObject.name == "Platform_R10_1") {
+				csScript.RemoveTutorialOne ();
+				platformLight_R10_1.color = Color.green;
+				platform_R10_1_Chosen = true;
+				if (platform_R10_2_Exists) {
+					platformLight_R10_2.color = Color.red;
+					platform_R10_2_Chosen = false;
+				}
+			} else if(this.gameObject.name == "Platform_R10_2"){
+				csScript.RemoveTutorialOne ();
+				platformLight_R10_1.color = Color.red;
+				platform_R10_1_Chosen = false;
+				if (platform_R10_2_Exists) {
+					platformLight_R10_2.color = Color.green;
+					platform_R10_2_Chosen = true;
+				}
+			}
+		}
+
+		// ROOMS 11-20 - TOWER OF ROOMS
+
+
 	}
 
 	void OnTriggerExit(Collider other){
@@ -440,5 +530,29 @@ public class Collection_Trigger : MonoBehaviour {
 				platform_R8_2_Chosen = false;
 			}
 		}
+
+		// TODO: ROOM NINE - TRIGGER EXITS
+		if(other.tag == "Objects" && this.gameObject.name == "Platform_R9_1" || this.gameObject.name == "Platform_R9_2"){
+			csScript.RemoveTeleporterCanvas ();
+			platformLight_R9_1.color = Color.white;
+			platform_R9_1_Chosen = false;
+			if (platform_R9_2_Exists) {
+				platformLight_R9_2.color = Color.white;
+				platform_R9_2_Chosen = false;
+			}
+		}
+
+		// TODO: ROOM TEN - TRIGGER EXITS
+		if(other.tag == "Objects" && this.gameObject.name == "Platform_R10_1" || this.gameObject.name == "Platform_R10_2"){
+			csScript.RemoveTeleporterCanvas ();
+			platformLight_R10_1.color = Color.white;
+			platform_R10_1_Chosen = false;
+			if (platform_R10_2_Exists) {
+				platformLight_R10_2.color = Color.white;
+				platform_R10_2_Chosen = false;
+			}
+		}
+
+		// ROOMS 11-20 - TOWER OF ROOMS
 	}
 }

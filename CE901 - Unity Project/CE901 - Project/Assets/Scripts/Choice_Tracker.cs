@@ -72,7 +72,7 @@ public class Choice_Tracker : MonoBehaviour {
 		room8ChoiceText = GameObject.Find("Room 8 Choice Text").GetComponent<Text>();
 		room9ChoiceText = GameObject.Find("Room 9 Choice Text").GetComponent<Text>();
 		room10ChoiceText = GameObject.Find("Room 10 Choice Text").GetComponent<Text>();
-		//choiceText = GameObject.Find("Choice Text").GetComponent<Text>();
+
 	}
 	
 	// Update is called once per frame
@@ -119,23 +119,23 @@ public class Choice_Tracker : MonoBehaviour {
 		} else if (!R7_Choice_1_Taken && R7_Choice_2_Taken) {
 			room7ChoiceText.text = "ROOM 7 - CHOSE BLUE";
 		}
-		// ROOM 8 (Green and Red)
+		// ROOM 8 (Yellow and Green)
 		if (R8_Choice_1_Taken && !R8_Choice_2_Taken) {
-			room8ChoiceText.text = "ROOM 8 - CHOSE GREEN";
+			room8ChoiceText.text = "ROOM 8 - CHOSE YELLOW";
 		} else if (!R8_Choice_1_Taken && R8_Choice_2_Taken) {
-			room8ChoiceText.text = "ROOM 8 - CHOSE BLUE";
+			room8ChoiceText.text = "ROOM 8 - CHOSE GREEN";
 		}
-		// ROOM 9 (Green and Red)
+		// ROOM 9 (Yellow and Green 2)
 		if (R9_Choice_1_Taken && !R9_Choice_2_Taken) {
-			room9ChoiceText.text = "ROOM 9 - CHOSE GREEN";
+			room9ChoiceText.text = "ROOM 9 - CHOSE YELLOW";
 		} else if (!R9_Choice_1_Taken && R9_Choice_2_Taken) {
-			room9ChoiceText.text = "ROOM 9 - CHOSE BLUE";
+			room9ChoiceText.text = "ROOM 9 - CHOSE GREEN";
 		}
-		// ROOM 10 (Green and Red)
+		// ROOM 10 (Yellow and Green Final)
 		if (R10_Choice_1_Taken && !R10_Choice_2_Taken) {
-			room10ChoiceText.text = "ROOM 10 - CHOSE GREEN";
+			room10ChoiceText.text = "ROOM 10 - CHOSE YELLOW";
 		} else if (!R10_Choice_1_Taken && R10_Choice_2_Taken) {
-			room10ChoiceText.text = "ROOM 10 - CHOSE BLUE";
+			room10ChoiceText.text = "ROOM 10 - CHOSE GREEN";
 		}
 
 	}
