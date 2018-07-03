@@ -56,6 +56,55 @@ public class Teleporter_Script : MonoBehaviour {
 	bool tele_R10;
 
 	// ROOMS 11-20 - TOWER OF ROOMS
+	// Room ELEVEN Assets
+	GameObject platform_R11_1, platform_R11_2,teleporterPad_R11_1, sphere_R11_1;
+	Collection_Trigger choice_R11_1, choice_R11_2;
+	bool tele_R11;
+
+	// Room TWELVE Assets
+	GameObject platform_R12_1, platform_R12_2,teleporterPad_R12_1, sphere_R12_1;
+	Collection_Trigger choice_R12_1, choice_R12_2;
+	bool tele_R12;
+
+	// Room THIRTEEN Assets
+	GameObject platform_R13_1, platform_R13_2,teleporterPad_R13_1, sphere_R13_1;
+	Collection_Trigger choice_R13_1, choice_R13_2;
+	bool tele_R13;
+
+	// Room FOURTEEN Assets
+	GameObject platform_R14_1, platform_R14_2,teleporterPad_R14_1, sphere_R14_1;
+	Collection_Trigger choice_R14_1, choice_R14_2;
+	bool tele_R14;
+
+	// Room FIFTHTEEN Assets
+	GameObject platform_R15_1, platform_R15_2,teleporterPad_R15_1, sphere_R15_1;
+	Collection_Trigger choice_R15_1, choice_R15_2;
+	bool tele_R15;
+
+	// Room SIXTEEN Assets
+	GameObject platform_R16_1, platform_R16_2,teleporterPad_R16_1, sphere_R16_1;
+	Collection_Trigger choice_R16_1, choice_R16_2;
+	bool tele_R16;
+
+	// Room SEVENTEEN Assets
+	GameObject platform_R17_1, platform_R17_2,teleporterPad_R17_1, sphere_R17_1;
+	Collection_Trigger choice_R17_1, choice_R17_2;
+	bool tele_R17;
+
+	// Room EIGHTEEN Assets
+	GameObject platform_R18_1, platform_R18_2,teleporterPad_R18_1, sphere_R18_1;
+	Collection_Trigger choice_R18_1, choice_R18_2;
+	bool tele_R18;
+
+	// Room NINETEEN Assets
+	GameObject platform_R19_1, platform_R19_2,teleporterPad_R19_1, sphere_R19_1;
+	Collection_Trigger choice_R19_1, choice_R19_2;
+	bool tele_R19;
+
+	// Room TWENTY Assets
+	GameObject platform_R20_1, platform_R20_2,teleporterPad_R20_1, sphere_R20_1;
+	Collection_Trigger choice_R20_1, choice_R20_2;
+	bool tele_R20;
 
 	// Generic Assets
 	GameObject player;
@@ -73,6 +122,16 @@ public class Teleporter_Script : MonoBehaviour {
 	Material teleMaterial_R10_1;
 
 	// ROOMS 11-20 - TOWER OF ROOMS
+	Material teleMaterial_R11_1;
+	Material teleMaterial_R12_1;
+	Material teleMaterial_R13_1;
+	Material teleMaterial_R14_1;
+	Material teleMaterial_R15_1;
+	Material teleMaterial_R16_1;
+	Material teleMaterial_R17_1;
+	Material teleMaterial_R18_1;
+	Material teleMaterial_R19_1;
+	Material teleMaterial_R20_1;
 
 	// Use this for initialization
 	void Start () {
@@ -191,7 +250,115 @@ public class Teleporter_Script : MonoBehaviour {
 		teleMaterial_R10_1 = GameObject.Find("Teleporter_R10_1").GetComponent<Renderer> ().material;
 
 		// ROOMS 11-20 - TOWER OF ROOMS
+		// Room ELEVEN Assets
+		platform_R11_1 = GameObject.Find ("Platform_R11_1");
+		platform_R11_2 = GameObject.Find ("Platform_R11_2");
+		teleporterPad_R11_1 = GameObject.Find ("TelePad_R11_1");
+		sphere_R11_1 = GameObject.Find ("Sphere_R11_1");
+		choice_R11_1 = platform_R11_1.GetComponent<Collection_Trigger> ();
+		choice_R11_2 = platform_R11_2.GetComponent<Collection_Trigger> ();
 
+		// Room ELEVEN Teleporter Materia
+		teleMaterial_R11_1 = GameObject.Find("Teleporter_R11_1").GetComponent<Renderer> ().material;
+
+		// Room TWELVE Assets
+		platform_R12_1 = GameObject.Find("Platform_R12_1");
+		platform_R12_2 = GameObject.Find("Platform_R12_2");
+		teleporterPad_R12_1 = GameObject.Find ("TelePad_R12_1");
+		sphere_R12_1 = GameObject.Find ("Sphere_R12_1");
+		choice_R12_1 = platform_R12_1.GetComponent<Collection_Trigger> ();
+		choice_R12_2 = platform_R12_2.GetComponent<Collection_Trigger> ();
+
+		// Room TWELVE Teleporter Material
+		teleMaterial_R12_1 = GameObject.Find("Teleporter_R12_1").GetComponent<Renderer> ().material;
+
+		// Room THIRTEEN Assets
+		platform_R13_1 = GameObject.Find("Platform_R13_1");
+		platform_R13_2 = GameObject.Find("Platform_R13_2");
+		teleporterPad_R13_1 = GameObject.Find ("TelePad_R13_1");
+		sphere_R13_1 = GameObject.Find ("Sphere_R13_1");
+		choice_R13_1 = platform_R13_1.GetComponent<Collection_Trigger> ();
+		choice_R13_2 = platform_R13_2.GetComponent<Collection_Trigger> ();
+
+		// Room THIRTEEN Teleporter Material
+		teleMaterial_R13_1 = GameObject.Find("Teleporter_R13_1").GetComponent<Renderer> ().material;
+
+		// Room FOURTEEN Assets
+		platform_R14_1 = GameObject.Find("Platform_R14_1");
+		platform_R14_2 = GameObject.Find("Platform_R14_2");
+		teleporterPad_R14_1 = GameObject.Find ("TelePad_R14_1");
+		sphere_R14_1 = GameObject.Find ("Sphere_R14_1");
+		choice_R14_1 = platform_R14_1.GetComponent<Collection_Trigger> ();
+		choice_R14_2 = platform_R14_2.GetComponent<Collection_Trigger> ();
+
+		// Room FOURTEEN Teleporter Material
+		teleMaterial_R14_1 = GameObject.Find("Teleporter_R14_1").GetComponent<Renderer> ().material;
+
+		// Room FIFTHTEEN Assets
+		platform_R15_1 = GameObject.Find("Platform_R15_1");
+		platform_R15_2 = GameObject.Find("Platform_R15_2");
+		teleporterPad_R15_1 = GameObject.Find ("TelePad_R15_1");
+		sphere_R15_1 = GameObject.Find ("Sphere_R15_1");
+		choice_R15_1 = platform_R15_1.GetComponent<Collection_Trigger> ();
+		choice_R15_2 = platform_R15_2.GetComponent<Collection_Trigger> ();
+
+		// Room FIFTHTEEN Teleporter Material
+		teleMaterial_R15_1 = GameObject.Find("Teleporter_R15_1").GetComponent<Renderer> ().material;
+
+		// Room SIXTEEN Assets
+		platform_R16_1 = GameObject.Find("Platform_R16_1");
+		platform_R16_2 = GameObject.Find("Platform_R16_2");
+		teleporterPad_R16_1 = GameObject.Find ("TelePad_R16_1");
+		sphere_R16_1 = GameObject.Find ("Sphere_R16_1");
+		choice_R16_1 = platform_R16_1.GetComponent<Collection_Trigger> ();
+		choice_R16_2 = platform_R16_2.GetComponent<Collection_Trigger> ();
+
+		// Room SIXTEEN Teleporter Material
+		teleMaterial_R16_1 = GameObject.Find("Teleporter_R16_1").GetComponent<Renderer> ().material;
+
+		// Room SEVENTEEN Assets
+		platform_R17_1 = GameObject.Find("Platform_R17_1");
+		platform_R17_2 = GameObject.Find("Platform_R17_2");
+		teleporterPad_R17_1 = GameObject.Find ("TelePad_R17_1");
+		sphere_R17_1 = GameObject.Find ("Sphere_R17_1");
+		choice_R17_1 = platform_R17_1.GetComponent<Collection_Trigger> ();
+		choice_R17_2 = platform_R17_2.GetComponent<Collection_Trigger> ();
+
+		// Room SEVENTEEN Teleporter Materia
+		teleMaterial_R17_1 = GameObject.Find("Teleporter_R17_1").GetComponent<Renderer> ().material;
+
+		// Room EIGHTEEN Assets
+		platform_R18_1 = GameObject.Find("Platform_R18_1");
+		platform_R18_2 = GameObject.Find("Platform_R18_2");
+		teleporterPad_R18_1 = GameObject.Find ("TelePad_R18_1");
+		sphere_R18_1 = GameObject.Find ("Sphere_R18_1");
+		choice_R18_1 = platform_R18_1.GetComponent<Collection_Trigger> ();
+		choice_R18_2 = platform_R18_2.GetComponent<Collection_Trigger> ();
+
+		// Room EIGHTEEN Teleporter Material
+		teleMaterial_R18_1 = GameObject.Find("Teleporter_R18_1").GetComponent<Renderer> ().material;
+
+		// Room NINETEEN Assets
+		platform_R19_1 = GameObject.Find("Platform_R19_1");
+		platform_R19_2 = GameObject.Find("Platform_R19_2");
+		teleporterPad_R19_1 = GameObject.Find ("TelePad_R19_1");
+		sphere_R19_1 = GameObject.Find ("Sphere_R19_1");
+		choice_R19_1 = platform_R19_1.GetComponent<Collection_Trigger> ();
+		choice_R19_2 = platform_R19_2.GetComponent<Collection_Trigger> ();
+
+		// Room NINETEEN Teleporter Material
+		teleMaterial_R19_1 = GameObject.Find("Teleporter_R19_1").GetComponent<Renderer> ().material;
+
+		// Room TWENTY Assets
+		platform_R20_1 = GameObject.Find("Platform_R20_1");
+		platform_R20_2 = GameObject.Find("Platform_R20_2");
+		teleporterPad_R20_1 = GameObject.Find ("TelePad_R20_1");
+		sphere_R20_1 = GameObject.Find ("Sphere_R20_1");
+		choice_R20_1 = platform_R20_1.GetComponent<Collection_Trigger> ();
+		choice_R20_2 = platform_R20_2.GetComponent<Collection_Trigger> ();
+
+		// Room TWENTY Teleporter Material
+		teleMaterial_R20_1 = GameObject.Find("Teleporter_R20_1").GetComponent<Renderer> ().material;
 
 
 	}
@@ -270,7 +437,75 @@ public class Teleporter_Script : MonoBehaviour {
 		else {teleMaterial_R10_1.color = Color.black;}
 
 		// ROOMS 11-20 - TOWER OF ROOMS
+		// Room ELEVEN Assets - Material Updates
+		if (choice_R11_1.platform_R11_1_Chosen || choice_R11_1.platform_R11_2_Chosen || choice_R11_2.platform_R11_1_Chosen || choice_R11_2.platform_R11_2_Chosen) {
+			if (!playerCS.teleTextCorrect) {playerCS.DisplayTeleporterCorrect ();}
+			teleMaterial_R11_1.color = Color.green;
+		}
+		else {teleMaterial_R11_1.color = Color.black;}
 
+		// Room TWELVE Assets - Material Updates
+		if(choice_R12_1.platform_R12_1_Chosen || choice_R12_1.platform_R12_2_Chosen || choice_R12_2.platform_R12_1_Chosen || choice_R12_2.platform_R12_2_Chosen) {
+			if (!playerCS.teleTextCorrect) {playerCS.DisplayTeleporterCorrect ();}
+			teleMaterial_R12_1.color = Color.green;
+		} 
+		else {teleMaterial_R12_1.color = Color.black;}
+
+		// Room THIRTEEN Assets - Material Updates
+		if(choice_R13_1.platform_R13_1_Chosen || choice_R13_1.platform_R13_2_Chosen || choice_R13_2.platform_R13_1_Chosen || choice_R13_2.platform_R13_2_Chosen) {
+			if (!playerCS.teleTextCorrect) {playerCS.DisplayTeleporterCorrect ();}
+			teleMaterial_R13_1.color = Color.green;
+		} 
+		else {teleMaterial_R13_1.color = Color.black;}
+
+		// TODO: Room FOURTEEN Assets - Material Updates
+		if(choice_R14_1.platform_R14_1_Chosen || choice_R14_1.platform_R14_2_Chosen || choice_R14_2.platform_R14_1_Chosen || choice_R14_2.platform_R14_2_Chosen) {
+			if (!playerCS.teleTextCorrect) {playerCS.DisplayTeleporterCorrect ();}
+			teleMaterial_R14_1.color = Color.green;
+		} 
+		else {teleMaterial_R14_1.color = Color.black;}
+
+		// TODO: Room FIFTHTEEN Assets - Material Updates
+		if(choice_R15_1.platform_R15_1_Chosen || choice_R15_1.platform_R15_2_Chosen || choice_R15_2.platform_R15_1_Chosen || choice_R15_2.platform_R15_2_Chosen) {
+			if (!playerCS.teleTextCorrect) {playerCS.DisplayTeleporterCorrect ();}
+			teleMaterial_R15_1.color = Color.green;
+		} 
+		else {teleMaterial_R15_1.color = Color.black;}
+
+		// TODO: Room SIXTEEN Assets - Material Updates
+		if(choice_R16_1.platform_R16_1_Chosen || choice_R16_1.platform_R16_2_Chosen || choice_R16_2.platform_R16_1_Chosen || choice_R16_2.platform_R16_2_Chosen) {
+			if (!playerCS.teleTextCorrect) {playerCS.DisplayTeleporterCorrect ();}
+			teleMaterial_R16_1.color = Color.green;
+		} 
+		else {teleMaterial_R16_1.color = Color.black;}
+
+		// TODO: Room SEVENTEEN Assets - Material Updates
+		if(choice_R17_1.platform_R17_1_Chosen || choice_R17_1.platform_R17_2_Chosen || choice_R17_2.platform_R17_1_Chosen || choice_R17_2.platform_R17_2_Chosen) {
+			if (!playerCS.teleTextCorrect) {playerCS.DisplayTeleporterCorrect ();}
+			teleMaterial_R17_1.color = Color.green;
+		} 
+		else {teleMaterial_R17_1.color = Color.black;}
+
+		// TODO: Room EIGHTEEN Assets - Material Updates
+		if(choice_R18_1.platform_R18_1_Chosen || choice_R18_1.platform_R18_2_Chosen || choice_R18_2.platform_R18_1_Chosen || choice_R18_2.platform_R18_2_Chosen) {
+			if (!playerCS.teleTextCorrect) {playerCS.DisplayTeleporterCorrect ();}
+			teleMaterial_R18_1.color = Color.green;
+		} 
+		else {teleMaterial_R18_1.color = Color.black;}
+
+		// TODO: Room NINETEEN Assets - Material Updates
+		if(choice_R19_1.platform_R19_1_Chosen || choice_R19_1.platform_R19_2_Chosen || choice_R19_2.platform_R19_1_Chosen || choice_R19_2.platform_R19_2_Chosen) {
+			if (!playerCS.teleTextCorrect) {playerCS.DisplayTeleporterCorrect ();}
+			teleMaterial_R19_1.color = Color.green;
+		} 
+		else {teleMaterial_R19_1.color = Color.black;}
+
+		// TODO: Room TWENTY Assets - Material Updates
+		if(choice_R20_1.platform_R20_1_Chosen || choice_R20_1.platform_R20_2_Chosen || choice_R20_2.platform_R20_1_Chosen || choice_R20_2.platform_R20_2_Chosen) {
+			if (!playerCS.teleTextCorrect) {playerCS.DisplayTeleporterCorrect ();}
+			teleMaterial_R20_1.color = Color.green;
+		} 
+		else {teleMaterial_R20_1.color = Color.black;}
 
 	}
 
@@ -313,7 +548,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R2_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R2_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R2_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R2_1, 0.1f);
 			}
@@ -323,7 +557,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R2_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R2_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R2_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R2_1, 0.1f);
 			}
@@ -340,7 +573,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R3_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R3_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R3_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R3_1, 0.1f);
 			}
@@ -350,7 +582,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R3_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R3_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R3_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R3_1, 0.1f);
 			}
@@ -367,7 +598,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R4_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R4_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R4_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R4_1, 0.1f);
 			}
@@ -377,7 +607,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R4_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R4_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R4_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R4_1, 0.1f);
 			}
@@ -394,7 +623,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R5_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R5_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R5_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R5_1, 0.1f);
 			}
@@ -404,7 +632,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R5_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R5_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R5_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R5_1, 0.1f);
 			}
@@ -421,7 +648,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R6_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R6_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R6_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R6_1, 0.1f);
 			}
@@ -431,7 +657,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R6_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R6_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R6_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R6_1, 0.1f);
 			}
@@ -448,7 +673,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R7_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R7_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R7_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R7_1, 0.1f);
 			}
@@ -458,7 +682,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R7_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R7_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R7_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R7_1, 0.1f);
 			}
@@ -475,7 +698,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R8_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R8_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R8_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R8_1, 0.1f);
 			}
@@ -485,7 +707,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R8_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R8_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R8_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R8_1, 0.1f);
 			}
@@ -502,7 +723,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R9_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R9_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R9_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R9_1, 0.1f);
 			}
@@ -512,7 +732,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R9_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R9_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R9_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R9_1, 0.1f);
 			}
@@ -529,7 +748,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R10_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R10_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R10_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R10_1, 0.1f);
 			}
@@ -539,7 +757,6 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R10_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R10_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
-				playerCS.DisplayChoiceText ();
 				sphere_R10_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R10_1, 0.1f);
 			}
@@ -550,5 +767,262 @@ public class Teleporter_Script : MonoBehaviour {
 		}
 
 	// ROOMS 11-20 - TOWER OF ROOMS
+
+		// Room ELEVEN Assets - Collision with Player Hitbox
+		if (choice_R11_1.platform_R11_1_Chosen && !choice_R11_2.platform_R11_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R11_1 Chosen - Now Teleporting");
+				playerCT.R11_Choice_1_Taken = true;
+				player.transform.position = teleporterPad_R11_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R11_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R11_1, 0.1f);
+			}
+		}
+		else if (!choice_R11_1.platform_R11_1_Chosen && choice_R11_2.platform_R11_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R11_2 Chosen - Now Teleporting");
+				playerCT.R11_Choice_2_Taken = true;
+				player.transform.position = teleporterPad_R11_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R11_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R11_1, 0.1f);
+			}
+		}
+		else if(other.name == "Player_Position"){
+			if (!playerCS.teleTextIncorrect) {
+				playerCS.DisplayTeleporterIncorrect ();
+			}
+		}
+
+
+		// TODO : Room TWELVE Assets - Collision with Player Hitbox
+		if (choice_R12_1.platform_R12_1_Chosen && !choice_R12_2.platform_R12_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R12_1 Chosen - Now Teleporting");
+				playerCT.R12_Choice_1_Taken = true;
+				player.transform.position = teleporterPad_R12_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R12_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R12_1, 0.1f);
+			}
+		} else if (!choice_R12_1.platform_R12_1_Chosen && choice_R12_2.platform_R12_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R12_2 Chosen - Now Teleporting");
+				playerCT.R12_Choice_2_Taken = true;
+				player.transform.position = teleporterPad_R12_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R12_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R12_1, 0.1f);
+			}
+		} else if (other.name == "Player_Position") {
+			if (!playerCS.teleTextIncorrect) {
+				playerCS.DisplayTeleporterIncorrect ();
+			}
+		}
+
+		// TODO : Room THIRTEEN Assets - Collision with Player Hitbox
+		if (choice_R13_1.platform_R13_1_Chosen && !choice_R13_2.platform_R13_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R13_1 Chosen - Now Teleporting");
+				playerCT.R13_Choice_1_Taken = true;
+				player.transform.position = teleporterPad_R13_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R13_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R13_1, 0.1f);
+			}
+		} else if (!choice_R13_1.platform_R13_1_Chosen && choice_R13_2.platform_R13_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R13_2 Chosen - Now Teleporting");
+				playerCT.R13_Choice_2_Taken = true;
+				player.transform.position = teleporterPad_R13_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R13_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R13_1, 0.1f);
+			}
+		} else if (other.name == "Player_Position") {
+			if (!playerCS.teleTextIncorrect) {
+				playerCS.DisplayTeleporterIncorrect ();
+			}
+		}
+
+		// TODO : Room FOURTEEN Assets - Collision with Player Hitbox
+		if (choice_R14_1.platform_R14_1_Chosen && !choice_R14_2.platform_R14_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R14_1 Chosen - Now Teleporting");
+				playerCT.R14_Choice_1_Taken = true;
+				player.transform.position = teleporterPad_R14_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R14_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R14_1, 0.1f);
+			}
+		} else if (!choice_R14_1.platform_R14_1_Chosen && choice_R14_2.platform_R14_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R14_2 Chosen - Now Teleporting");
+				playerCT.R14_Choice_2_Taken = true;
+				player.transform.position = teleporterPad_R14_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R14_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R14_1, 0.1f);
+			}
+		} else if (other.name == "Player_Position") {
+			if (!playerCS.teleTextIncorrect) {
+				playerCS.DisplayTeleporterIncorrect ();
+			}
+		}
+
+		// TODO : Room FIFTHTEEN Assets - Collision with Player Hitbox
+		if (choice_R15_1.platform_R15_1_Chosen && !choice_R15_2.platform_R15_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R15_1 Chosen - Now Teleporting");
+				playerCT.R15_Choice_1_Taken = true;
+				player.transform.position = teleporterPad_R15_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R15_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R15_1, 0.1f);
+			}
+		} else if (!choice_R15_1.platform_R15_1_Chosen && choice_R15_2.platform_R15_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R15_2 Chosen - Now Teleporting");
+				playerCT.R15_Choice_2_Taken = true;
+				player.transform.position = teleporterPad_R15_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R15_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R15_1, 0.1f);
+			}
+		} else if (other.name == "Player_Position") {
+			if (!playerCS.teleTextIncorrect) {
+				playerCS.DisplayTeleporterIncorrect ();
+			}
+		}
+
+		// TODO : Room SIXTEEN Assets - Collision with Player Hitbox
+		if (choice_R16_1.platform_R16_1_Chosen && !choice_R16_2.platform_R16_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R16_1 Chosen - Now Teleporting");
+				playerCT.R16_Choice_1_Taken = true;
+				player.transform.position = teleporterPad_R16_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R16_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R16_1, 0.1f);
+			}
+		} else if (!choice_R16_1.platform_R16_1_Chosen && choice_R16_2.platform_R16_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R16_2 Chosen - Now Teleporting");
+				playerCT.R16_Choice_2_Taken = true;
+				player.transform.position = teleporterPad_R16_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R16_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R16_1, 0.1f);
+			}
+		} else if (other.name == "Player_Position") {
+			if (!playerCS.teleTextIncorrect) {
+				playerCS.DisplayTeleporterIncorrect ();
+			}
+		}
+
+		// TODO : Room SEVENTEEN Assets - Collision with Player Hitbox
+		if (choice_R17_1.platform_R17_1_Chosen && !choice_R17_2.platform_R17_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R17_1 Chosen - Now Teleporting");
+				playerCT.R17_Choice_1_Taken = true;
+				player.transform.position = teleporterPad_R17_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R17_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R17_1, 0.1f);
+			}
+		} else if (!choice_R17_1.platform_R17_1_Chosen && choice_R17_2.platform_R17_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R17_2 Chosen - Now Teleporting");
+				playerCT.R17_Choice_2_Taken = true;
+				player.transform.position = teleporterPad_R17_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R17_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R17_1, 0.1f);
+			}
+		} else if (other.name == "Player_Position") {
+			if (!playerCS.teleTextIncorrect) {
+				playerCS.DisplayTeleporterIncorrect ();
+			}
+		}
+
+		// TODO : Room EIGHTEEN Assets - Collision with Player Hitbox
+		if (choice_R18_1.platform_R18_1_Chosen && !choice_R18_2.platform_R18_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R18_1 Chosen - Now Teleporting");
+				playerCT.R18_Choice_1_Taken = true;
+				player.transform.position = teleporterPad_R18_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R18_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R18_1, 0.1f);
+			}
+		} else if (!choice_R18_1.platform_R18_1_Chosen && choice_R18_2.platform_R18_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R18_2 Chosen - Now Teleporting");
+				playerCT.R18_Choice_2_Taken = true;
+				player.transform.position = teleporterPad_R18_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R18_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R18_1, 0.1f);
+			}
+		} else if (other.name == "Player_Position") {
+			if (!playerCS.teleTextIncorrect) {
+				playerCS.DisplayTeleporterIncorrect ();
+			}
+		}
+
+		// TODO : Room NINETEEN Assets - Collision with Player Hitbox
+		if (choice_R19_1.platform_R19_1_Chosen && !choice_R19_2.platform_R19_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R19_1 Chosen - Now Teleporting");
+				playerCT.R19_Choice_1_Taken = true;
+				player.transform.position = teleporterPad_R19_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R19_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R19_1, 0.1f);
+			}
+		} else if (!choice_R19_1.platform_R19_1_Chosen && choice_R19_2.platform_R19_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R19_2 Chosen - Now Teleporting");
+				playerCT.R19_Choice_2_Taken = true;
+				player.transform.position = teleporterPad_R19_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				sphere_R19_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R19_1, 0.1f);
+			}
+		} else if (other.name == "Player_Position") {
+			if (!playerCS.teleTextIncorrect) {
+				playerCS.DisplayTeleporterIncorrect ();
+			}
+		}
+
+		// TODO : Room TWENTY Assets - Collision with Player Hitbox
+		if (choice_R20_1.platform_R20_1_Chosen && !choice_R20_2.platform_R20_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R20_1 Chosen - Now Teleporting");
+				playerCT.R20_Choice_1_Taken = true;
+				player.transform.position = teleporterPad_R20_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				playerCT.RoomStatsOff ();
+				playerCT.StatsOn ();
+				sphere_R20_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R20_1, 0.1f);
+			}
+		} else if (!choice_R20_1.platform_R20_1_Chosen && choice_R20_2.platform_R20_2_Chosen) {
+			if (other.name == "Player_Position") {
+				Debug.Log ("Platform R20_2 Chosen - Now Teleporting");
+				playerCT.R20_Choice_2_Taken = true;
+				player.transform.position = teleporterPad_R20_1.transform.position;
+				playerCS.RemoveTeleporterCanvas ();
+				playerCT.RoomStatsOff ();
+				playerCT.StatsOn ();
+				sphere_R20_1.transform.position = Vector3.zero;
+				Object.Destroy (sphere_R20_1, 0.1f);
+			}
+		} else if (other.name == "Player_Position") {
+			if (!playerCS.teleTextIncorrect) {
+				playerCS.DisplayTeleporterIncorrect ();
+			}
+		}
 	}
 }
