@@ -1005,6 +1005,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCS.RemoveTeleporterCanvas ();
 				playerCT.RoomStatsOff ();
 				playerCT.StatsOn ();
+				playerCT.writeToFile ();
 				sphere_R20_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R20_1, 0.1f);
 			}
@@ -1016,6 +1017,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCS.RemoveTeleporterCanvas ();
 				playerCT.RoomStatsOff ();
 				playerCT.StatsOn ();
+				playerCT.writeToFile ();
 				sphere_R20_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R20_1, 0.1f);
 			}

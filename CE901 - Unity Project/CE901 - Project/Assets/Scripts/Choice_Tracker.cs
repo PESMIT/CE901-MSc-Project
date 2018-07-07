@@ -1,5 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text;
+using System.IO;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -194,7 +197,34 @@ public class Choice_Tracker : MonoBehaviour {
 		orangeChosen = 0;
 
 		StatsOff ();
+		Debug.Log ("Path :" + Application.dataPath);
 
+	}
+
+	public void writeToFile(){
+		//string path = @"C:\Users\Patrick\Desktop\MyTest.txt";
+		//string path = @"C:\Desktop\MyTest2.txt";
+		string path = Application.dataPath.ToString() + @"\Results.txt";
+		// This text is added only once to the file.
+		if(!File.Exists(path)){
+			// Create a file you want to write to.
+			string titleText = "RESULTS: " + Environment.NewLine;
+			string redColourText = "RED COLOURS CHOSEN " + redChosen + " / 6" + Environment.NewLine;
+			string blueColourText = "BLUE COLOURS CHOSEN " + blueChosen + " / 9" + Environment.NewLine;
+			string greenColourText = "GREEN COLOURS CHOSEN " + greenChosen + " / 9" + Environment.NewLine;
+			string yellowColourText = "YELLOW COLOURS CHOSEN " + yellowChosen + " / 6" + Environment.NewLine;
+			string orangeColourText = "ORANGE COLOURS CHOSEN " + orangeChosen + " / 6" + Environment.NewLine;
+			string wholeText = titleText + redColourText + blueColourText + greenColourText + yellowColourText + orangeColourText; 
+			File.WriteAllText (path, wholeText);
+		}
+		// This text is always added, making the file longer over time.
+		// If it is not deleted.
+		string appendText = "EXTRA RESULTS: " + Environment.NewLine;
+		File.AppendAllText (path, appendText);
+
+		// Open the file to read from.
+		string readText = File.ReadAllText(path);
+		Console.WriteLine(readText);
 	}
 
 	public void StatsOn(){
