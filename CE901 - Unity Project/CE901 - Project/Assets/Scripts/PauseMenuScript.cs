@@ -16,15 +16,22 @@ public class PauseMenuScript : MonoBehaviour {
 		mainCameraCC = mainCamera.GetComponent<Camera_Control> ();
 		playerCC = GameObject.Find ("Player").GetComponent<Camera_Control> ();
 		pauseMenu.SetActive (false);
+
+		// Mouse Cursor
+		Cursor.visible = false;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.Escape)){
 			if (pauseMenu.activeSelf == true) {
 				PauseMenuOff ();
+				// Mouse Cursor
+				Cursor.visible = false;
 			} else if (pauseMenu.activeSelf == false) {
 				PauseMenuOn ();
+				// Mouse Cursor
+				Cursor.visible = true;
 			}
 		}
 	}
