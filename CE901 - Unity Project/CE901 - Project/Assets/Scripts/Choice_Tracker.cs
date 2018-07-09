@@ -72,9 +72,6 @@ public class Choice_Tracker : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		// Mouse Cursor
-		Cursor.visible = false;
-
 
 		// Room 1
 		R1_Choice_1_Taken = false;
