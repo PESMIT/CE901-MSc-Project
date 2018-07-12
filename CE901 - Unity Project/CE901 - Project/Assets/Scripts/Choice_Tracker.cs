@@ -32,6 +32,18 @@ public class Choice_Tracker : MonoBehaviour {
 	public bool R19_Choice_1_Taken, R19_Choice_2_Taken;
 	public bool R20_Choice_1_Taken, R20_Choice_2_Taken;
 
+	// ROOMS 21-30
+	public bool R21_Choice_1_Taken, R21_Choice_2_Taken;
+	public bool R22_Choice_1_Taken, R22_Choice_2_Taken;
+	public bool R23_Choice_1_Taken, R23_Choice_2_Taken;
+	public bool R24_Choice_1_Taken, R24_Choice_2_Taken;
+	public bool R25_Choice_1_Taken, R25_Choice_2_Taken;
+	public bool R26_Choice_1_Taken, R26_Choice_2_Taken;
+	public bool R27_Choice_1_Taken, R27_Choice_2_Taken;
+	public bool R28_Choice_1_Taken, R28_Choice_2_Taken;
+	public bool R29_Choice_1_Taken, R29_Choice_2_Taken;
+	public bool R30_Choice_1_Taken, R30_Choice_2_Taken;
+
 	// Increment Booleans
 	private bool R1_Choice_Made;
 	private bool R2_Choice_Made;
@@ -55,20 +67,39 @@ public class Choice_Tracker : MonoBehaviour {
 	private bool R19_Choice_Made;
 	private bool R20_Choice_Made;
 
+	private bool R21_Choice_Made;
+	private bool R22_Choice_Made;
+	private bool R23_Choice_Made;
+	private bool R24_Choice_Made;
+	private bool R25_Choice_Made;
+	private bool R26_Choice_Made;
+	private bool R27_Choice_Made;
+	private bool R28_Choice_Made;
+	private bool R29_Choice_Made;
+	private bool R30_Choice_Made;
+
 	private Text choiceText, room1ChoiceText, room2ChoiceText, room3ChoiceText, room4ChoiceText, room5ChoiceText, room6ChoiceText, room7ChoiceText, room8ChoiceText, room9ChoiceText, room10ChoiceText;
 	private Text room11ChoiceText, room12ChoiceText, room13ChoiceText, room14ChoiceText, room15ChoiceText, room16ChoiceText, room17ChoiceText, room18ChoiceText, room19ChoiceText, room20ChoiceText;
-	private Text redChosenText, blueChosenText, greenChosenText, yellowChosenText, orangeChosenText;
+	private Text room21ChoiceText, room22ChoiceText, room23ChoiceText, room24ChoiceText, room25ChoiceText, room26ChoiceText, room27ChoiceText, room28ChoiceText, room29ChoiceText, room30ChoiceText;
+
+	private Text redChosenText, blueChosenText, greenChosenText, yellowChosenText, orangeChosenText, magentaChosenText, cyanChosenText;
 
 	private Text yourStatsTitle,coloursChosenTitle,mostChosenTitle, mostChosenText, routeChosenTitle, routeChosenText, colourPathChosenTitle, colourPathChosenText;
-	private int redChosen, blueChosen, greenChosen, yellowChosen,orangeChosen;
+	private int redChosen, blueChosen, greenChosen, yellowChosen,orangeChosen, magentaChosen, cyanChosen;
+
 	private int leftChosen, rightChosen;
 	private int redLeftChosen, redRightChosen;
 	private int blueLeftChosen, blueRightChosen;
 	private int greenLeftChosen, greenRightChosen;
 	private int yellowLeftChosen, yellowRightChosen;
 	private int orangeLeftChosen, orangeRightChosen;
+	private int magentaLeftChosen, magentaRightChosen;
+	private int cyanLeftChosen, cyanRightChosen;
+
 	public GameObject statsGroup;
-	private Color color_orange = new Color(265f,155f,0f);
+	private Color color_orange = new Color(255f,155f,0f);
+	private Color color_magenta = new Color (255f, 0f, 255f);
+	private Color color_cyan = new Color(0f, 255f,255f);
 
 	// Use this for initialization
 	void Start () {
@@ -135,6 +166,37 @@ public class Choice_Tracker : MonoBehaviour {
 		R20_Choice_1_Taken = false;
 		R20_Choice_2_Taken = false;
 
+		// Room 21
+		R21_Choice_1_Taken = false;
+		R21_Choice_2_Taken = false;
+		// Room 22
+		R22_Choice_1_Taken = false;
+		R22_Choice_2_Taken = false;
+		// Room 23
+		R23_Choice_1_Taken = false;
+		R23_Choice_2_Taken = false;
+		// Room 24
+		R24_Choice_1_Taken = false;
+		R24_Choice_2_Taken = false;
+		// Room 25
+		R25_Choice_1_Taken = false;
+		R25_Choice_2_Taken = false;
+		// Room 26
+		R26_Choice_1_Taken = false;
+		R26_Choice_2_Taken = false;
+		// Room 27
+		R27_Choice_1_Taken = false;
+		R27_Choice_2_Taken = false;
+		// Room 28
+		R28_Choice_1_Taken = false;
+		R28_Choice_2_Taken = false;
+		// Room 29
+		R29_Choice_1_Taken = false;
+		R29_Choice_2_Taken = false;
+		// Room 30
+		R30_Choice_1_Taken = false;
+		R30_Choice_2_Taken = false;
+
 		R1_Choice_Made = false;
 		R2_Choice_Made = false;
 		R3_Choice_Made = false;
@@ -156,6 +218,17 @@ public class Choice_Tracker : MonoBehaviour {
 		R18_Choice_Made = false;
 		R19_Choice_Made = false;
 		R20_Choice_Made = false;
+
+		R21_Choice_Made = false;
+		R22_Choice_Made = false;
+		R23_Choice_Made = false;
+		R24_Choice_Made = false;
+		R25_Choice_Made = false;
+		R26_Choice_Made = false;
+		R27_Choice_Made = false;
+		R28_Choice_Made = false;
+		R29_Choice_Made = false;
+		R30_Choice_Made = false;
 
 		// Text Update
 		room1ChoiceText = GameObject.Find("Room 1 Choice Text").GetComponent<Text>();
@@ -181,6 +254,18 @@ public class Choice_Tracker : MonoBehaviour {
 		room19ChoiceText = GameObject.Find("Room 19 Choice Text").GetComponent<Text>();
 		room20ChoiceText = GameObject.Find("Room 20 Choice Text").GetComponent<Text>();
 
+		// Text Update - Rooms 21 - 30
+		room21ChoiceText = GameObject.Find("Room 21 Choice Text").GetComponent<Text>();
+		room22ChoiceText = GameObject.Find("Room 22 Choice Text").GetComponent<Text>();
+		room23ChoiceText = GameObject.Find("Room 23 Choice Text").GetComponent<Text>();
+		room24ChoiceText = GameObject.Find("Room 24 Choice Text").GetComponent<Text>();
+		room25ChoiceText = GameObject.Find("Room 25 Choice Text").GetComponent<Text>();
+		room26ChoiceText = GameObject.Find("Room 26 Choice Text").GetComponent<Text>();
+		room27ChoiceText = GameObject.Find("Room 27 Choice Text").GetComponent<Text>();
+		room28ChoiceText = GameObject.Find("Room 28 Choice Text").GetComponent<Text>();
+		room29ChoiceText = GameObject.Find("Room 29 Choice Text").GetComponent<Text>();
+		room30ChoiceText = GameObject.Find("Room 30 Choice Text").GetComponent<Text>();
+
 		// Stats Main Group
 		statsGroup = GameObject.Find("StatsGroup");
 
@@ -197,6 +282,9 @@ public class Choice_Tracker : MonoBehaviour {
 		greenChosenText = GameObject.Find("Green_Chosen_Text").GetComponent<Text>();
 		yellowChosenText = GameObject.Find("Yellow_Chosen_Text").GetComponent<Text>();
 		orangeChosenText = GameObject.Find("Orange_Chosen_Text").GetComponent<Text>();
+		magentaChosenText = GameObject.Find ("Magenta_Chosen_Text").GetComponent<Text> ();
+		cyanChosenText = GameObject.Find ("Cyan_Chosen_Text").GetComponent<Text> ();
+
 		mostChosenText = GameObject.Find("Most_Chosen_Text").GetComponent<Text>();
 		routeChosenText = GameObject.Find ("Most_Chosen_Route_Text").GetComponent<Text> ();
 		colourPathChosenText = GameObject.Find ("Colour_Path_Chosen_Text").GetComponent<Text> ();
@@ -206,6 +294,9 @@ public class Choice_Tracker : MonoBehaviour {
 		greenChosen = 0;
 		yellowChosen = 0;
 		orangeChosen = 0;
+		magentaChosen = 0;
+		cyanChosen = 0;
+
 		leftChosen = 0;
 		rightChosen = 0;
 
@@ -220,6 +311,10 @@ public class Choice_Tracker : MonoBehaviour {
 		yellowRightChosen = 0;
 		orangeLeftChosen = 0;
 		orangeRightChosen = 0;
+		magentaLeftChosen = 0;
+		magentaRightChosen = 0;
+		cyanLeftChosen = 0;
+		cyanRightChosen = 0;
 
 		StatsOff ();
 		Debug.Log ("Path :" + Application.dataPath);
@@ -240,11 +335,13 @@ public class Choice_Tracker : MonoBehaviour {
 		colourPathChosenTitle.text = "COLOUR PATH ROUTE";
 
 		// Colours
-		redChosenText.text = "RED COLOURS CHOSEN - " + redChosen + " / 6";
-		blueChosenText.text = "BLUE COLOURS CHOSEN - " + blueChosen + " / 9";
-		greenChosenText.text = "GREEN COLOURS CHOSEN - " + greenChosen + " / 9";
-		yellowChosenText.text = "YELLOW COLOURS CHOSEN - " + yellowChosen + " / 6";
-		orangeChosenText.text = "ORANGE COLOURS CHOSEN - " + orangeChosen + " / 6";
+		redChosenText.text = "RED COLOURS CHOSEN - " + redChosen + " / 14";
+		blueChosenText.text = "BLUE COLOURS CHOSEN - " + blueChosen + " / 14";
+		greenChosenText.text = "GREEN COLOURS CHOSEN - " + greenChosen + " / 14";
+		yellowChosenText.text = "YELLOW COLOURS CHOSEN - " + yellowChosen + " / 14";
+		orangeChosenText.text = "ORANGE COLOURS CHOSEN - " + orangeChosen + " / 14";
+		magentaChosenText.text = "MAGENTA COLOURS CHOSEN - " + magentaChosen + " / 14";
+		cyanChosenText.text = "CYAN COLOURS CHOSEN - " + cyanChosen + " / 14";
 
 		// Most Chosen Route
 		routeChosenText.text = "LEFT ROUTE CHOSEN: " + leftChosen + " TIMES\n" + "RIGHT ROUTE CHOSEN: " + rightChosen + " TIMES";
@@ -254,48 +351,67 @@ public class Choice_Tracker : MonoBehaviour {
 			"BLUE ON LEFT CHOSEN: " + blueLeftChosen + "\n" + "BLUE ON RIGHT CHOSEN: " + blueRightChosen + "\n" +
 			"GREEN ON LEFT CHOSEN: " + greenLeftChosen + "\n" + "GREEN ON RIGHT CHOSEN: " + greenRightChosen + "\n" +
 			"YELLOW ON LEFT CHOSEN: " + yellowLeftChosen + "\n" + "YELLOW ON RIGHT CHOSEN: " + yellowRightChosen + "\n" +
-			"ORANGE ON LEFT CHOSEN: " + orangeLeftChosen + "\n" + "ORANGE ON RIGHT CHOSEN: " + orangeRightChosen + "\n";
+			"ORANGE ON LEFT CHOSEN: " + orangeLeftChosen + "\n" + "ORANGE ON RIGHT CHOSEN: " + orangeRightChosen + "\n" +
+			"MAGENTA ON LEFT CHOSEN: " + magentaLeftChosen + "\n" + "MAGENTA ON RIGHT CHOSEN: " + magentaRightChosen + "\n" +
+			"CYAN ON LEFT CHOSEN: " + cyanLeftChosen + "\n" + "CYAN ON RIGHT CHOSEN: " + cyanRightChosen + "\n";
 
 
 		// Most Chosen Colour Text
-		int[] foo = {redChosen,blueChosen,greenChosen,yellowChosen,orangeChosen};
+		int[] foo = {redChosen,blueChosen,greenChosen,yellowChosen,orangeChosen, magentaChosen, cyanChosen};
 		int most = (Mathf.Max (foo));
 
-		if (redChosen == most && blueChosen == most || greenChosen == most || yellowChosen == most || orangeChosen == most) {
+		if (redChosen == most && blueChosen == most || greenChosen == most || yellowChosen == most || orangeChosen == most || magentaChosen == most || cyanChosen == most) {
 			mostChosenText.text = "NO SINGLE COLOUR CHOSEN MOST";
 			mostChosenText.color = Color.white;
 		}
-		if (redChosen == most || blueChosen == most && greenChosen == most || yellowChosen == most || orangeChosen == most) {
+		if (redChosen == most || blueChosen == most && greenChosen == most || yellowChosen == most || orangeChosen == most || magentaChosen == most || cyanChosen == most) {
 			mostChosenText.text = "NO SINGLE COLOUR CHOSEN MOST";
 			mostChosenText.color = Color.white;
 		}
-		if (redChosen == most || blueChosen == most || greenChosen == most && yellowChosen == most || orangeChosen == most) {
+		if (redChosen == most || blueChosen == most || greenChosen == most && yellowChosen == most || orangeChosen == most || magentaChosen == most || cyanChosen == most) {
 			mostChosenText.text = "NO SINGLE COLOUR CHOSEN MOST";
 			mostChosenText.color = Color.white;
 		}
-		if (redChosen == most || blueChosen == most || greenChosen == most || yellowChosen == most && orangeChosen == most) {
+		if (redChosen == most || blueChosen == most || greenChosen == most || yellowChosen == most && orangeChosen == most || magentaChosen == most || cyanChosen == most) {
 			mostChosenText.text = "NO SINGLE COLOUR CHOSEN MOST";
 			mostChosenText.color = Color.white;
 		}
-		if (redChosen == most && !(blueChosen == most) && !(greenChosen == most) && !(yellowChosen == most) && !(orangeChosen == most)) {
+		if (redChosen == most || blueChosen == most || greenChosen == most || yellowChosen == most || orangeChosen == most && magentaChosen == most || cyanChosen == most) {
+			mostChosenText.text = "NO SINGLE COLOUR CHOSEN MOST";
+			mostChosenText.color = Color.white;
+		}
+		if (redChosen == most || blueChosen == most || greenChosen == most || yellowChosen == most && orangeChosen == most || magentaChosen == most && cyanChosen == most) {
+			mostChosenText.text = "NO SINGLE COLOUR CHOSEN MOST";
+			mostChosenText.color = Color.white;
+		}
+
+		if (redChosen == most && !(blueChosen == most) && !(greenChosen == most) && !(yellowChosen == most) && !(orangeChosen == most) && !(magentaChosen == most) && !(cyanChosen == most)) {
 			mostChosenText.text = "RED COLOUR CHOSEN MOST - " + redChosen;
 			mostChosenText.color = Color.red;
 		} 
-		if (!(redChosen == most) && blueChosen == most && !(greenChosen == most) && !(yellowChosen == most) && !(orangeChosen == most)) {
+		if (!(redChosen == most) && blueChosen == most && !(greenChosen == most) && !(yellowChosen == most) && !(orangeChosen == most) && !(magentaChosen == most) && !(cyanChosen == most)) {
 			mostChosenText.text = "BLUE COLOUR CHOSEN MOST - " + blueChosen;
 			mostChosenText.color = Color.blue;
 		} 
-		if (!(redChosen == most) && !(blueChosen == most) && greenChosen == most && !(yellowChosen == most) && !(orangeChosen == most)) {
+		if (!(redChosen == most) && !(blueChosen == most) && greenChosen == most && !(yellowChosen == most) && !(orangeChosen == most) && !(magentaChosen == most) && !(cyanChosen == most)) {
 			mostChosenText.text = "GREEN COLOUR CHOSEN MOST - " + greenChosen;
 			mostChosenText.color = Color.green;
 		} 
-		if (!(redChosen == most) && !(blueChosen == most) && !(greenChosen == most) && yellowChosen == most && !(orangeChosen == most)) {
+		if (!(redChosen == most) && !(blueChosen == most) && !(greenChosen == most) && yellowChosen == most && !(orangeChosen == most) && !(magentaChosen == most) && !(cyanChosen == most)) {
 			mostChosenText.text = "YELLOW COLOUR CHOSEN MOST - " + yellowChosen;
 			mostChosenText.color = Color.yellow;
 		} 
-		if (!(redChosen == most) && !(blueChosen == most) && !(greenChosen == most) && !(yellowChosen == most) && orangeChosen == most) {
+		if (!(redChosen == most) && !(blueChosen == most) && !(greenChosen == most) && !(yellowChosen == most) && (orangeChosen == most) && !(magentaChosen == most) && !(cyanChosen == most)) {
 			mostChosenText.text = "ORANGE COLOUR CHOSEN MOST - " + orangeChosen;
 			mostChosenText.color = color_orange;
+		} 
+		if (!(redChosen == most) && !(blueChosen == most) && !(greenChosen == most) && !(yellowChosen == most) && !(orangeChosen == most) && (magentaChosen == most) && !(cyanChosen == most)) {
+			mostChosenText.text = "MAGENTA COLOUR CHOSEN MOST - " + magentaChosen;
+			mostChosenText.color = color_magenta;
+		} 
+		if (!(redChosen == most) && !(blueChosen == most) && !(greenChosen == most) && !(yellowChosen == most) && !(orangeChosen == most) && !(magentaChosen == most) && (cyanChosen == most)) {
+			mostChosenText.text = "CYAN COLOUR CHOSEN MOST - " + cyanChosen;
+			mostChosenText.color = color_cyan;
 		} 
 	}
 
@@ -315,6 +431,8 @@ public class Choice_Tracker : MonoBehaviour {
 		greenChosenText.text = "";
 		yellowChosenText.text = "";
 		orangeChosenText.text = "";
+		magentaChosenText.text = "";
+		cyanChosenText.text = "";
 
 		// Most Chosen Colour Text
 		mostChosenText.text = "";
@@ -327,8 +445,6 @@ public class Choice_Tracker : MonoBehaviour {
 	}
 
 	public void writeToFile(){
-		//string path = @"C:\Users\Patrick\Desktop\MyTest.txt";
-		//string path = @"C:\Desktop\MyTest2.txt";
 		string path = Application.dataPath.ToString() + @"\Colour Survey Results.txt";
 		// This text is added only once to the file.
 		if(!File.Exists(path)){
@@ -336,11 +452,13 @@ public class Choice_Tracker : MonoBehaviour {
 			// COLOUR RESULTS
 			string mainTitleText = "YOUR RESULTS" + Environment.NewLine;
 			string titleText = Environment.NewLine + "COLOURS CHOSEN: " + Environment.NewLine;
-			string redColourText = "RED COLOURS CHOSEN " + redChosen + " / 6" + Environment.NewLine;
-			string blueColourText = "BLUE COLOURS CHOSEN " + blueChosen + " / 9" + Environment.NewLine;
-			string greenColourText = "GREEN COLOURS CHOSEN " + greenChosen + " / 9" + Environment.NewLine;
-			string yellowColourText = "YELLOW COLOURS CHOSEN " + yellowChosen + " / 6" + Environment.NewLine;
-			string orangeColourText = "ORANGE COLOURS CHOSEN " + orangeChosen + " / 6" + Environment.NewLine;
+			string redColourText = "RED COLOURS CHOSEN " + redChosen + " / 14" + Environment.NewLine;
+			string blueColourText = "BLUE COLOURS CHOSEN " + blueChosen + " / 14" + Environment.NewLine;
+			string greenColourText = "GREEN COLOURS CHOSEN " + greenChosen + " / 14" + Environment.NewLine;
+			string yellowColourText = "YELLOW COLOURS CHOSEN " + yellowChosen + " / 14" + Environment.NewLine;
+			string orangeColourText = "ORANGE COLOURS CHOSEN " + orangeChosen + " / 14" + Environment.NewLine;
+			string magentaColourText = "MAGENTA COLOURS CHOSEN " + magentaChosen + " / 14" + Environment.NewLine;
+			string cyanColourText = "CYAN COLOURS CHOSEN " + cyanChosen + " / 14" + Environment.NewLine;
 
 			// MOST CHOSEN COLOUR
 			string secondTitleText = Environment.NewLine + "MOST CHOSEN COLOUR" + Environment.NewLine;
@@ -353,25 +471,28 @@ public class Choice_Tracker : MonoBehaviour {
 			// COLOUR PATH CHOSEN
 			string colourPathChosenStringTitle = Environment.NewLine + "COLOUR PATH CHOICES: " + Environment.NewLine;
 			string colourPathChosenStringText = "RED ON LEFT CHOSEN: " + redLeftChosen + Environment.NewLine + "RED ON RIGHT CHOSEN: " + redRightChosen + Environment.NewLine +
-			                              "BLUE ON LEFT CHOSEN: " + blueLeftChosen + Environment.NewLine + "BLUE ON RIGHT CHOSEN: " + blueRightChosen + Environment.NewLine +
-			                              "GREEN ON LEFT CHOSEN: " + greenLeftChosen + Environment.NewLine + "GREEN ON RIGHT CHOSEN: " + greenRightChosen + Environment.NewLine +
-			                              "YELLOW ON LEFT CHOSEN: " + yellowLeftChosen + Environment.NewLine + "YELLOW ON RIGHT CHOSEN: " + yellowRightChosen + Environment.NewLine +
-			                              "ORANGE ON LEFT CHOSEN: " + orangeLeftChosen + Environment.NewLine + "ORANGE ON RIGHT CHOSEN: " + orangeRightChosen + Environment.NewLine;
+			                                    "BLUE ON LEFT CHOSEN: " + blueLeftChosen + Environment.NewLine + "BLUE ON RIGHT CHOSEN: " + blueRightChosen + Environment.NewLine +
+			                                    "GREEN ON LEFT CHOSEN: " + greenLeftChosen + Environment.NewLine + "GREEN ON RIGHT CHOSEN: " + greenRightChosen + Environment.NewLine +
+			                                    "YELLOW ON LEFT CHOSEN: " + yellowLeftChosen + Environment.NewLine + "YELLOW ON RIGHT CHOSEN: " + yellowRightChosen + Environment.NewLine +
+			                                    "ORANGE ON LEFT CHOSEN: " + orangeLeftChosen + Environment.NewLine + "ORANGE ON RIGHT CHOSEN: " + orangeRightChosen + Environment.NewLine +
+			                                    "MAGENTA ON LEFT CHOSEN: " + magentaLeftChosen + Environment.NewLine + "MAGENTA ON RIGHT CHOSEN: " + magentaRightChosen + Environment.NewLine +
+			                                    "CYAN ON LEFT CHOSEN: " + cyanLeftChosen + Environment.NewLine + "CYAN ON RIGHT CHOSEN: " + cyanRightChosen + Environment.NewLine;
+
+			string roomPath = Environment.NewLine + "ROOM PATH" + Environment.NewLine + room1ChoiceText.text + Environment.NewLine + room2ChoiceText.text + Environment.NewLine + room3ChoiceText.text +
+			                  Environment.NewLine + room4ChoiceText.text + Environment.NewLine + room5ChoiceText.text + Environment.NewLine + room6ChoiceText.text + Environment.NewLine + room7ChoiceText.text +
+			                  Environment.NewLine + room8ChoiceText.text + Environment.NewLine + room9ChoiceText.text + Environment.NewLine + room10ChoiceText.text + Environment.NewLine + room11ChoiceText.text +
+			                  Environment.NewLine + room12ChoiceText.text + Environment.NewLine + room13ChoiceText.text + Environment.NewLine + room14ChoiceText.text + Environment.NewLine + room15ChoiceText.text +
+			                  Environment.NewLine + room16ChoiceText.text + Environment.NewLine + room17ChoiceText.text + Environment.NewLine + room18ChoiceText.text + Environment.NewLine + room19ChoiceText.text +
+			                  Environment.NewLine + room20ChoiceText.text + Environment.NewLine + room21ChoiceText.text + Environment.NewLine + room22ChoiceText.text + Environment.NewLine + room23ChoiceText.text +
+			                  Environment.NewLine + room24ChoiceText.text + Environment.NewLine + room25ChoiceText.text + Environment.NewLine + room26ChoiceText.text + Environment.NewLine + room27ChoiceText.text +
+			                  Environment.NewLine + room28ChoiceText.text + Environment.NewLine + room29ChoiceText.text + Environment.NewLine + room30ChoiceText.text + Environment.NewLine;
 
 			string wholeText = mainTitleText + titleText + redColourText + blueColourText + greenColourText +
-			                   yellowColourText + orangeColourText + secondTitleText + mostChosenColour + routeChosenMost +
-			                   mostChosenStringText + colourPathChosenStringTitle + colourPathChosenStringText;
+			                   yellowColourText + orangeColourText + magentaColourText + cyanColourText + secondTitleText + mostChosenColour + routeChosenMost +
+			                   mostChosenStringText + colourPathChosenStringTitle + colourPathChosenStringText + roomPath;
 			
 			File.WriteAllText (path, wholeText);
 		}
-		// This text is always added, making the file longer over time.
-		// If it is not deleted.
-		//string appendText = "EXTRA RESULTS: " + Environment.NewLine;
-		//File.AppendAllText (path, appendText);
-
-		// Open the file to read from.
-		//string readText = File.ReadAllText(path);
-		//Console.WriteLine(readText);
 	}
 
 
@@ -396,6 +517,16 @@ public class Choice_Tracker : MonoBehaviour {
 		room18ChoiceText.gameObject.SetActive (true);
 		room19ChoiceText.gameObject.SetActive (true);
 		room20ChoiceText.gameObject.SetActive (true);
+		room21ChoiceText.gameObject.SetActive (true);
+		room22ChoiceText.gameObject.SetActive (true);
+		room23ChoiceText.gameObject.SetActive (true);
+		room24ChoiceText.gameObject.SetActive (true);
+		room25ChoiceText.gameObject.SetActive (true);
+		room26ChoiceText.gameObject.SetActive (true);
+		room27ChoiceText.gameObject.SetActive (true);
+		room28ChoiceText.gameObject.SetActive (true);
+		room29ChoiceText.gameObject.SetActive (true);
+		room30ChoiceText.gameObject.SetActive (true);
 
 	}
 
@@ -420,6 +551,16 @@ public class Choice_Tracker : MonoBehaviour {
 		room18ChoiceText.gameObject.SetActive (false);
 		room19ChoiceText.gameObject.SetActive (false);
 		room20ChoiceText.gameObject.SetActive (false);
+		room21ChoiceText.gameObject.SetActive (false);
+		room22ChoiceText.gameObject.SetActive (false);
+		room23ChoiceText.gameObject.SetActive (false);
+		room24ChoiceText.gameObject.SetActive (false);
+		room25ChoiceText.gameObject.SetActive (false);
+		room26ChoiceText.gameObject.SetActive (false);
+		room27ChoiceText.gameObject.SetActive (false);
+		room28ChoiceText.gameObject.SetActive (false);
+		room29ChoiceText.gameObject.SetActive (false);
+		room30ChoiceText.gameObject.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -449,9 +590,9 @@ public class Choice_Tracker : MonoBehaviour {
 		}
 		// ROOM 3 (Blue and Red 2)
 		if (R3_Choice_1_Taken && !R3_Choice_2_Taken && !R3_Choice_Made) {
-			room3ChoiceText.text = "ROOM 3 - CHOSE BLUE";
-			blueChosen += 1;
-			blueRightChosen += 1;
+			room3ChoiceText.text = "ROOM 3 - CHOSE GREEN";
+			greenChosen += 1;
+			greenRightChosen += 1;
 			R3_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R3_Choice_1_Taken && R3_Choice_2_Taken && !R3_Choice_Made) {
@@ -463,9 +604,9 @@ public class Choice_Tracker : MonoBehaviour {
 		}
 		// ROOM 4 (Blue and Red Final)
 		if (R4_Choice_1_Taken && !R4_Choice_2_Taken && !R4_Choice_Made) {
-			room4ChoiceText.text = "ROOM 4 - CHOSE BLUE";
-			blueChosen += 1;
-			blueRightChosen += 1;
+			room4ChoiceText.text = "ROOM 4 - CHOSE YELLOW";
+			yellowChosen += 1;
+			yellowRightChosen += 1;
 			R4_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R4_Choice_1_Taken && R4_Choice_2_Taken && !R4_Choice_Made) {
@@ -477,71 +618,71 @@ public class Choice_Tracker : MonoBehaviour {
 		}
 		// ROOM 5 (Green and Blue)
 		if (R5_Choice_1_Taken && !R5_Choice_2_Taken && !R5_Choice_Made) {
-			room5ChoiceText.text = "ROOM 5 - CHOSE GREEN";
-			greenChosen += 1;
-			greenRightChosen += 1;
+			room5ChoiceText.text = "ROOM 5 - CHOSE ORANGE";
+			orangeChosen += 1;
+			orangeRightChosen += 1;
 			R5_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R5_Choice_1_Taken && R5_Choice_2_Taken && !R5_Choice_Made) {
-			room5ChoiceText.text = "ROOM 5 - CHOSE BLUE";
-			blueChosen += 1;
-			blueLeftChosen += 1;
+			room5ChoiceText.text = "ROOM 5 - CHOSE RED";
+			redChosen += 1;
+			redLeftChosen += 1;
 			R5_Choice_Made = true;
 			leftChosen += 1;
 		}
 		// ROOM 6 (Green and Blue 2)
 		if (R6_Choice_1_Taken && !R6_Choice_2_Taken && !R6_Choice_Made) {
-			room6ChoiceText.text = "ROOM 6 - CHOSE GREEN";
-			greenChosen += 1;
-			greenRightChosen += 1;
+			room6ChoiceText.text = "ROOM 6 - CHOSE MAGENTA";
+			magentaChosen += 1;
+			magentaRightChosen += 1;
 			R6_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R6_Choice_1_Taken && R6_Choice_2_Taken && !R6_Choice_Made) {
-			room6ChoiceText.text = "ROOM 6 - CHOSE BLUE";
-			blueChosen += 1;
-			blueLeftChosen += 1;
+			room6ChoiceText.text = "ROOM 6 - CHOSE RED";
+			redChosen += 1;
+			redLeftChosen += 1;
 			R6_Choice_Made = true;
 			leftChosen += 1;
 		}
 		// ROOM 7 (Green and Blue Final)
 		if (R7_Choice_1_Taken && !R7_Choice_2_Taken && !R7_Choice_Made) {
-			room7ChoiceText.text = "ROOM 7 - CHOSE GREEN";
-			greenChosen += 1;
-			greenRightChosen += 1;
+			room7ChoiceText.text = "ROOM 7 - CHOSE CYAN";
+			cyanChosen += 1;
+			cyanRightChosen += 1;
 			R7_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R7_Choice_1_Taken && R7_Choice_2_Taken && !R7_Choice_Made) {
-			room7ChoiceText.text = "ROOM 7 - CHOSE BLUE";
-			blueChosen += 1;
-			blueLeftChosen += 1;
+			room7ChoiceText.text = "ROOM 7 - CHOSE RED";
+			redChosen += 1;
+			redLeftChosen += 1;
 			R7_Choice_Made = true;
 			leftChosen += 1;
 		}
 		// ROOM 8 (Yellow and Green)
 		if (R8_Choice_1_Taken && !R8_Choice_2_Taken && !R8_Choice_Made) {
-			room8ChoiceText.text = "ROOM 8 - CHOSE YELLOW";
-			yellowChosen += 1;
-			yellowRightChosen += 1;
+			room8ChoiceText.text = "ROOM 8 - CHOSE RED";
+			redChosen += 1;
+			redRightChosen += 1;
 			R8_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R8_Choice_1_Taken && R8_Choice_2_Taken && !R8_Choice_Made) {
-			room8ChoiceText.text = "ROOM 8 - CHOSE GREEN";
-			greenChosen += 1;
-			greenLeftChosen += 1;
+			room8ChoiceText.text = "ROOM 8 - CHOSE BLUE";
+			blueChosen += 1;
+			blueLeftChosen += 1;
 			R8_Choice_Made = true;
 			leftChosen += 1;
 		}
 		// ROOM 9 (Yellow and Green 2)
 		if (R9_Choice_1_Taken && !R9_Choice_2_Taken && !R9_Choice_Made) {
-			room9ChoiceText.text = "ROOM 9 - CHOSE YELLOW";
-			yellowChosen += 1;
-			yellowRightChosen += 1;
+			room9ChoiceText.text = "ROOM 9 - CHOSE GREEN";
+			greenChosen += 1;
+			greenRightChosen += 1;
 			R9_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R9_Choice_1_Taken && R9_Choice_2_Taken && !R9_Choice_Made) {
-			room9ChoiceText.text = "ROOM 9 - CHOSE GREEN";
-			greenChosen += 1;
-			greenLeftChosen += 1;
+			room9ChoiceText.text = "ROOM 9 - CHOSE BLUE";
+			blueChosen += 1;
+			blueLeftChosen += 1;
 			R9_Choice_Made = true;
 			leftChosen += 1;
 		}
@@ -553,66 +694,66 @@ public class Choice_Tracker : MonoBehaviour {
 			R10_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R10_Choice_1_Taken && R10_Choice_2_Taken && !R10_Choice_Made) {
-			room10ChoiceText.text = "ROOM 10 - CHOSE GREEN";
-			greenChosen += 1;
-			greenLeftChosen += 1;
+			room10ChoiceText.text = "ROOM 10 - CHOSE BLUE";
+			blueChosen += 1;
+			blueLeftChosen += 1;
 			R10_Choice_Made = true;
 			leftChosen += 1;
 		}
 
 		// ROOM 11 (RED AND YELLOW)
 		if (R11_Choice_1_Taken && !R11_Choice_2_Taken && !R11_Choice_Made) {
-			room11ChoiceText.text = "ROOM 11 - CHOSE RED";
-			redChosen += 1;
-			redRightChosen += 1;
+			room11ChoiceText.text = "ROOM 11 - CHOSE ORANGE";
+			orangeChosen += 1;
+			orangeRightChosen += 1;
 			R11_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R11_Choice_1_Taken && R11_Choice_2_Taken && !R11_Choice_Made) {
-			room11ChoiceText.text = "ROOM 11 - CHOSE YELLOW";
-			yellowChosen += 1;
-			yellowLeftChosen += 1;
+			room11ChoiceText.text = "ROOM 11 - CHOSE BLUE";
+			blueChosen += 1;
+			blueLeftChosen += 1;
 			R11_Choice_Made = true;
 			leftChosen += 1;
 		}
 		// ROOM 12 (RED AND YELLOW 2)
 		if (R12_Choice_1_Taken && !R12_Choice_2_Taken && !R12_Choice_Made) {
-			room12ChoiceText.text = "ROOM 12 - CHOSE RED";
-			redChosen += 1;
-			redRightChosen += 1;
+			room12ChoiceText.text = "ROOM 12 - CHOSE MAGENTA";
+			magentaChosen += 1;
+			magentaRightChosen += 1;
 			R12_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R12_Choice_1_Taken && R12_Choice_2_Taken && !R12_Choice_Made) {
-			room12ChoiceText.text = "ROOM 12 - CHOSE YELLOW";
-			yellowChosen += 1;
-			yellowLeftChosen += 1;
+			room12ChoiceText.text = "ROOM 12 - CHOSE BLUE";
+			blueChosen += 1;
+			blueLeftChosen += 1;
 			R12_Choice_Made = true;
 			leftChosen += 1;
 		}
 		// ROOM 13 (RED AND YELLOW FINAL)
 		if (R13_Choice_1_Taken && !R13_Choice_2_Taken && !R13_Choice_Made) {
-			room13ChoiceText.text = "ROOM 13 - CHOSE RED";
-			redChosen += 1;
-			redRightChosen += 1;
+			room13ChoiceText.text = "ROOM 13 - CHOSE CYAN";
+			cyanChosen += 1;
+			cyanRightChosen += 1;
 			R13_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R13_Choice_1_Taken && R13_Choice_2_Taken && !R13_Choice_Made) {
-			room13ChoiceText.text = "ROOM 13 - CHOSE YELLOW";
-			yellowChosen += 1;
-			yellowLeftChosen += 1;
+			room13ChoiceText.text = "ROOM 13 - CHOSE BLUE";
+			blueChosen += 1;
+			blueLeftChosen += 1;
 			R13_Choice_Made = true;
 			leftChosen += 1;
 		}
 		// ROOM 14 (BLUE AND ORANGE)
 		if (R14_Choice_1_Taken && !R14_Choice_2_Taken && !R14_Choice_Made) {
-			room14ChoiceText.text = "ROOM 14 - CHOSE BLUE";
-			blueChosen += 1;
-			blueRightChosen += 1;
+			room14ChoiceText.text = "ROOM 14 - CHOSE RED";
+			redChosen += 1;
+			redRightChosen += 1;
 			R14_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R14_Choice_1_Taken && R14_Choice_2_Taken && !R14_Choice_Made) {
-			room14ChoiceText.text = "ROOM 14 - CHOSE ORANGE";
-			orangeChosen += 1;
-			orangeLeftChosen += 1;
+			room14ChoiceText.text = "ROOM 14 - CHOSE GREEN";
+			greenChosen += 1;
+			greenLeftChosen += 1;
 			R14_Choice_Made = true;
 			leftChosen += 1;
 		}
@@ -624,23 +765,23 @@ public class Choice_Tracker : MonoBehaviour {
 			R15_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R15_Choice_1_Taken && R15_Choice_2_Taken && !R15_Choice_Made) {
-			room15ChoiceText.text = "ROOM 15 - CHOSE ORANGE";
-			orangeChosen += 1;
-			orangeLeftChosen += 1;
+			room15ChoiceText.text = "ROOM 15 - CHOSE GREEN";
+			greenChosen += 1;
+			greenLeftChosen += 1;
 			R15_Choice_Made = true;
 			leftChosen += 1;
 		}
 		// ROOM 16 (BLUE AND ORANGE FINAL)
 		if (R16_Choice_1_Taken && !R16_Choice_2_Taken && !R16_Choice_Made) {
-			room16ChoiceText.text = "ROOM 16 - CHOSE BLUE";
-			blueChosen += 1;
-			blueRightChosen += 1;
+			room16ChoiceText.text = "ROOM 16 - CHOSE YELLOW";
+			yellowChosen += 1;
+			yellowRightChosen += 1;
 			R16_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R16_Choice_1_Taken && R16_Choice_2_Taken && !R16_Choice_Made) {
-			room16ChoiceText.text = "ROOM 16 - CHOSE ORANGE";
-			orangeChosen += 1;
-			orangeLeftChosen += 1;
+			room16ChoiceText.text = "ROOM 16 - CHOSE GREEN";
+			greenChosen += 1;
+			greenLeftChosen += 1;
 			R16_Choice_Made = true;
 			leftChosen += 1;
 		}
@@ -660,9 +801,9 @@ public class Choice_Tracker : MonoBehaviour {
 		}
 		// ROOM 18 (ORANGE AND GREEN 2)
 		if (R18_Choice_1_Taken && !R18_Choice_2_Taken && !R18_Choice_Made) {
-			room18ChoiceText.text = "ROOM 18 - CHOSE ORANGE";
-			orangeChosen += 1;
-			orangeRightChosen += 1;
+			room18ChoiceText.text = "ROOM 18 - CHOSE MAGENTA";
+			magentaChosen += 1;
+			magentaRightChosen += 1;
 			R18_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R18_Choice_1_Taken && R18_Choice_2_Taken && !R18_Choice_Made) {
@@ -674,9 +815,9 @@ public class Choice_Tracker : MonoBehaviour {
 		}
 		// ROOM 19 (ORANGE AND GREEN FINAL)
 		if (R19_Choice_1_Taken && !R19_Choice_2_Taken && !R19_Choice_Made) {
-			room19ChoiceText.text = "ROOM 19 - CHOSE ORANGE";
-			orangeChosen += 1;
-			orangeRightChosen += 1;
+			room19ChoiceText.text = "ROOM 19 - CHOSE CYAN";
+			cyanChosen += 1;
+			cyanRightChosen += 1;
 			R19_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R19_Choice_1_Taken && R19_Choice_2_Taken && !R19_Choice_Made) {
@@ -686,14 +827,159 @@ public class Choice_Tracker : MonoBehaviour {
 			R19_Choice_Made = true;
 			leftChosen += 1;
 		}
-		// ROOM 20 (BLANK)
+		// ROOM 20 (RED or GREEN)
 		if (R20_Choice_1_Taken && !R20_Choice_2_Taken && !R20_Choice_Made) {
-			room20ChoiceText.text = "ROOM 20 - CHOSE RIGHT";
+			room20ChoiceText.text = "ROOM 20 - CHOSE RED";
+			redChosen += 1;
+			redRightChosen += 1;
 			R20_Choice_Made = true;
 			rightChosen += 1;
 		} else if (!R20_Choice_1_Taken && R20_Choice_2_Taken && !R20_Choice_Made) {
-			room20ChoiceText.text = "ROOM 20 - CHOSE LEFT";
+			room20ChoiceText.text = "ROOM 20 - CHOSE YELLOW";
+			yellowChosen += 1;
+			yellowLeftChosen += 1;
 			R20_Choice_Made = true;
+			leftChosen += 1;
+		}
+
+		// ROOM 21 (RED AND YELLOW)
+		if (R21_Choice_1_Taken && !R21_Choice_2_Taken && !R21_Choice_Made) {
+			room21ChoiceText.text = "ROOM 21 - CHOSE BLUE";
+			blueChosen += 1;
+			blueRightChosen += 1;
+			R21_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R21_Choice_1_Taken && R21_Choice_2_Taken && !R21_Choice_Made) {
+			room21ChoiceText.text = "ROOM 21 - CHOSE YELLOW";
+			yellowChosen += 1;
+			yellowLeftChosen += 1;
+			R21_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 22 (RED AND YELLOW 2)
+		if (R22_Choice_1_Taken && !R22_Choice_2_Taken && !R22_Choice_Made) {
+			room22ChoiceText.text = "ROOM 22 - CHOSE GREEN";
+			greenChosen += 1;
+			greenRightChosen += 1;
+			R22_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R22_Choice_1_Taken && R22_Choice_2_Taken && !R22_Choice_Made) {
+			room22ChoiceText.text = "ROOM 22 - CHOSE YELLOW";
+			yellowChosen += 1;
+			yellowLeftChosen += 1;
+			R22_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 23 (RED AND YELLOW FINAL)
+		if (R23_Choice_1_Taken && !R23_Choice_2_Taken && !R23_Choice_Made) {
+			room23ChoiceText.text = "ROOM 23 - CHOSE ORANGE";
+			orangeChosen += 1;
+			orangeRightChosen += 1;
+			R23_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R23_Choice_1_Taken && R23_Choice_2_Taken && !R23_Choice_Made) {
+			room23ChoiceText.text = "ROOM 23 - CHOSE YELLOW";
+			yellowChosen += 1;
+			yellowLeftChosen += 1;
+			R23_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 24 (BLUE AND ORANGE)
+		if (R24_Choice_1_Taken && !R24_Choice_2_Taken && !R24_Choice_Made) {
+			room24ChoiceText.text = "ROOM 24 - CHOSE MAGENTA";
+			magentaChosen += 1;
+			magentaRightChosen += 1;
+			R24_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R24_Choice_1_Taken && R24_Choice_2_Taken && !R24_Choice_Made) {
+			room24ChoiceText.text = "ROOM 24 - CHOSE YELLOW";
+			yellowChosen += 1;
+			yellowLeftChosen += 1;
+			R24_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 25 (BLUE AND ORANGE 2)
+		if (R25_Choice_1_Taken && !R25_Choice_2_Taken && !R25_Choice_Made) {
+			room25ChoiceText.text = "ROOM 25 - CHOSE CYAN";
+			cyanChosen += 1;
+			cyanRightChosen += 1;
+			R25_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R25_Choice_1_Taken && R25_Choice_2_Taken && !R25_Choice_Made) {
+			room25ChoiceText.text = "ROOM 25 - CHOSE YELLOW";
+			yellowChosen += 1;
+			yellowLeftChosen += 1;
+			R25_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 26 (BLUE AND ORANGE FINAL)
+		if (R26_Choice_1_Taken && !R26_Choice_2_Taken && !R26_Choice_Made) {
+			room26ChoiceText.text = "ROOM 26 - CHOSE RED";
+			redChosen += 1;
+			redRightChosen += 1;
+			R26_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R26_Choice_1_Taken && R26_Choice_2_Taken && !R26_Choice_Made) {
+			room26ChoiceText.text = "ROOM 26 - CHOSE ORANGE";
+			orangeChosen += 1;
+			orangeLeftChosen += 1;
+			R26_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 27 (ORANGE AND GREEN)
+		if (R27_Choice_1_Taken && !R27_Choice_2_Taken && !R27_Choice_Made) {
+			room27ChoiceText.text = "ROOM 27 - CHOSE BLUE";
+			blueChosen += 1;
+			blueRightChosen += 1;
+			R27_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R27_Choice_1_Taken && R27_Choice_2_Taken && !R27_Choice_Made) {
+			room27ChoiceText.text = "ROOM 27 - CHOSE ORANGE";
+			orangeChosen += 1;
+			orangeLeftChosen += 1;
+			R27_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 28 (ORANGE AND GREEN 2)
+		if (R28_Choice_1_Taken && !R28_Choice_2_Taken && !R28_Choice_Made) {
+			room28ChoiceText.text = "ROOM 28 - CHOSE GREEN";
+			greenChosen += 1;
+			greenRightChosen += 1;
+			R28_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R28_Choice_1_Taken && R28_Choice_2_Taken && !R28_Choice_Made) {
+			room28ChoiceText.text = "ROOM 28 - CHOSE ORANGE";
+			orangeChosen += 1;
+			orangeLeftChosen += 1;
+			R28_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 19 (ORANGE AND GREEN FINAL)
+		if (R29_Choice_1_Taken && !R29_Choice_2_Taken && !R29_Choice_Made) {
+			room29ChoiceText.text = "ROOM 29 - CHOSE YELLOW";
+			yellowChosen += 1;
+			yellowRightChosen += 1;
+			R29_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R29_Choice_1_Taken && R29_Choice_2_Taken && !R29_Choice_Made) {
+			room29ChoiceText.text = "ROOM 29 - CHOSE ORANGE";
+			orangeChosen += 1;
+			orangeLeftChosen += 1;
+			R29_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 30 (RED or GREEN)
+		if (R30_Choice_1_Taken && !R30_Choice_2_Taken && !R30_Choice_Made) {
+			room30ChoiceText.text = "ROOM 30 - CHOSE MAGENTA";
+			magentaChosen += 1;
+			magentaRightChosen += 1;
+			R30_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R30_Choice_1_Taken && R30_Choice_2_Taken && !R30_Choice_Made) {
+			room30ChoiceText.text = "ROOM 30 - CHOSE ORANGE";
+			orangeChosen += 1;
+			orangeLeftChosen += 1;
+			R30_Choice_Made = true;
 			leftChosen += 1;
 		}
 
