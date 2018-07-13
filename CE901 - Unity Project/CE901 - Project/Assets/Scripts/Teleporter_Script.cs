@@ -162,6 +162,7 @@ public class Teleporter_Script : MonoBehaviour {
 	CanvasScript playerCS;
 	Camera_Control playerCC;
 	Choice_Tracker playerCT;
+	Pickup_Script playerPS;
 	GameObject btMainMenuButton;
 
 	Material teleMaterial_R1_1;
@@ -204,6 +205,7 @@ public class Teleporter_Script : MonoBehaviour {
 		playerCS = GameObject.Find ("Player").GetComponent<CanvasScript> ();
 		playerCT = GameObject.Find ("Player").GetComponent<Choice_Tracker> ();
 		playerCC = GameObject.Find ("Player").GetComponent<Camera_Control> ();
+		playerPS = GameObject.Find ("Player").GetComponent<Pickup_Script> ();
 		player = GameObject.Find ("Player");
 		btMainMenuButton = GameObject.Find ("btMainMenuButton");
 
@@ -768,6 +770,7 @@ public class Teleporter_Script : MonoBehaviour {
 				Debug.Log ("Platform R1_1 Chosen - Now Teleporting");
 				playerCT.R1_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R1_1.transform.position;
+				stopCarrying();
 				playerCS.RemoveTeleporterCanvas ();
 				playerCS.DisplayChoiceText ();
 				sphere_R1_1.transform.position = Vector3.zero;
@@ -779,6 +782,7 @@ public class Teleporter_Script : MonoBehaviour {
 				Debug.Log ("Platform R1_2 Chosen - Now Teleporting");
 				playerCT.R1_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R1_1.transform.position;
+				stopCarrying();
 				playerCS.RemoveTeleporterCanvas ();
 				playerCS.DisplayChoiceText ();
 				sphere_R1_1.transform.position = Vector3.zero;
@@ -799,6 +803,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R2_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R2_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R2_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R2_1, 0.1f);
 			}
@@ -808,6 +813,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R2_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R2_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R2_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R2_1, 0.1f);
 			}
@@ -824,6 +830,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R3_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R3_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R3_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R3_1, 0.1f);
 			}
@@ -833,6 +840,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R3_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R3_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R3_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R3_1, 0.1f);
 			}
@@ -849,6 +857,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R4_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R4_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R4_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R4_1, 0.1f);
 			}
@@ -858,6 +867,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R4_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R4_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R4_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R4_1, 0.1f);
 			}
@@ -874,6 +884,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R5_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R5_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R5_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R5_1, 0.1f);
 			}
@@ -883,6 +894,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R5_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R5_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R5_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R5_1, 0.1f);
 			}
@@ -899,6 +911,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R6_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R6_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R6_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R6_1, 0.1f);
 			}
@@ -908,6 +921,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R6_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R6_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R6_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R6_1, 0.1f);
 			}
@@ -924,6 +938,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R7_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R7_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R7_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R7_1, 0.1f);
 			}
@@ -933,6 +948,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R7_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R7_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R7_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R7_1, 0.1f);
 			}
@@ -949,6 +965,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R8_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R8_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R8_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R8_1, 0.1f);
 			}
@@ -958,6 +975,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R8_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R8_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R8_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R8_1, 0.1f);
 			}
@@ -974,6 +992,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R9_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R9_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R9_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R9_1, 0.1f);
 			}
@@ -983,6 +1002,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R9_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R9_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R9_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R9_1, 0.1f);
 			}
@@ -999,6 +1019,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R10_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R10_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R10_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R10_1, 0.1f);
 			}
@@ -1008,6 +1029,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R10_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R10_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R10_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R10_1, 0.1f);
 			}
@@ -1026,6 +1048,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R11_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R11_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R11_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R11_1, 0.1f);
 			}
@@ -1036,6 +1059,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R11_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R11_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R11_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R11_1, 0.1f);
 			}
@@ -1054,6 +1078,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R12_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R12_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R12_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R12_1, 0.1f);
 			}
@@ -1063,6 +1088,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R12_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R12_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R12_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R12_1, 0.1f);
 			}
@@ -1079,6 +1105,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R13_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R13_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R13_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R13_1, 0.1f);
 			}
@@ -1088,6 +1115,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R13_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R13_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R13_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R13_1, 0.1f);
 			}
@@ -1104,6 +1132,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R14_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R14_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R14_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R14_1, 0.1f);
 			}
@@ -1113,6 +1142,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R14_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R14_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R14_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R14_1, 0.1f);
 			}
@@ -1129,6 +1159,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R15_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R15_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R15_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R15_1, 0.1f);
 			}
@@ -1138,6 +1169,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R15_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R15_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R15_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R15_1, 0.1f);
 			}
@@ -1154,6 +1186,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R16_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R16_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R16_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R16_1, 0.1f);
 			}
@@ -1163,6 +1196,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R16_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R16_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R16_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R16_1, 0.1f);
 			}
@@ -1179,6 +1213,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R17_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R17_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R17_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R17_1, 0.1f);
 			}
@@ -1188,6 +1223,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R17_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R17_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R17_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R17_1, 0.1f);
 			}
@@ -1204,6 +1240,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R18_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R18_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R18_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R18_1, 0.1f);
 			}
@@ -1213,6 +1250,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R18_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R18_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R18_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R18_1, 0.1f);
 			}
@@ -1229,6 +1267,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R19_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R19_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R19_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R19_1, 0.1f);
 			}
@@ -1238,6 +1277,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R19_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R19_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R19_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R19_1, 0.1f);
 			}
@@ -1254,6 +1294,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R20_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R20_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R20_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R20_1, 0.1f);
 			}
@@ -1263,6 +1304,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R20_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R20_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R20_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R20_1, 0.1f);
 			}
@@ -1281,6 +1323,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R21_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R21_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R21_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R21_1, 0.1f);
 			}
@@ -1291,6 +1334,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R21_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R21_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R21_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R21_1, 0.1f);
 			}
@@ -1309,6 +1353,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R22_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R22_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R22_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R22_1, 0.1f);
 			}
@@ -1318,6 +1363,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R22_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R22_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R22_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R22_1, 0.1f);
 			}
@@ -1334,6 +1380,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R23_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R23_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R23_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R23_1, 0.1f);
 			}
@@ -1343,6 +1390,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R23_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R23_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R23_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R23_1, 0.1f);
 			}
@@ -1359,6 +1407,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R24_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R24_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R24_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R24_1, 0.1f);
 			}
@@ -1368,6 +1417,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R24_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R24_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R24_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R24_1, 0.1f);
 			}
@@ -1384,6 +1434,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R25_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R25_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R25_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R25_1, 0.1f);
 			}
@@ -1393,6 +1444,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R25_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R25_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R25_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R25_1, 0.1f);
 			}
@@ -1409,6 +1461,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R26_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R26_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R26_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R26_1, 0.1f);
 			}
@@ -1418,6 +1471,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R26_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R26_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R26_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R26_1, 0.1f);
 			}
@@ -1434,6 +1488,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R27_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R27_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R27_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R27_1, 0.1f);
 			}
@@ -1443,6 +1498,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R27_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R27_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R27_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R27_1, 0.1f);
 			}
@@ -1459,6 +1515,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R28_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R28_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R28_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R28_1, 0.1f);
 			}
@@ -1468,6 +1525,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R28_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R28_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R28_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R28_1, 0.1f);
 			}
@@ -1484,6 +1542,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R29_Choice_1_Taken = true;
 				player.transform.position = teleporterPad_R29_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R29_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R29_1, 0.1f);
 			}
@@ -1493,6 +1552,7 @@ public class Teleporter_Script : MonoBehaviour {
 				playerCT.R29_Choice_2_Taken = true;
 				player.transform.position = teleporterPad_R29_1.transform.position;
 				playerCS.RemoveTeleporterCanvas ();
+				stopCarrying();
 				sphere_R29_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R29_1, 0.1f);
 			}
@@ -1512,6 +1572,7 @@ public class Teleporter_Script : MonoBehaviour {
 //				playerCT.RoomStatsOff ();
 //				playerCT.StatsOn ();
 //				playerCT.writeToFile ();
+				stopCarrying();
 				onEnd ();
 				sphere_R30_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R30_1, 0.1f);
@@ -1525,6 +1586,7 @@ public class Teleporter_Script : MonoBehaviour {
 //				playerCT.RoomStatsOff ();
 //				playerCT.StatsOn ();
 //				playerCT.writeToFile ();
+				stopCarrying();
 				onEnd ();
 				sphere_R30_1.transform.position = Vector3.zero;
 				Object.Destroy (sphere_R30_1, 0.1f);
@@ -1546,6 +1608,10 @@ public class Teleporter_Script : MonoBehaviour {
 			Cursor.visible = true;
 			Invoke ("backToMainMenu", 10f);
 		}
+	}
+
+	private void stopCarrying(){
+		playerPS.carrying = false;
 	}
 
 	private void backToMainMenu(){

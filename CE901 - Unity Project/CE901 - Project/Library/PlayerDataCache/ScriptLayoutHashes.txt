@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Patrick/Dropbox/MSc Folder/CE901 - MSc Project/CE901-MSc-Project/CE901 - Unity Project/Executables/Sprint Session 9/Sprint Session 9.exe
+C:/Users/Patrick/Dropbox/MSc Folder/CE901 - MSc Project/CE901-MSc-Project/CE901 - Unity Project/Executables/Sprint Session 9/EXE 2 - Alpha Build 0.2/EXE 2 - Alpha Build 0.2.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/SurveySelection.unity
@@ -122,7 +122,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 a0ee0514fa342b70d48545f647d0c2cf Assembly-CSharp.dll:.CanvasScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PauseMenuScript
 69e43830daeff269b6736f9c4536e413 Assembly-CSharp.dll:.Player_Movement
-45e45fd5ac9dc4355837e2edb814be25 Assembly-CSharp.dll:.Pickup_Script
+497bb7d66f152e169c1d3fa3f4d7c162 Assembly-CSharp.dll:.Pickup_Script
 14624a4b784072e14bfadc765c65945d Assembly-CSharp.dll:.Choice_Tracker
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour

@@ -10,7 +10,7 @@ public class Pickup_Script : MonoBehaviour {
 	public float rotSpeed = 50.0f;
 	public float lerpSmooth;
 
-	private bool carrying;
+	public bool carrying;
 
 	GameObject mainCamera;
 	Camera mcCamera;
@@ -68,7 +68,7 @@ public class Pickup_Script : MonoBehaviour {
 	void carry(GameObject o){
 		rb = o.GetComponent<Rigidbody> ();
 		rb.isKinematic = true;
-		o.transform.position = Vector3.Lerp(o.transform.position, mainCamera.transform.position + mainCamera.transform.forward * distance, Time.deltaTime * lerpSmooth);
+		o.transform.position = Vector3.Lerp(o.transform.position, (mainCamera.transform.position + (transform.up * 0.10f)) + mainCamera.transform.forward * distance, Time.deltaTime * lerpSmooth);
 	}
 
 	void checkDrop(){
