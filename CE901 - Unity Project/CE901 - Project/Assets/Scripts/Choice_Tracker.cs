@@ -44,6 +44,21 @@ public class Choice_Tracker : MonoBehaviour {
 	public bool R29_Choice_1_Taken, R29_Choice_2_Taken;
 	public bool R30_Choice_1_Taken, R30_Choice_2_Taken;
 
+	// ROOMS 31-42
+	public bool R31_Choice_1_Taken, R31_Choice_2_Taken;
+	public bool R32_Choice_1_Taken, R32_Choice_2_Taken;
+	public bool R33_Choice_1_Taken, R33_Choice_2_Taken;
+	public bool R34_Choice_1_Taken, R34_Choice_2_Taken;
+	public bool R35_Choice_1_Taken, R35_Choice_2_Taken;
+	public bool R36_Choice_1_Taken, R36_Choice_2_Taken;
+	public bool R37_Choice_1_Taken, R37_Choice_2_Taken;
+	public bool R38_Choice_1_Taken, R38_Choice_2_Taken;
+	public bool R39_Choice_1_Taken, R39_Choice_2_Taken;
+	public bool R40_Choice_1_Taken, R40_Choice_2_Taken;
+	public bool R41_Choice_1_Taken, R41_Choice_2_Taken;
+	public bool R42_Choice_1_Taken, R42_Choice_2_Taken;
+	public bool R43_Choice_1_Taken, R43_Choice_2_Taken;
+
 	// Increment Booleans
 	private bool R1_Choice_Made;
 	private bool R2_Choice_Made;
@@ -78,9 +93,25 @@ public class Choice_Tracker : MonoBehaviour {
 	private bool R29_Choice_Made;
 	private bool R30_Choice_Made;
 
+	private bool R31_Choice_Made;
+	private bool R32_Choice_Made;
+	private bool R33_Choice_Made;
+	private bool R34_Choice_Made;
+	private bool R35_Choice_Made;
+	private bool R36_Choice_Made;
+	private bool R37_Choice_Made;
+	private bool R38_Choice_Made;
+	private bool R39_Choice_Made;
+	private bool R40_Choice_Made;
+	private bool R41_Choice_Made;
+	private bool R42_Choice_Made;
+	private bool R43_Choice_Made;
+
 	private Text choiceText, room1ChoiceText, room2ChoiceText, room3ChoiceText, room4ChoiceText, room5ChoiceText, room6ChoiceText, room7ChoiceText, room8ChoiceText, room9ChoiceText, room10ChoiceText;
 	private Text room11ChoiceText, room12ChoiceText, room13ChoiceText, room14ChoiceText, room15ChoiceText, room16ChoiceText, room17ChoiceText, room18ChoiceText, room19ChoiceText, room20ChoiceText;
 	private Text room21ChoiceText, room22ChoiceText, room23ChoiceText, room24ChoiceText, room25ChoiceText, room26ChoiceText, room27ChoiceText, room28ChoiceText, room29ChoiceText, room30ChoiceText;
+	private Text room31ChoiceText, room32ChoiceText, room33ChoiceText, room34ChoiceText, room35ChoiceText, room36ChoiceText, room37ChoiceText, room38ChoiceText, room39ChoiceText, room40ChoiceText;
+	private Text room41ChoiceText, room42ChoiceText, room43ChoiceText;
 
 	private Text redChosenText, blueChosenText, greenChosenText, yellowChosenText, orangeChosenText, magentaChosenText, cyanChosenText;
 
@@ -197,6 +228,46 @@ public class Choice_Tracker : MonoBehaviour {
 		R30_Choice_1_Taken = false;
 		R30_Choice_2_Taken = false;
 
+		// Room 31
+		R31_Choice_1_Taken = false;
+		R31_Choice_2_Taken = false;
+		// Room 32
+		R32_Choice_1_Taken = false;
+		R32_Choice_2_Taken = false;
+		// Room 33
+		R33_Choice_1_Taken = false;
+		R33_Choice_2_Taken = false;
+		// Room 34
+		R34_Choice_1_Taken = false;
+		R34_Choice_2_Taken = false;
+		// Room 35
+		R35_Choice_1_Taken = false;
+		R35_Choice_2_Taken = false;
+		// Room 36
+		R36_Choice_1_Taken = false;
+		R36_Choice_2_Taken = false;
+		// Room 37
+		R37_Choice_1_Taken = false;
+		R37_Choice_2_Taken = false;
+		// Room 38
+		R38_Choice_1_Taken = false;
+		R38_Choice_2_Taken = false;
+		// Room 39
+		R39_Choice_1_Taken = false;
+		R39_Choice_2_Taken = false;
+		// Room 40
+		R40_Choice_1_Taken = false;
+		R40_Choice_2_Taken = false;
+		// Room 41
+		R41_Choice_1_Taken = false;
+		R41_Choice_2_Taken = false;
+		// Room 42
+		R42_Choice_1_Taken = false;
+		R42_Choice_2_Taken = false;
+		// Room 43
+		R43_Choice_1_Taken = false;
+		R43_Choice_2_Taken = false;
+
 		R1_Choice_Made = false;
 		R2_Choice_Made = false;
 		R3_Choice_Made = false;
@@ -229,6 +300,20 @@ public class Choice_Tracker : MonoBehaviour {
 		R28_Choice_Made = false;
 		R29_Choice_Made = false;
 		R30_Choice_Made = false;
+
+		R31_Choice_Made = false;
+		R32_Choice_Made = false;
+		R33_Choice_Made = false;
+		R34_Choice_Made = false;
+		R35_Choice_Made = false;
+		R36_Choice_Made = false;
+		R37_Choice_Made = false;
+		R38_Choice_Made = false;
+		R39_Choice_Made = false;
+		R40_Choice_Made = false;
+		R41_Choice_Made = false;
+		R42_Choice_Made = false;
+		R43_Choice_Made = false;
 
 		// Text Update
 		room1ChoiceText = GameObject.Find("Room 1 Choice Text").GetComponent<Text>();
@@ -265,6 +350,21 @@ public class Choice_Tracker : MonoBehaviour {
 		room28ChoiceText = GameObject.Find("Room 28 Choice Text").GetComponent<Text>();
 		room29ChoiceText = GameObject.Find("Room 29 Choice Text").GetComponent<Text>();
 		room30ChoiceText = GameObject.Find("Room 30 Choice Text").GetComponent<Text>();
+
+		// Text Update - Rooms 31 - 43
+		room31ChoiceText = GameObject.Find("Room 31 Choice Text").GetComponent<Text>();
+		room32ChoiceText = GameObject.Find("Room 32 Choice Text").GetComponent<Text>();
+		room33ChoiceText = GameObject.Find("Room 33 Choice Text").GetComponent<Text>();
+		room34ChoiceText = GameObject.Find("Room 34 Choice Text").GetComponent<Text>();
+		room35ChoiceText = GameObject.Find("Room 35 Choice Text").GetComponent<Text>();
+		room36ChoiceText = GameObject.Find("Room 36 Choice Text").GetComponent<Text>();
+		room37ChoiceText = GameObject.Find("Room 37 Choice Text").GetComponent<Text>();
+		room38ChoiceText = GameObject.Find("Room 38 Choice Text").GetComponent<Text>();
+		room39ChoiceText = GameObject.Find("Room 39 Choice Text").GetComponent<Text>();
+		room40ChoiceText = GameObject.Find("Room 40 Choice Text").GetComponent<Text>();
+		room41ChoiceText = GameObject.Find("Room 41 Choice Text").GetComponent<Text>();
+		room42ChoiceText = GameObject.Find("Room 42 Choice Text").GetComponent<Text>();
+		room43ChoiceText = GameObject.Find("Room 43 Choice Text").GetComponent<Text>();
 
 		// Stats Main Group
 		statsGroup = GameObject.Find("StatsGroup");
@@ -485,7 +585,11 @@ public class Choice_Tracker : MonoBehaviour {
 			                  Environment.NewLine + room16ChoiceText.text + Environment.NewLine + room17ChoiceText.text + Environment.NewLine + room18ChoiceText.text + Environment.NewLine + room19ChoiceText.text +
 			                  Environment.NewLine + room20ChoiceText.text + Environment.NewLine + room21ChoiceText.text + Environment.NewLine + room22ChoiceText.text + Environment.NewLine + room23ChoiceText.text +
 			                  Environment.NewLine + room24ChoiceText.text + Environment.NewLine + room25ChoiceText.text + Environment.NewLine + room26ChoiceText.text + Environment.NewLine + room27ChoiceText.text +
-			                  Environment.NewLine + room28ChoiceText.text + Environment.NewLine + room29ChoiceText.text + Environment.NewLine + room30ChoiceText.text + Environment.NewLine;
+			                  Environment.NewLine + room28ChoiceText.text + Environment.NewLine + room29ChoiceText.text + Environment.NewLine + room30ChoiceText.text + Environment.NewLine + room30ChoiceText.text +
+			                  Environment.NewLine + room31ChoiceText.text + Environment.NewLine + room32ChoiceText.text + Environment.NewLine + room33ChoiceText.text + Environment.NewLine + room34ChoiceText.text +
+			                  Environment.NewLine + room35ChoiceText.text + Environment.NewLine + room36ChoiceText.text + Environment.NewLine + room37ChoiceText.text + Environment.NewLine + room38ChoiceText.text +
+			                  Environment.NewLine + room39ChoiceText.text + Environment.NewLine + room40ChoiceText.text + Environment.NewLine + room41ChoiceText.text + Environment.NewLine + room42ChoiceText.text +
+			                  Environment.NewLine + room43ChoiceText.text + Environment.NewLine;
 
 			string wholeText = mainTitleText + titleText + redColourText + blueColourText + greenColourText +
 			                   yellowColourText + orangeColourText + magentaColourText + cyanColourText + secondTitleText + mostChosenColour + routeChosenMost +
@@ -507,6 +611,7 @@ public class Choice_Tracker : MonoBehaviour {
 		room8ChoiceText.gameObject.SetActive (true);
 		room9ChoiceText.gameObject.SetActive (true);
 		room10ChoiceText.gameObject.SetActive (true);
+		//
 		room11ChoiceText.gameObject.SetActive (true);
 		room12ChoiceText.gameObject.SetActive (true);
 		room13ChoiceText.gameObject.SetActive (true);
@@ -517,6 +622,7 @@ public class Choice_Tracker : MonoBehaviour {
 		room18ChoiceText.gameObject.SetActive (true);
 		room19ChoiceText.gameObject.SetActive (true);
 		room20ChoiceText.gameObject.SetActive (true);
+		//
 		room21ChoiceText.gameObject.SetActive (true);
 		room22ChoiceText.gameObject.SetActive (true);
 		room23ChoiceText.gameObject.SetActive (true);
@@ -527,6 +633,20 @@ public class Choice_Tracker : MonoBehaviour {
 		room28ChoiceText.gameObject.SetActive (true);
 		room29ChoiceText.gameObject.SetActive (true);
 		room30ChoiceText.gameObject.SetActive (true);
+		//
+		room31ChoiceText.gameObject.SetActive (true);
+		room32ChoiceText.gameObject.SetActive (true);
+		room33ChoiceText.gameObject.SetActive (true);
+		room34ChoiceText.gameObject.SetActive (true);
+		room35ChoiceText.gameObject.SetActive (true);
+		room36ChoiceText.gameObject.SetActive (true);
+		room37ChoiceText.gameObject.SetActive (true);
+		room38ChoiceText.gameObject.SetActive (true);
+		room39ChoiceText.gameObject.SetActive (true);
+		room40ChoiceText.gameObject.SetActive (true);
+		room41ChoiceText.gameObject.SetActive (true);
+		room42ChoiceText.gameObject.SetActive (true);
+		room43ChoiceText.gameObject.SetActive (true);
 
 	}
 
@@ -541,6 +661,7 @@ public class Choice_Tracker : MonoBehaviour {
 		room8ChoiceText.gameObject.SetActive (false);
 		room9ChoiceText.gameObject.SetActive (false);
 		room10ChoiceText.gameObject.SetActive (false);
+		//
 		room11ChoiceText.gameObject.SetActive (false);
 		room12ChoiceText.gameObject.SetActive (false);
 		room13ChoiceText.gameObject.SetActive (false);
@@ -551,6 +672,7 @@ public class Choice_Tracker : MonoBehaviour {
 		room18ChoiceText.gameObject.SetActive (false);
 		room19ChoiceText.gameObject.SetActive (false);
 		room20ChoiceText.gameObject.SetActive (false);
+		//
 		room21ChoiceText.gameObject.SetActive (false);
 		room22ChoiceText.gameObject.SetActive (false);
 		room23ChoiceText.gameObject.SetActive (false);
@@ -561,6 +683,20 @@ public class Choice_Tracker : MonoBehaviour {
 		room28ChoiceText.gameObject.SetActive (false);
 		room29ChoiceText.gameObject.SetActive (false);
 		room30ChoiceText.gameObject.SetActive (false);
+		//
+		room31ChoiceText.gameObject.SetActive (false);
+		room32ChoiceText.gameObject.SetActive (false);
+		room33ChoiceText.gameObject.SetActive (false);
+		room34ChoiceText.gameObject.SetActive (false);
+		room35ChoiceText.gameObject.SetActive (false);
+		room36ChoiceText.gameObject.SetActive (false);
+		room37ChoiceText.gameObject.SetActive (false);
+		room38ChoiceText.gameObject.SetActive (false);
+		room39ChoiceText.gameObject.SetActive (false);
+		room40ChoiceText.gameObject.SetActive (false);
+		room41ChoiceText.gameObject.SetActive (false);
+		room42ChoiceText.gameObject.SetActive (false);
+		room43ChoiceText.gameObject.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -954,7 +1090,7 @@ public class Choice_Tracker : MonoBehaviour {
 			R28_Choice_Made = true;
 			leftChosen += 1;
 		}
-		// ROOM 19 (ORANGE AND GREEN FINAL)
+		// ROOM 29 (ORANGE AND GREEN FINAL)
 		if (R29_Choice_1_Taken && !R29_Choice_2_Taken && !R29_Choice_Made) {
 			room29ChoiceText.text = "ROOM 29 - CHOSE YELLOW";
 			yellowChosen += 1;
@@ -980,6 +1116,190 @@ public class Choice_Tracker : MonoBehaviour {
 			orangeChosen += 1;
 			orangeLeftChosen += 1;
 			R30_Choice_Made = true;
+			leftChosen += 1;
+		}
+
+
+		// ROOM 31 (ORANGE OR CYAN)
+		if (R31_Choice_1_Taken && !R31_Choice_2_Taken && !R31_Choice_Made) {
+			room31ChoiceText.text = "ROOM 31 - CHOSE CYAN";
+			cyanChosen += 1;
+			cyanRightChosen += 1;
+			R31_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R31_Choice_1_Taken && R31_Choice_2_Taken && !R31_Choice_Made) {
+			room31ChoiceText.text = "ROOM 31 - CHOSE ORANGE";
+			orangeChosen += 1;
+			orangeLeftChosen += 1;
+			R31_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 32 (MAGENTA or RED)
+		if (R32_Choice_1_Taken && !R32_Choice_2_Taken && !R32_Choice_Made) {
+			room32ChoiceText.text = "ROOM 32 - CHOSE RED";
+			redChosen += 1;
+			redRightChosen += 1;
+			R32_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R32_Choice_1_Taken && R32_Choice_2_Taken && !R32_Choice_Made) {
+			room32ChoiceText.text = "ROOM 32 - CHOSE MAGENTA";
+			magentaChosen += 1;
+			magentaLeftChosen += 1;
+			R32_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 33 (MAGENTA OR BLUE)
+		if (R33_Choice_1_Taken && !R33_Choice_2_Taken && !R33_Choice_Made) {
+			room33ChoiceText.text = "ROOM 23 - CHOSE BLUE";
+			blueChosen += 1;
+			blueRightChosen += 1;
+			R33_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R33_Choice_1_Taken && R33_Choice_2_Taken && !R33_Choice_Made) {
+			room33ChoiceText.text = "ROOM 33 - CHOSE MAGENTA";
+			magentaChosen += 1;
+			magentaLeftChosen += 1;
+			R33_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 34 (MAGENTA OR GREEN)
+		if (R34_Choice_1_Taken && !R34_Choice_2_Taken && !R34_Choice_Made) {
+			room34ChoiceText.text = "ROOM 34 - CHOSE GREEN";
+			greenChosen += 1;
+			greenRightChosen += 1;
+			R34_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R34_Choice_1_Taken && R34_Choice_2_Taken && !R34_Choice_Made) {
+			room34ChoiceText.text = "ROOM 34 - CHOSE MAGENTA";
+			magentaChosen += 1;
+			magentaLeftChosen += 1;
+			R34_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 35 (MAGENTA OR YELLOW)
+		if (R35_Choice_1_Taken && !R35_Choice_2_Taken && !R35_Choice_Made) {
+			room35ChoiceText.text = "ROOM 35 - CHOSE YELLOW";
+			yellowChosen += 1;
+			yellowRightChosen += 1;
+			R35_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R35_Choice_1_Taken && R35_Choice_2_Taken && !R35_Choice_Made) {
+			room35ChoiceText.text = "ROOM 35 - CHOSE MAGENTA";
+			magentaChosen += 1;
+			magentaLeftChosen += 1;
+			R35_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 36 (MAGENTA OR ORANGE)
+		if (R36_Choice_1_Taken && !R36_Choice_2_Taken && !R36_Choice_Made) {
+			room36ChoiceText.text = "ROOM 36 - CHOSE ORANGE";
+			orangeChosen += 1;
+			orangeRightChosen += 1;
+			R36_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R36_Choice_1_Taken && R36_Choice_2_Taken && !R36_Choice_Made) {
+			room36ChoiceText.text = "ROOM 36 - CHOSE MAGENTA";
+			magentaChosen += 1;
+			magentaLeftChosen += 1;
+			R36_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 37 (MAGENTA OR CYAN)
+		if (R37_Choice_1_Taken && !R37_Choice_2_Taken && !R37_Choice_Made) {
+			room37ChoiceText.text = "ROOM 37 - CHOSE CYAN";
+			cyanChosen += 1;
+			cyanRightChosen += 1;
+			R37_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R37_Choice_1_Taken && R37_Choice_2_Taken && !R37_Choice_Made) {
+			room37ChoiceText.text = "ROOM 37 - CHOSE MAGENTA";
+			magentaChosen += 1;
+			magentaLeftChosen += 1;
+			R37_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 38 (CYAN OR RED)
+		if (R38_Choice_1_Taken && !R38_Choice_2_Taken && !R38_Choice_Made) {
+			room38ChoiceText.text = "ROOM 38 - CHOSE RED";
+			redChosen += 1;
+			redRightChosen += 1;
+			R38_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R38_Choice_1_Taken && R38_Choice_2_Taken && !R38_Choice_Made) {
+			room38ChoiceText.text = "ROOM 38 - CHOSE CYAN";
+			cyanChosen += 1;
+			cyanLeftChosen += 1;
+			R38_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 39 (CYAN OR BLUE)
+		if (R39_Choice_1_Taken && !R39_Choice_2_Taken && !R39_Choice_Made) {
+			room39ChoiceText.text = "ROOM 39 - CHOSE BLUE";
+			blueChosen += 1;
+			blueRightChosen += 1;
+			R39_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R39_Choice_1_Taken && R39_Choice_2_Taken && !R39_Choice_Made) {
+			room39ChoiceText.text = "ROOM 39 - CHOSE CYAN";
+			cyanChosen += 1;
+			cyanLeftChosen += 1;
+			R39_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 40 (CYAN OR GREEN)
+		if (R40_Choice_1_Taken && !R40_Choice_2_Taken && !R40_Choice_Made) {
+			room40ChoiceText.text = "ROOM 40 - CHOSE GREEN";
+			greenChosen += 1;
+			greenRightChosen += 1;
+			R40_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R40_Choice_1_Taken && R40_Choice_2_Taken && !R40_Choice_Made) {
+			room40ChoiceText.text = "ROOM 40 - CHOSE CYAN";
+			cyanChosen += 1;
+			cyanLeftChosen += 1;
+			R40_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 41 (CYAN OR YELLOW)
+		if (R41_Choice_1_Taken && !R41_Choice_2_Taken && !R41_Choice_Made) {
+			room41ChoiceText.text = "ROOM 41 - CHOSE YELLOW";
+			yellowChosen += 1;
+			yellowRightChosen += 1;
+			R41_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R41_Choice_1_Taken && R41_Choice_2_Taken && !R41_Choice_Made) {
+			room41ChoiceText.text = "ROOM 41 - CHOSE CYAN";
+			cyanChosen += 1;
+			cyanLeftChosen += 1;
+			R41_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 42 (CYAN OR ORANGE)
+		if (R42_Choice_1_Taken && !R42_Choice_2_Taken && !R42_Choice_Made) {
+			room42ChoiceText.text = "ROOM 42 - CHOSE ORANGE";
+			orangeChosen += 1;
+			orangeRightChosen += 1;
+			R42_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R42_Choice_1_Taken && R42_Choice_2_Taken && !R42_Choice_Made) {
+			room42ChoiceText.text = "ROOM 42 - CHOSE CYAN";
+			cyanChosen += 1;
+			cyanLeftChosen += 1;
+			R42_Choice_Made = true;
+			leftChosen += 1;
+		}
+		// ROOM 43 (CYAN OR MAGENTA)
+		if (R43_Choice_1_Taken && !R43_Choice_2_Taken && !R43_Choice_Made) {
+			room43ChoiceText.text = "ROOM 43 - CHOSE MAGENTA";
+			magentaChosen += 1;
+			magentaRightChosen += 1;
+			R43_Choice_Made = true;
+			rightChosen += 1;
+		} else if (!R43_Choice_1_Taken && R43_Choice_2_Taken && !R43_Choice_Made) {
+			room43ChoiceText.text = "ROOM 43 - CHOSE CYAN";
+			cyanChosen += 1;
+			cyanLeftChosen += 1;
+			R43_Choice_Made = true;
 			leftChosen += 1;
 		}
 

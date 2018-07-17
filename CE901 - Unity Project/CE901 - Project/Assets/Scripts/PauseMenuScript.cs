@@ -19,6 +19,7 @@ public class PauseMenuScript : MonoBehaviour {
 
 		// Mouse Cursor
 		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Confined;
 	}
 
 	// Update is called once per frame
@@ -28,10 +29,12 @@ public class PauseMenuScript : MonoBehaviour {
 				PauseMenuOff ();
 				// Mouse Cursor
 				Cursor.visible = false;
+				Cursor.lockState = CursorLockMode.Confined;
 			} else if (pauseMenu.activeSelf == false) {
 				PauseMenuOn ();
 				// Mouse Cursor
 				Cursor.visible = true;
+				Cursor.lockState = CursorLockMode.None;
 			}
 		}
 	}

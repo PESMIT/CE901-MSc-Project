@@ -189,7 +189,87 @@ public class Collection_Trigger : MonoBehaviour {
 	GameObject platformBody_R30_1, platformBody_R30_2;
 	Light platformLight_R30_1, platformLight_R30_2;
 	private bool platform_R30_2_Exists;
-	public bool platform_R30_1_Chosen, platform_R30_2_Chosen;
+	public bool  platform_R30_1_Chosen, platform_R30_2_Chosen;
+
+	// ROOMS 31 - 43
+
+	// ROOM 31 ASSETS
+	GameObject platformBody_R31_1, platformBody_R31_2;
+	Light platformLight_R31_1, platformLight_R31_2;
+	private bool platform_R31_2_Exists;
+	public bool platform_R31_1_Chosen, platform_R31_2_Chosen;
+
+	// ROOM 32 ASSETS
+	GameObject platformBody_R32_1, platformBody_R32_2;
+	Light platformLight_R32_1, platformLight_R32_2;
+	private bool platform_R32_2_Exists;
+	public bool platform_R32_1_Chosen, platform_R32_2_Chosen;
+
+	// ROOM 33 ASSETS
+	GameObject platformBody_R33_1, platformBody_R33_2;
+	Light platformLight_R33_1, platformLight_R33_2;
+	private bool platform_R33_2_Exists;
+	public bool platform_R33_1_Chosen, platform_R33_2_Chosen;
+
+	// ROOM 34 ASSETS
+	GameObject platformBody_R34_1, platformBody_R34_2;
+	Light platformLight_R34_1, platformLight_R34_2;
+	private bool platform_R34_2_Exists;
+	public bool platform_R34_1_Chosen, platform_R34_2_Chosen;
+
+	// ROOM 35 ASSETS
+	GameObject platformBody_R35_1, platformBody_R35_2;
+	Light platformLight_R35_1, platformLight_R35_2;
+	private bool platform_R35_2_Exists;
+	public bool platform_R35_1_Chosen, platform_R35_2_Chosen;
+
+	// ROOM 36 ASSETS
+	GameObject platformBody_R36_1, platformBody_R36_2;
+	Light platformLight_R36_1, platformLight_R36_2;
+	private bool platform_R36_2_Exists;
+	public bool platform_R36_1_Chosen, platform_R36_2_Chosen;
+
+	// ROOM 37 ASSETS
+	GameObject platformBody_R37_1, platformBody_R37_2;
+	Light platformLight_R37_1, platformLight_R37_2;
+	private bool platform_R37_2_Exists;
+	public bool platform_R37_1_Chosen, platform_R37_2_Chosen;
+
+	// ROOM 38 ASSETS
+	GameObject platformBody_R38_1, platformBody_R38_2;
+	Light platformLight_R38_1, platformLight_R38_2;
+	private bool platform_R38_2_Exists;
+	public bool platform_R38_1_Chosen, platform_R38_2_Chosen;
+
+	// ROOM 39 ASSETS
+	GameObject platformBody_R39_1, platformBody_R39_2;
+	Light platformLight_R39_1, platformLight_R39_2;
+	private bool platform_R39_2_Exists;
+	public bool platform_R39_1_Chosen, platform_R39_2_Chosen;
+
+	// ROOM 40 ASSETS
+	GameObject platformBody_R40_1, platformBody_R40_2;
+	Light platformLight_R40_1, platformLight_R40_2;
+	private bool platform_R40_2_Exists;
+	public bool platform_R40_1_Chosen, platform_R40_2_Chosen;
+
+	// ROOM 41 ASSETS
+	GameObject platformBody_R41_1, platformBody_R41_2;
+	Light platformLight_R41_1, platformLight_R41_2;
+	private bool platform_R41_2_Exists;
+	public bool platform_R41_1_Chosen, platform_R41_2_Chosen;
+
+	// ROOM 42 ASSETS
+	GameObject platformBody_R42_1, platformBody_R42_2;
+	Light platformLight_R42_1, platformLight_R42_2;
+	private bool platform_R42_2_Exists;
+	public bool platform_R42_1_Chosen, platform_R42_2_Chosen;
+
+	// ROOM 43 ASSETS
+	GameObject platformBody_R43_1, platformBody_R43_2;
+	Light platformLight_R43_1, platformLight_R43_2;
+	private bool platform_R43_2_Exists;
+	public bool platform_R43_1_Chosen, platform_R43_2_Chosen;
 
 	// Use this for initialization
 	void Start () {
@@ -641,6 +721,201 @@ public class Collection_Trigger : MonoBehaviour {
 			platformLight_R30_2 = platformBody_R30_2.GetComponentInChildren<Light> ();
 			platformLight_R30_2.color = Color.blue;
 			platform_R30_2_Exists = true;
+		}
+
+		// ROOMS 31-43 - TOWER OF ROOMS
+
+		// ROOM 31 ASSET REFERENCE
+		// Platform 1 - RIGHT SIDE
+		if (GameObject.Find ("Platform_R31_1")!= null) {
+			platformBody_R31_1 = GameObject.Find ("Platform_R31_1");
+			platformLight_R31_1 = platformBody_R31_1.GetComponentInChildren<Light> ();
+			platformLight_R31_1.color = Color.blue;
+		}
+		// Platform 2 - LEFT SIDE
+		if (GameObject.Find ("Platform_R31_2")!= null) {
+			platformBody_R31_2 = GameObject.Find ("Platform_R31_2");
+			platformLight_R31_2 = platformBody_R31_2.GetComponentInChildren<Light> ();
+			platformLight_R31_2.color = Color.blue;
+			platform_R31_2_Exists = true;
+		}
+
+		// TODO: ROOM 32 ASSET REFERENCE
+		// Platform 1 - RIGHT SIDE
+		if(GameObject.Find("Platform_R32_1")!= null){
+			platformBody_R32_1 = GameObject.Find ("Platform_R32_1");
+			platformLight_R32_1 = platformBody_R32_1.GetComponentInChildren<Light> ();
+			platformLight_R32_1.color = Color.blue;
+		}
+		// Platform 2 - LEFT SIDE
+		if(GameObject.Find("Platform_R32_2")!= null){
+			platformBody_R32_2 = GameObject.Find ("Platform_R32_2");
+			platformLight_R32_2 = platformBody_R32_2.GetComponentInChildren<Light> ();
+			platformLight_R32_2.color = Color.blue;
+			platform_R32_2_Exists = true;
+		}
+
+		// TODO: ROOM 33 ASSET REFERENCE
+		// Platform 1 - RIGHT SIDE
+		if(GameObject.Find("Platform_R33_1")!= null){
+			platformBody_R33_1 = GameObject.Find ("Platform_R33_1");
+			platformLight_R33_1 = platformBody_R33_1.GetComponentInChildren<Light> ();
+			platformLight_R33_1.color = Color.blue;
+		}
+		// Platform 2 - LEFT SIDE
+		if(GameObject.Find("Platform_R33_2")!= null){
+			platformBody_R33_2 = GameObject.Find ("Platform_R33_2");
+			platformLight_R33_2 = platformBody_R33_2.GetComponentInChildren<Light> ();
+			platformLight_R33_2.color = Color.blue;
+			platform_R33_2_Exists = true;
+		}
+
+		// TODO: ROOM 34 ASSET REFERENCE
+		// Platform 1 - RIGHT SIDE
+		if(GameObject.Find("Platform_R34_1")!= null){
+			platformBody_R34_1 = GameObject.Find ("Platform_R34_1");
+			platformLight_R34_1 = platformBody_R34_1.GetComponentInChildren<Light> ();
+			platformLight_R34_1.color = Color.blue;
+		}
+		// Platform 2 - LEFT SIDE
+		if(GameObject.Find("Platform_R34_2")!= null){
+			platformBody_R34_2 = GameObject.Find ("Platform_R34_2");
+			platformLight_R34_2 = platformBody_R34_2.GetComponentInChildren<Light> ();
+			platformLight_R34_2.color = Color.blue;
+			platform_R34_2_Exists = true;
+		}
+
+		// TODO: ROOM 35 ASSET REFERENCE
+		// Platform 1 - RIGHT SIDE
+		if(GameObject.Find("Platform_R35_1")!= null){
+			platformBody_R35_1 = GameObject.Find ("Platform_R35_1");
+			platformLight_R35_1 = platformBody_R35_1.GetComponentInChildren<Light> ();
+			platformLight_R35_1.color = Color.blue;
+		}
+		// Platform 2 - LEFT SIDE
+		if(GameObject.Find("Platform_R35_2")!= null){
+			platformBody_R35_2 = GameObject.Find ("Platform_R35_2");
+			platformLight_R35_2 = platformBody_R35_2.GetComponentInChildren<Light> ();
+			platformLight_R35_2.color = Color.blue;
+			platform_R35_2_Exists = true;
+		}
+		// TODO: ROOM 36 ASSET REFERENCE
+		// Platform 1 - RIGHT SIDE
+		if(GameObject.Find("Platform_R36_1")!= null){
+			platformBody_R36_1 = GameObject.Find ("Platform_R36_1");
+			platformLight_R36_1 = platformBody_R36_1.GetComponentInChildren<Light> ();
+			platformLight_R36_1.color = Color.blue;
+		}
+		// Platform 2 - LEFT SIDE
+		if(GameObject.Find("Platform_R36_2")!= null){
+			platformBody_R36_2 = GameObject.Find ("Platform_R36_2");
+			platformLight_R36_2 = platformBody_R36_2.GetComponentInChildren<Light> ();
+			platformLight_R36_2.color = Color.blue;
+			platform_R36_2_Exists = true;
+		}
+		// TODO: ROOM 37 ASSET REFERENCE
+		// Platform 1 - RIGHT SIDE
+		if(GameObject.Find("Platform_R37_1")!= null){
+			platformBody_R37_1 = GameObject.Find ("Platform_R37_1");
+			platformLight_R37_1 = platformBody_R37_1.GetComponentInChildren<Light> ();
+			platformLight_R37_1.color = Color.blue;
+		}
+		// Platform 2 - LEFT SIDE
+		if(GameObject.Find("Platform_R37_2")!= null){
+			platformBody_R37_2 = GameObject.Find ("Platform_R37_2");
+			platformLight_R37_2 = platformBody_R37_2.GetComponentInChildren<Light> ();
+			platformLight_R37_2.color = Color.blue;
+			platform_R37_2_Exists = true;
+		}
+
+		// TODO: ROOM 38 ASSET REFERENCE
+		// Platform 1 - RIGHT SIDE
+		if(GameObject.Find("Platform_R38_1")!= null){
+			platformBody_R38_1 = GameObject.Find ("Platform_R38_1");
+			platformLight_R38_1 = platformBody_R38_1.GetComponentInChildren<Light> ();
+			platformLight_R38_1.color = Color.blue;
+		}
+		// Platform 2 - LEFT SIDE
+		if(GameObject.Find("Platform_R38_2")!= null){
+			platformBody_R38_2 = GameObject.Find ("Platform_R38_2");
+			platformLight_R38_2 = platformBody_R38_2.GetComponentInChildren<Light> ();
+			platformLight_R38_2.color = Color.blue;
+			platform_R38_2_Exists = true;
+		}
+
+		// TODO: ROOM 39 ASSET REFERENCE
+		// Platform 1 - RIGHT SIDE
+		if(GameObject.Find("Platform_R39_1")!= null){
+			platformBody_R39_1 = GameObject.Find ("Platform_R39_1");
+			platformLight_R39_1 = platformBody_R39_1.GetComponentInChildren<Light> ();
+			platformLight_R39_1.color = Color.blue;
+		}
+		// Platform 2 - LEFT SIDE
+		if(GameObject.Find("Platform_R39_2")!= null){
+			platformBody_R39_2 = GameObject.Find ("Platform_R39_2");
+			platformLight_R39_2 = platformBody_R39_2.GetComponentInChildren<Light> ();
+			platformLight_R39_2.color = Color.blue;
+			platform_R39_2_Exists = true;
+		}
+
+		// TODO: ROOM 40 ASSET REFERENCE
+		// Platform 1 - RIGHT SIDE
+		if(GameObject.Find("Platform_R40_1")!= null){
+			platformBody_R40_1 = GameObject.Find ("Platform_R40_1");
+			platformLight_R40_1 = platformBody_R40_1.GetComponentInChildren<Light> ();
+			platformLight_R40_1.color = Color.blue;
+		}
+		// Platform 2 - LEFT SIDE
+		if(GameObject.Find("Platform_R40_2")!= null){
+			platformBody_R40_2 = GameObject.Find ("Platform_R40_2");
+			platformLight_R40_2 = platformBody_R40_2.GetComponentInChildren<Light> ();
+			platformLight_R40_2.color = Color.blue;
+			platform_R40_2_Exists = true;
+		}
+
+		// TODO: ROOM 41 ASSET REFERENCE
+		// Platform 1 - RIGHT SIDE
+		if(GameObject.Find("Platform_R41_1")!= null){
+			platformBody_R41_1 = GameObject.Find ("Platform_R41_1");
+			platformLight_R41_1 = platformBody_R41_1.GetComponentInChildren<Light> ();
+			platformLight_R41_1.color = Color.blue;
+		}
+		// Platform 2 - LEFT SIDE
+		if(GameObject.Find("Platform_R41_2")!= null){
+			platformBody_R41_2 = GameObject.Find ("Platform_R41_2");
+			platformLight_R41_2 = platformBody_R41_2.GetComponentInChildren<Light> ();
+			platformLight_R41_2.color = Color.blue;
+			platform_R41_2_Exists = true;
+		}
+
+		// TODO: ROOM 42 ASSET REFERENCE
+		// Platform 1 - RIGHT SIDE
+		if(GameObject.Find("Platform_R42_1")!= null){
+			platformBody_R42_1 = GameObject.Find ("Platform_R42_1");
+			platformLight_R42_1 = platformBody_R42_1.GetComponentInChildren<Light> ();
+			platformLight_R42_1.color = Color.blue;
+		}
+		// Platform 2 - LEFT SIDE
+		if(GameObject.Find("Platform_R42_2")!= null){
+			platformBody_R42_2 = GameObject.Find ("Platform_R42_2");
+			platformLight_R42_2 = platformBody_R42_2.GetComponentInChildren<Light> ();
+			platformLight_R42_2.color = Color.blue;
+			platform_R42_2_Exists = true;
+		}
+
+		// TODO: ROOM 43 ASSET REFERENCE
+		// Platform 1 - RIGHT SIDE
+		if(GameObject.Find("Platform_R43_1")!= null){
+			platformBody_R43_1 = GameObject.Find ("Platform_R43_1");
+			platformLight_R43_1 = platformBody_R43_1.GetComponentInChildren<Light> ();
+			platformLight_R43_1.color = Color.blue;
+		}
+		// Platform 2 - LEFT SIDE
+		if(GameObject.Find("Platform_R43_2")!= null){
+			platformBody_R43_2 = GameObject.Find ("Platform_R43_2");
+			platformLight_R43_2 = platformBody_R43_2.GetComponentInChildren<Light> ();
+			platformLight_R43_2.color = Color.blue;
+			platform_R43_2_Exists = true;
 		}
 			
 	}
@@ -1279,6 +1554,281 @@ public class Collection_Trigger : MonoBehaviour {
 					}
 				}
 			}
+
+			// ROOMS 31-43 - TOWER OF ROOMS
+
+			// ROOM 31 - TRIGGER COLLISIONS
+			if (other.tag == "Objects") {
+				if (this.gameObject.name == "Platform_R31_1") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R31_1.color = Color.green;
+					platform_R31_1_Chosen = true;
+					if (platform_R31_2_Exists) {
+						platformLight_R31_2.color = Color.red;
+						platform_R31_2_Chosen = false;
+					}
+				} else if (this.gameObject.name == "Platform_R31_2") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R31_1.color = Color.red;
+					platform_R31_1_Chosen = false;
+					if (platform_R31_2_Exists) {
+						platformLight_R31_2.color = Color.green;
+						platform_R31_2_Chosen = true;
+					}
+				}
+			}
+
+			// TODO: ROOM 32 - TRIGGER COLLISIONS
+			if (other.tag == "Objects") {
+				if (this.gameObject.name == "Platform_R32_1") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R32_1.color = Color.green;
+					platform_R32_1_Chosen = true;
+					if (platform_R32_2_Exists) {
+						platformLight_R32_2.color = Color.red;
+						platform_R32_2_Chosen = false;
+					}
+				} else if (this.gameObject.name == "Platform_R32_2") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R32_1.color = Color.red;
+					platform_R32_1_Chosen = false;
+					if (platform_R32_2_Exists) {
+						platformLight_R32_2.color = Color.green;
+						platform_R32_2_Chosen = true;
+					}
+				}
+			}
+
+			// TODO: ROOM 33 - TRIGGER COLLISIONS
+			if (other.tag == "Objects") {
+				if (this.gameObject.name == "Platform_R33_1") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R33_1.color = Color.green;
+					platform_R33_1_Chosen = true;
+					if (platform_R33_2_Exists) {
+						platformLight_R33_2.color = Color.red;
+						platform_R33_2_Chosen = false;
+					}
+				} else if (this.gameObject.name == "Platform_R33_2") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R33_1.color = Color.red;
+					platform_R33_1_Chosen = false;
+					if (platform_R33_2_Exists) {
+						platformLight_R33_2.color = Color.green;
+						platform_R33_2_Chosen = true;
+					}
+				}
+			}
+
+			// TODO: ROOM 34 - TRIGGER COLLISIONS
+			if (other.tag == "Objects") {
+				if (this.gameObject.name == "Platform_R34_1") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R34_1.color = Color.green;
+					platform_R34_1_Chosen = true;
+					if (platform_R34_2_Exists) {
+						platformLight_R34_2.color = Color.red;
+						platform_R34_2_Chosen = false;
+					}
+				} else if (this.gameObject.name == "Platform_R34_2") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R34_1.color = Color.red;
+					platform_R34_1_Chosen = false;
+					if (platform_R34_2_Exists) {
+						platformLight_R34_2.color = Color.green;
+						platform_R34_2_Chosen = true;
+					}
+				}
+			}
+
+			// TODO: ROOM 35 - TRIGGER COLLISIONS
+			if (other.tag == "Objects") {
+				if (this.gameObject.name == "Platform_R35_1") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R35_1.color = Color.green;
+					platform_R35_1_Chosen = true;
+					if (platform_R35_2_Exists) {
+						platformLight_R35_2.color = Color.red;
+						platform_R35_2_Chosen = false;
+					}
+				} else if (this.gameObject.name == "Platform_R35_2") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R35_1.color = Color.red;
+					platform_R35_1_Chosen = false;
+					if (platform_R35_2_Exists) {
+						platformLight_R35_2.color = Color.green;
+						platform_R35_2_Chosen = true;
+					}
+				}
+			}
+
+			// TODO: ROOM 36 - TRIGGER COLLISIONS
+			if (other.tag == "Objects") {
+				if (this.gameObject.name == "Platform_R36_1") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R36_1.color = Color.green;
+					platform_R36_1_Chosen = true;
+					if (platform_R36_2_Exists) {
+						platformLight_R36_2.color = Color.red;
+						platform_R36_2_Chosen = false;
+					}
+				} else if (this.gameObject.name == "Platform_R36_2") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R36_1.color = Color.red;
+					platform_R36_1_Chosen = false;
+					if (platform_R36_2_Exists) {
+						platformLight_R36_2.color = Color.green;
+						platform_R36_2_Chosen = true;
+					}
+				}
+			}
+
+			// TODO: ROOM 37 - TRIGGER COLLISIONS
+			if (other.tag == "Objects") {
+				if (this.gameObject.name == "Platform_R37_1") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R37_1.color = Color.green;
+					platform_R37_1_Chosen = true;
+					if (platform_R37_2_Exists) {
+						platformLight_R37_2.color = Color.red;
+						platform_R37_2_Chosen = false;
+					}
+				} else if (this.gameObject.name == "Platform_R37_2") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R37_1.color = Color.red;
+					platform_R37_1_Chosen = false;
+					if (platform_R37_2_Exists) {
+						platformLight_R37_2.color = Color.green;
+						platform_R37_2_Chosen = true;
+					}
+				}
+			}
+
+			// TODO: ROOM 38 - TRIGGER COLLISIONS
+			if (other.tag == "Objects") {
+				if (this.gameObject.name == "Platform_R38_1") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R38_1.color = Color.green;
+					platform_R38_1_Chosen = true;
+					if (platform_R38_2_Exists) {
+						platformLight_R38_2.color = Color.red;
+						platform_R38_2_Chosen = false;
+					}
+				} else if (this.gameObject.name == "Platform_R38_2") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R38_1.color = Color.red;
+					platform_R38_1_Chosen = false;
+					if (platform_R38_2_Exists) {
+						platformLight_R38_2.color = Color.green;
+						platform_R38_2_Chosen = true;
+					}
+				}
+			}
+
+			// TODO: ROOM 39 - TRIGGER COLLISIONS
+			if (other.tag == "Objects") {
+				if (this.gameObject.name == "Platform_R39_1") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R39_1.color = Color.green;
+					platform_R39_1_Chosen = true;
+					if (platform_R39_2_Exists) {
+						platformLight_R39_2.color = Color.red;
+						platform_R39_2_Chosen = false;
+					}
+				} else if (this.gameObject.name == "Platform_R39_2") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R39_1.color = Color.red;
+					platform_R39_1_Chosen = false;
+					if (platform_R39_2_Exists) {
+						platformLight_R39_2.color = Color.green;
+						platform_R39_2_Chosen = true;
+					}
+				}
+			}
+
+			// TODO: ROOM 40 - TRIGGER COLLISIONS
+			if (other.tag == "Objects") {
+				if (this.gameObject.name == "Platform_R40_1") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R40_1.color = Color.green;
+					platform_R40_1_Chosen = true;
+					if (platform_R40_2_Exists) {
+						platformLight_R40_2.color = Color.red;
+						platform_R40_2_Chosen = false;
+					}
+				} else if (this.gameObject.name == "Platform_R40_2") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R40_1.color = Color.red;
+					platform_R40_1_Chosen = false;
+					if (platform_R40_2_Exists) {
+						platformLight_R40_2.color = Color.green;
+						platform_R40_2_Chosen = true;
+					}
+				}
+			}
+
+			// TODO: ROOM 41 - TRIGGER COLLISIONS
+			if (other.tag == "Objects") {
+				if (this.gameObject.name == "Platform_R41_1") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R41_1.color = Color.green;
+					platform_R41_1_Chosen = true;
+					if (platform_R41_2_Exists) {
+						platformLight_R41_2.color = Color.red;
+						platform_R41_2_Chosen = false;
+					}
+				} else if (this.gameObject.name == "Platform_R41_2") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R41_1.color = Color.red;
+					platform_R41_1_Chosen = false;
+					if (platform_R41_2_Exists) {
+						platformLight_R41_2.color = Color.green;
+						platform_R41_2_Chosen = true;
+					}
+				}
+			}
+
+			// TODO: ROOM 42 - TRIGGER COLLISIONS
+			if (other.tag == "Objects") {
+				if (this.gameObject.name == "Platform_R42_1") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R42_1.color = Color.green;
+					platform_R42_1_Chosen = true;
+					if (platform_R42_2_Exists) {
+						platformLight_R42_2.color = Color.red;
+						platform_R42_2_Chosen = false;
+					}
+				} else if (this.gameObject.name == "Platform_R42_2") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R42_1.color = Color.red;
+					platform_R42_1_Chosen = false;
+					if (platform_R42_2_Exists) {
+						platformLight_R42_2.color = Color.green;
+						platform_R42_2_Chosen = true;
+					}
+				}
+			}
+
+			// TODO: ROOM 43 - TRIGGER COLLISIONS
+			if (other.tag == "Objects") {
+				if (this.gameObject.name == "Platform_R43_1") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R43_1.color = Color.green;
+					platform_R43_1_Chosen = true;
+					if (platform_R43_2_Exists) {
+						platformLight_R43_2.color = Color.red;
+						platform_R43_2_Chosen = false;
+					}
+				} else if (this.gameObject.name == "Platform_R43_2") {
+					csScript.RemoveTutorialOne ();
+					platformLight_R43_1.color = Color.red;
+					platform_R43_1_Chosen = false;
+					if (platform_R43_2_Exists) {
+						platformLight_R43_2.color = Color.green;
+						platform_R43_2_Chosen = true;
+					}
+				}
+			}
 		}
 	}
 
@@ -1615,6 +2165,151 @@ public class Collection_Trigger : MonoBehaviour {
 			if (platform_R30_2_Exists) {
 				platformLight_R30_2.color = Color.white;
 				platform_R30_2_Chosen = false;
+			}
+		}
+
+		// ROOMS 31-43 - TOWER OF ROOMS
+
+		// ROOM 31 - TRIGGER EXITS
+		if (other.tag == "Objects" && this.gameObject.name == "Platform_R31_1" || this.gameObject.name == "Platform_R31_2") {
+			csScript.RemoveTeleporterCanvas ();
+			platformLight_R31_1.color = Color.white;
+			platform_R31_1_Chosen = false;
+			if (platform_R31_2_Exists) {
+				platformLight_R31_2.color = Color.white;
+				platform_R31_2_Chosen = false;
+			}
+		}
+
+		// TODO: ROOM 32 - TRIGGER EXITS
+		if(other.tag == "Objects" && this.gameObject.name == "Platform_R32_1" || this.gameObject.name == "Platform_R32_2"){
+			csScript.RemoveTeleporterCanvas ();
+			platformLight_R32_1.color = Color.white;
+			platform_R32_1_Chosen = false;
+			if (platform_R32_2_Exists) {
+				platformLight_R32_2.color = Color.white;
+				platform_R32_2_Chosen = false;
+			}
+		}
+
+		// TODO: ROOM 33 - TRIGGER EXITS
+		if(other.tag == "Objects" && this.gameObject.name == "Platform_R33_1" || this.gameObject.name == "Platform_R33_2"){
+			csScript.RemoveTeleporterCanvas ();
+			platformLight_R33_1.color = Color.white;
+			platform_R33_1_Chosen = false;
+			if (platform_R33_2_Exists) {
+				platformLight_R33_2.color = Color.white;
+				platform_R33_2_Chosen = false;
+			}
+		}
+
+		// TODO: ROOM 34 - TRIGGER EXITS
+		if(other.tag == "Objects" && this.gameObject.name == "Platform_R34_1" || this.gameObject.name == "Platform_R34_2"){
+			csScript.RemoveTeleporterCanvas ();
+			platformLight_R34_1.color = Color.white;
+			platform_R34_1_Chosen = false;
+			if (platform_R34_2_Exists) {
+				platformLight_R34_2.color = Color.white;
+				platform_R34_2_Chosen = false;
+			}
+		}
+
+		// TODO: ROOM 35 - TRIGGER EXITS
+		if(other.tag == "Objects" && this.gameObject.name == "Platform_R35_1" || this.gameObject.name == "Platform_R35_2"){
+			csScript.RemoveTeleporterCanvas ();
+			platformLight_R35_1.color = Color.white;
+			platform_R35_1_Chosen = false;
+			if (platform_R35_2_Exists) {
+				platformLight_R35_2.color = Color.white;
+				platform_R35_2_Chosen = false;
+			}
+		}
+
+		// TODO: ROOM 36 - TRIGGER EXITS
+		if(other.tag == "Objects" && this.gameObject.name == "Platform_R36_1" || this.gameObject.name == "Platform_R36_2"){
+			csScript.RemoveTeleporterCanvas ();
+			platformLight_R36_1.color = Color.white;
+			platform_R36_1_Chosen = false;
+			if (platform_R36_2_Exists) {
+				platformLight_R36_2.color = Color.white;
+				platform_R36_2_Chosen = false;
+			}
+		}
+
+		// TODO: ROOM 37 - TRIGGER EXITS
+		if(other.tag == "Objects" && this.gameObject.name == "Platform_R37_1" || this.gameObject.name == "Platform_R37_2"){
+			csScript.RemoveTeleporterCanvas ();
+			platformLight_R37_1.color = Color.white;
+			platform_R37_1_Chosen = false;
+			if (platform_R37_2_Exists) {
+				platformLight_R37_2.color = Color.white;
+				platform_R37_2_Chosen = false;
+			}
+		}
+
+		// TODO: ROOM 38 - TRIGGER EXITS
+		if(other.tag == "Objects" && this.gameObject.name == "Platform_R38_1" || this.gameObject.name == "Platform_R38_2"){
+			csScript.RemoveTeleporterCanvas ();
+			platformLight_R38_1.color = Color.white;
+			platform_R38_1_Chosen = false;
+			if (platform_R38_2_Exists) {
+				platformLight_R38_2.color = Color.white;
+				platform_R38_2_Chosen = false;
+			}
+		}
+
+		// TODO: ROOM 39 - TRIGGER EXITS
+		if(other.tag == "Objects" && this.gameObject.name == "Platform_R39_1" || this.gameObject.name == "Platform_R39_2"){
+			csScript.RemoveTeleporterCanvas ();
+			platformLight_R39_1.color = Color.white;
+			platform_R39_1_Chosen = false;
+			if (platform_R39_2_Exists) {
+				platformLight_R39_2.color = Color.white;
+				platform_R39_2_Chosen = false;
+			}
+		}
+
+		// TODO: ROOM 40 - TRIGGER EXITS
+		if(other.tag == "Objects" && this.gameObject.name == "Platform_R40_1" || this.gameObject.name == "Platform_R40_2"){
+			csScript.RemoveTeleporterCanvas ();
+			platformLight_R40_1.color = Color.white;
+			platform_R40_1_Chosen = false;
+			if (platform_R40_2_Exists) {
+				platformLight_R40_2.color = Color.white;
+				platform_R40_2_Chosen = false;
+			}
+		}
+
+		// TODO: ROOM 41 - TRIGGER EXITS
+		if(other.tag == "Objects" && this.gameObject.name == "Platform_R41_1" || this.gameObject.name == "Platform_R41_2"){
+			csScript.RemoveTeleporterCanvas ();
+			platformLight_R41_1.color = Color.white;
+			platform_R41_1_Chosen = false;
+			if (platform_R41_2_Exists) {
+				platformLight_R41_2.color = Color.white;
+				platform_R41_2_Chosen = false;
+			}
+		}
+
+		// TODO: ROOM 42 - TRIGGER EXITS
+		if(other.tag == "Objects" && this.gameObject.name == "Platform_R42_1" || this.gameObject.name == "Platform_R42_2"){
+			csScript.RemoveTeleporterCanvas ();
+			platformLight_R42_1.color = Color.white;
+			platform_R42_1_Chosen = false;
+			if (platform_R42_2_Exists) {
+				platformLight_R42_2.color = Color.white;
+				platform_R42_2_Chosen = false;
+			}
+		}
+
+		// TODO: ROOM 43 - TRIGGER EXITS
+		if(other.tag == "Objects" && this.gameObject.name == "Platform_R43_1" || this.gameObject.name == "Platform_R43_2"){
+			csScript.RemoveTeleporterCanvas ();
+			platformLight_R43_1.color = Color.white;
+			platform_R43_1_Chosen = false;
+			if (platform_R43_2_Exists) {
+				platformLight_R43_2.color = Color.white;
+				platform_R43_2_Chosen = false;
 			}
 		}
 	}
