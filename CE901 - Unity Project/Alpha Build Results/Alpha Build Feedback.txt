@@ -1,0 +1,10 @@
+Alpha Build Feedback:
+
+	- Reduce Mouse Sensitivity or Offer Option -
+	- Increase Minimum Distance between Player and Ball to prevent RIDING BALL bug -
+	- Add ambient music -
+	- Make initial tutorial longer lasting or provide level 1 placards -
+	- Mouse Cursor Not Locked to Full Screen
+	- Further BALL RIDING problems 
+	- Available TYPO in placard -
+	- 

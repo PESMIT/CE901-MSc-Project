@@ -1,0 +1,74 @@
+Multiple Choice Colours
+
+	- Red (6)
+		- R2-4 (LEFT)
+		- R11-13 (RIGHT)
+	- Blue (9)
+		- R2-4 (RIGHT)
+		- R5-7 (LEFT)
+		- R14-16 (RIGHT)
+	- Green (9)
+		- R5-7 (RIGHT)
+		- R8-10 (LEFT)
+		- R17-19 (LEFT)
+	- Yellow (6)	
+		- R8-10 (RIGHT)
+		- R11-13 (LEFT)
+	- Orange (6)
+		- R14-16 (LEFT)
+		- R17-19 (RIGHT)
+	- Magenta
+		- 
+	- Cyan
+		- 
+		
+Red and Blue
+(NTA: Red and Green)
+Red and Yellow
+(NTA: Red and Orange)
+(NTA: Red and Magenta)
+(NTA: Red and Cyan)
+
+Blue and Red
+Blue and Green
+(NTA: Blue and Yellow)
+Blue and Orange
+(NTA: Blue and Magenta)
+(NTA: Blue and Cyan)
+
+(NTA: Green and Red)
+Green and Blue
+Green and Yellow
+Green and Orange
+(NTA: Green and Magenta)
+(NTA: Green and Cyan)
+
+(NTA: Yellow and Blue)
+Yellow and Green
+(NTA: Yellow and Magenta)
+(NTA: Yellow and Cyan)
+(NTA: Yellow and Orange)
+Yellow and Red
+
+(NTA: Orange and Red)
+Orange and Blue
+Orange and Green
+(NTA: Orange and Yellow)
+(NTA: Orange and Magenta)
+(NTA: Orange and Cyan)
+
+(NTA: ALL)
+Magenta and Red
+Magenta and Blue
+Magenta and Green
+Magenta and Yellow
+Magenta and Orange
+Magenta and Cyan
+
+(NTA: ALL)
+Cyan and Red
+Cyan and Blue
+Cyan and Green
+Cyan and Yellow
+Cyan and Orange
+Cyan and Magenta
