@@ -1,10 +1,11 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Patrick/Dropbox/MSc Folder/CE901 - MSc Project/CE901-MSc-Project/CE901 - Unity Project/Executables/Sprint Session 10/EXE 1 - Alpha P1/EXE 1 - Alpha P1.exe
+C:/Users/Patrick/Dropbox/MSc Folder/CE901 - MSc Project/CE901-MSc-Project/CE901 - Unity Project/Executables/Sprint Session 10/EXE 1 - Ror Scenario/EXE 1 - Ror Scenario.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/SurveySelection.unity
 Assets/Scenes/FirstScenario.unity
+Assets/Scenes/RorSecondScenario.unity
 Assets/Scenes/TestingScene.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -159,3 +160,5 @@ dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.Sphere_Movement
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 35bd31e8ec371c2707174335225aea12 Assembly-CSharp.dll:.Camera_Control
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Teleporter_Script
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.rorCanvas
+ae246022241ba33abac164c05116ecb0 Assembly-CSharp.dll:.rorGameManager

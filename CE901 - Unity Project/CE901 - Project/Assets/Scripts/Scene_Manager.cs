@@ -17,6 +17,8 @@ public class Scene_Manager : MonoBehaviour {
 			SceneManager.LoadSceneAsync ("SurveySelection");
 		} else if (level == 2) {
 			SceneManager.LoadSceneAsync ("FirstScenario");
+		} else if (level == 3) {
+			SceneManager.LoadSceneAsync ("RorSecondScenario");
 		} else {
 			Debug.Log ("No Scene Number matches that input");
 		}
