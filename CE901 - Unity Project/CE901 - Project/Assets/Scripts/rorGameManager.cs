@@ -9,6 +9,9 @@ public class rorGameManager : MonoBehaviour {
 	Renderer mainAChoice, mainBChoice, mainCChoice, mainDChoice;
 	GameObject choiceButton;
 
+	// Reference to Option Pad Script
+	rorCollectionScript rorCS_1, rorCS_2, rorCS_3, rorCS_4;
+
 	// Game Loop Integer
 	public int gamePhase;
 	// Placard Headers
@@ -37,6 +40,12 @@ public class rorGameManager : MonoBehaviour {
 
 		// Game Loop Start
 		gamePhase = 1;
+
+		// rorCS Reference
+		rorCS_1 = GameObject.Find("Option Pad 1").GetComponent<rorCollectionScript>();
+		rorCS_2 = GameObject.Find("Option Pad 2").GetComponent<rorCollectionScript>();
+		rorCS_3 = GameObject.Find("Option Pad 3").GetComponent<rorCollectionScript>();
+		rorCS_4 = GameObject.Find("Option Pad 4").GetComponent<rorCollectionScript>();
 	}
 	
 	// Update is called once per frame
@@ -145,6 +154,7 @@ public class rorGameManager : MonoBehaviour {
 			if (Input.GetKeyDown (KeyCode.E)) {
 				if (gamePhase < 10) {
 					gamePhase += 1;
+					rorCS_1.resetPads ();
 				} else if (gamePhase >= 3) {
 					gamePhase = 1;
 				}
