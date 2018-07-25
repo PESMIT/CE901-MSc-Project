@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Patrick/Dropbox/MSc Folder/CE901 - MSc Project/CE901-MSc-Project/CE901 - Unity Project/Executables/Sprint Session 10/EXE 1 - Ror Scenario/EXE 1 - Ror Scenario.exe
+C:/Users/Patrick/Dropbox/MSc Folder/CE901 - MSc Project/CE901-MSc-Project/CE901 - Unity Project/Executables/Sprint Session 11/EXE 1 - Beta Ror 0.5/EXE 1 - Beta Ror 0.5.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/SurveySelection.unity
@@ -20,6 +20,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.rorCanvas
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -121,8 +122,9 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Interactable
 a0ee0514fa342b70d48545f647d0c2cf Assembly-CSharp.dll:.CanvasScript
+7db6b2600561bf190d524b467be41b91 Assembly-CSharp.dll:.rorCollectionScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PauseMenuScript
-69e43830daeff269b6736f9c4536e413 Assembly-CSharp.dll:.Player_Movement
+097bbe86d79ad9c2338a87ebc1c8bf64 Assembly-CSharp.dll:.Player_Movement
 497bb7d66f152e169c1d3fa3f4d7c162 Assembly-CSharp.dll:.Pickup_Script
 6746ab37284c62a0ad3a7da2a6e46c20 Assembly-CSharp.dll:.Choice_Tracker
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -139,6 +141,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.introScript
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 f02726adeff0a3ec5905565234b372da UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
@@ -159,6 +162,5 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.Sphere_Movement
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 35bd31e8ec371c2707174335225aea12 Assembly-CSharp.dll:.Camera_Control
+4554fb8da9d9e38c7986f789bed86062 Assembly-CSharp.dll:.rorGameManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Teleporter_Script
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.rorCanvas
-ae246022241ba33abac164c05116ecb0 Assembly-CSharp.dll:.rorGameManager
