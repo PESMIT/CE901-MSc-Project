@@ -32,6 +32,8 @@ public class rorGameManager : MonoBehaviour {
 	// Rorschach Answers
 	public Texture[] rorAnswerArray;
 
+	private GameObject TutorialText;
+
 
 
 
@@ -60,6 +62,23 @@ public class rorGameManager : MonoBehaviour {
 		rorCS_2 = GameObject.Find("Option Pad 2").GetComponent<rorCollectionScript>();
 		rorCS_3 = GameObject.Find("Option Pad 3").GetComponent<rorCollectionScript>();
 		rorCS_4 = GameObject.Find("Option Pad 4").GetComponent<rorCollectionScript>();
+
+		// Tutorial Text
+		TutorialText = GameObject.Find("Tutorial Text");
+		Invoke ("TutorialTextOff", 11f);
+	}
+
+	void TutorialTextOn(){
+		TutorialText.SetActive (true);
+	}
+
+	void TutorialTextOff(){
+		TutorialText.SetActive (false);
+	}
+
+	void EndOfGame(){
+		TutorialText.SetActive (true);
+		TutorialText.GetComponent<Text> ().text = "Thank you for playing the Rorschach Test Scenario \n You are now being moved to the Main Menu";
 	}
 	
 	// Update is called once per frame
@@ -68,7 +87,12 @@ public class rorGameManager : MonoBehaviour {
 		if (gamePhase > 10) {
 			player.transform.position = new Vector3 (0, 15, 0);
 			writeToFile ();
+			EndOfGame ();
 			Invoke ("backToMainMenu", 5);
+		}
+		if (Input.GetKeyDown (KeyCode.T)) {
+			TutorialTextOn ();
+			Invoke ("TutorialTextOff", 10);
 		}
 	}
 
@@ -184,6 +208,9 @@ public class rorGameManager : MonoBehaviour {
 				if (gamePhase <= 10 && (rorCS_1.optionPad1_Chosen || rorCS_2.optionPad2_Chosen || rorCS_3.optionPad3_Chosen || rorCS_4.optionPad4_Chosen)) {
 					checkCollection ();
 					rorCS_1.resetPads ();
+					rorCS_2.resetPads ();
+					rorCS_3.resetPads ();
+					rorCS_4.resetPads ();
 				}
 			}
 		}
