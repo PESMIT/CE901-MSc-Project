@@ -16,11 +16,15 @@ public class Scene_Manager : MonoBehaviour {
 		} else if (level == 1) {
 			SceneManager.LoadSceneAsync ("SurveySelection");
 		} else if (level == 2) {
-			SceneManager.LoadSceneAsync ("FirstScenario");
+			SceneManager.LoadSceneAsync ("colourIntroScene");
 		} else if (level == 3) {
+			SceneManager.LoadSceneAsync ("FirstScenario");
+		} else if (level == 4) {
+			SceneManager.LoadSceneAsync ("rorIntroScene");
+		} else if (level == 5) {
 			SceneManager.LoadSceneAsync ("RorSecondScenario");
-		} else {
-			Debug.Log ("No Scene Number matches that input");
+		}else {
+			Debug.Log ("No Scene Number matches that input - Check Script");
 		}
 	}
 

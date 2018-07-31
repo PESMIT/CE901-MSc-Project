@@ -12,8 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/SurveySelection.unity
     guid: 95144922a905d22449de58fd24c8cbbf
   - enabled: 1
+    path: Assets/Scenes/colourIntroScene.unity
+    guid: a3c84382b9eba9244b682acf4f778e7a
+  - enabled: 1
     path: Assets/Scenes/FirstScenario.unity
     guid: 05ec8485dc5113247be2ef12bc36a6c6
+  - enabled: 1
+    path: Assets/Scenes/rorIntroScene.unity
+    guid: 3563cdaaca0782a4386b7e1198f3bc11
   - enabled: 1
     path: Assets/Scenes/RorSecondScenario.unity
     guid: f79936a8077b25348b2178c156605ec3

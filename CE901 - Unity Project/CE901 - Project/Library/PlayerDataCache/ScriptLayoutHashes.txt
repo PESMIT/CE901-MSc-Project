@@ -1,10 +1,12 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Patrick/Dropbox/MSc Folder/CE901 - MSc Project/CE901-MSc-Project/CE901 - Unity Project/Executables/Sprint Session 11/EXE 2 - Beta Ror 1.0/EXE 2 - Beta Ror 1.0.exe
+C:/Users/Patrick/Dropbox/MSc Folder/CE901 - MSc Project/CE901-MSc-Project/CE901 - Unity Project/Executables/Sprint Session 12/EXE 1 - ROR Polish/EXE 1 - ROR Polish.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/SurveySelection.unity
+Assets/Scenes/colourIntroScene.unity
 Assets/Scenes/FirstScenario.unity
+Assets/Scenes/rorIntroScene.unity
 Assets/Scenes/RorSecondScenario.unity
 Assets/Scenes/TestingScene.unity
 SceneListEnd?

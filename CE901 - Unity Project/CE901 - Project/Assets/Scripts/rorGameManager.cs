@@ -22,6 +22,7 @@ public class rorGameManager : MonoBehaviour {
 	// Record Keeping
 	public int room1OptionChosen, room2OptionChosen, room3OptionChosen, room4OptionChosen, room5OptionChosen; 
 	public int room6OptionChosen, room7OptionChosen, room8OptionChosen, room9OptionChosen, room10OptionChosen; 
+	private string room1TimeTaken, room2TimeTaken, room3TimeTaken, room4TimeTaken, room5TimeTaken, room6TimeTaken, room7TimeTaken, room8TimeTaken, room9TimeTaken, room10TimeTaken;
 
 	// Game Loop Integer
 	public int gamePhase;
@@ -31,11 +32,14 @@ public class rorGameManager : MonoBehaviour {
 	public Texture[] rorImageArray;
 	// Rorschach Answers
 	public Texture[] rorAnswerArray;
-
+	// Rorschach Canvas
 	private GameObject TutorialText;
-
-
-
+	// Timer
+	private float rorTimer;
+	private string minutes;
+	private string seconds;
+	private Text rorTimerCanvas;
+	private bool R1TimeTakenCheck, R2TimeTakenCheck, R3TimeTakenCheck, R4TimeTakenCheck, R5TimeTakenCheck, R6TimeTakenCheck, R7TimeTakenCheck, R8TimeTakenCheck, R9TimeTakenCheck, R10TimeTakenCheck;
 
 	// Use this for initialization
 	void Start () {
@@ -65,7 +69,37 @@ public class rorGameManager : MonoBehaviour {
 
 		// Tutorial Text
 		TutorialText = GameObject.Find("Tutorial Text");
-		Invoke ("TutorialTextOff", 11f);
+		//Invoke ("TutorialTextOff", 11f);
+
+		rorTimerCanvas = GameObject.Find ("TimerText").GetComponent<Text> ();
+
+		// Timer
+		rorTimer = 0.0f;
+		room1TimeTaken = "";
+		room2TimeTaken = "";
+		room3TimeTaken = "";
+		room4TimeTaken = "";
+		room5TimeTaken = "";
+		room6TimeTaken = "";
+		room7TimeTaken = "";
+		room8TimeTaken = "";
+		room9TimeTaken = "";
+		room10TimeTaken = "";
+
+		// Timer Stats
+		R1TimeTakenCheck = false;
+		R2TimeTakenCheck = false;
+		R3TimeTakenCheck = false;
+		R4TimeTakenCheck = false;
+		R5TimeTakenCheck = false;
+		R6TimeTakenCheck = false;
+		R7TimeTakenCheck = false;
+		R8TimeTakenCheck = false;
+		R9TimeTakenCheck = false;
+		R10TimeTakenCheck = false;
+
+
+
 	}
 
 	void TutorialTextOn(){
@@ -80,15 +114,42 @@ public class rorGameManager : MonoBehaviour {
 		TutorialText.SetActive (true);
 		TutorialText.GetComponent<Text> ().text = "Thank you for playing the Rorschach Test Scenario \n You are now being moved to the Main Menu";
 	}
+
+	void resetTimer(){
+		rorTimer = 0f;
+		minutes = "";
+		seconds = "";
+	}
+
+	void startTimer(){
+		rorTimer += Time.deltaTime;
+	}
+
+	void displayTimer(){
+		minutes = Mathf.Floor (rorTimer / 60).ToString("00");
+		seconds = Mathf.RoundToInt (rorTimer % 60).ToString("00");
+		rorTimerCanvas.text = minutes + ":" + seconds;
+	}
+
+	void blankTimer(){
+		rorTimerCanvas.gameObject.SetActive(false);
+	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		startTimer ();
+		displayTimer ();
+		blankTimer ();
+
 		gameLoop ();
+
 		if (gamePhase > 10) {
 			player.transform.position = new Vector3 (0, 15, 0);
 			writeToFile ();
 			EndOfGame ();
-			Invoke ("backToMainMenu", 5);
+			Invoke ("backToMainMenu", 2.5f);
+			Cursor.visible = true;
 		}
 		if (Input.GetKeyDown (KeyCode.T)) {
 			TutorialTextOn ();
@@ -112,11 +173,20 @@ public class rorGameManager : MonoBehaviour {
 			// Animals - Beard - Humans - Laughing
 			mainPortrait.material.mainTexture = rorImageArray [2];
 			mainPortraitPlacard.material.mainTexture = rorPlacardHeaders [2];
-
 			mainAChoice.material.mainTexture = rorAnswerArray [5];
 			mainBChoice.material.mainTexture = rorAnswerArray [6];
 			mainCChoice.material.mainTexture = rorAnswerArray [7];
 			mainDChoice.material.mainTexture = rorAnswerArray [8];
+
+			// Timer
+			if(!R1TimeTakenCheck){
+				rorTimer -= 15.0f;
+				displayTimer ();
+				blankTimer ();
+				room1TimeTaken = rorTimerCanvas.text;
+				resetTimer ();
+				R1TimeTakenCheck = true;
+			}
 			break;
 		case 3:
 			// Birds - Bones - Humans - Instruments
@@ -127,6 +197,14 @@ public class rorGameManager : MonoBehaviour {
 			mainBChoice.material.mainTexture = rorAnswerArray [10];
 			mainCChoice.material.mainTexture = rorAnswerArray [11];
 			mainDChoice.material.mainTexture = rorAnswerArray [12];
+
+			// Timer
+			if(!R2TimeTakenCheck){
+				room2TimeTaken = rorTimerCanvas.text;
+				resetTimer ();
+				R2TimeTakenCheck = true;
+			}
+
 			break;
 		case 4:
 			// Animal Hide - Bat - Cocoon - Flower
@@ -137,6 +215,14 @@ public class rorGameManager : MonoBehaviour {
 			mainBChoice.material.mainTexture = rorAnswerArray [14];
 			mainCChoice.material.mainTexture = rorAnswerArray [15];
 			mainDChoice.material.mainTexture = rorAnswerArray [16];
+
+			// Timer
+			if(!R3TimeTakenCheck){
+				room3TimeTaken = rorTimerCanvas.text;
+				resetTimer ();
+				R3TimeTakenCheck = true;
+			}
+
 			break;
 		case 5:
 			// Bat - Butterfly - Moth - Sheep
@@ -147,6 +233,14 @@ public class rorGameManager : MonoBehaviour {
 			mainBChoice.material.mainTexture = rorAnswerArray [18];
 			mainCChoice.material.mainTexture = rorAnswerArray [19];
 			mainDChoice.material.mainTexture = rorAnswerArray [20];
+
+			// Timer
+			if(!R4TimeTakenCheck){
+				room4TimeTaken = rorTimerCanvas.text;
+				resetTimer ();
+				R4TimeTakenCheck = true;
+			}
+
 			break;
 		case 6:
 			// Animal Hide - Instruments - Staff - Tower
@@ -157,6 +251,14 @@ public class rorGameManager : MonoBehaviour {
 			mainBChoice.material.mainTexture = rorAnswerArray [22];
 			mainCChoice.material.mainTexture = rorAnswerArray [23];
 			mainDChoice.material.mainTexture = rorAnswerArray [24];
+
+			// Timer
+			if(!R5TimeTakenCheck){
+				room5TimeTaken = rorTimerCanvas.text;
+				resetTimer ();
+				R5TimeTakenCheck = true;
+			}
+
 			break;
 		case 7:
 			// Arrow - Dish or Bowl - Human Faces - Vase
@@ -167,6 +269,14 @@ public class rorGameManager : MonoBehaviour {
 			mainBChoice.material.mainTexture = rorAnswerArray [26];
 			mainCChoice.material.mainTexture = rorAnswerArray [27];
 			mainDChoice.material.mainTexture = rorAnswerArray [28];
+
+			// Timer
+			if(!R6TimeTakenCheck){
+				room6TimeTaken = rorTimerCanvas.text;
+				resetTimer ();
+				R6TimeTakenCheck = true;
+			}
+
 			break;
 		case 8:
 			// Aniamls - Face - Organ - Trophy 
@@ -177,6 +287,14 @@ public class rorGameManager : MonoBehaviour {
 			mainBChoice.material.mainTexture = rorAnswerArray [30];
 			mainCChoice.material.mainTexture = rorAnswerArray [31];
 			mainDChoice.material.mainTexture = rorAnswerArray [32];
+
+			// Timer
+			if(!R7TimeTakenCheck){
+				room7TimeTaken = rorTimerCanvas.text;
+				resetTimer ();
+				R7TimeTakenCheck = true;
+			}
+
 			break;
 		case 9:
 			// Flower - Giraffe - Human - Tower
@@ -187,6 +305,14 @@ public class rorGameManager : MonoBehaviour {
 			mainBChoice.material.mainTexture = rorAnswerArray [34];
 			mainCChoice.material.mainTexture = rorAnswerArray [35];
 			mainDChoice.material.mainTexture = rorAnswerArray [36];
+
+			// Timer
+			if(!R8TimeTakenCheck){
+				room8TimeTaken = rorTimerCanvas.text;
+				resetTimer ();
+				R8TimeTakenCheck = true;
+			}
+
 			break;
 		case 10:
 			// Banana - Crab - Lobster - Spider
@@ -197,6 +323,23 @@ public class rorGameManager : MonoBehaviour {
 			mainBChoice.material.mainTexture = rorAnswerArray [38];
 			mainCChoice.material.mainTexture = rorAnswerArray [39];
 			mainDChoice.material.mainTexture = rorAnswerArray [40];
+
+			// Timer
+			if(!R9TimeTakenCheck){
+				room9TimeTaken = rorTimerCanvas.text;
+				resetTimer ();
+				R9TimeTakenCheck = true;
+			}
+
+			break;
+		case 11:
+			// Timer
+			if(!R10TimeTakenCheck){
+				room10TimeTaken = rorTimerCanvas.text;
+				resetTimer ();
+				R10TimeTakenCheck = true;
+			}
+
 			break;
 		}
 	}
@@ -272,18 +415,18 @@ public class rorGameManager : MonoBehaviour {
 			// ROOM 7 - BIRDS - BONES - HUMANS - INSTRUMENTS
 			string header7Text = "ROOM 7 - Rorschach Image" + Environment.NewLine;
 			string roomSevenChoice = "";
-			if (room7OptionChosen == 1) {roomSevenChoice = "BIRDS" + Environment.NewLine;}
-			if (room7OptionChosen == 2) {roomSevenChoice = "BONES" + Environment.NewLine;}
-			if (room7OptionChosen == 3) {roomSevenChoice = "HUMANS" + Environment.NewLine;}
-			if (room7OptionChosen == 4) {roomSevenChoice = "INSTRUMENTS" + Environment.NewLine;}
+			if (room7OptionChosen == 1) {roomSevenChoice = "ARROW" + Environment.NewLine;}
+			if (room7OptionChosen == 2) {roomSevenChoice = "DISH OR BOWL" + Environment.NewLine;}
+			if (room7OptionChosen == 3) {roomSevenChoice = "HUMAN FACES" + Environment.NewLine;}
+			if (room7OptionChosen == 4) {roomSevenChoice = "VASE" + Environment.NewLine;}
 
 			// ROOM 8 - ANIMAL HIDE - BAT - COCOON - FLOWER
 			string header8Text = "ROOM 8 - Rorschach Image" + Environment.NewLine;
 			string roomEightChoice = "";
-			if (room8OptionChosen == 1) {roomEightChoice = "ANIMAL HIDE" + Environment.NewLine;}
-			if (room8OptionChosen == 2) {roomEightChoice = "BAT" + Environment.NewLine;}
-			if (room8OptionChosen == 3) {roomEightChoice = "COCOON" + Environment.NewLine;}
-			if (room8OptionChosen == 4) {roomEightChoice = "FLOWER" + Environment.NewLine;}
+			if (room8OptionChosen == 1) {roomEightChoice = "ANIMALS" + Environment.NewLine;}
+			if (room8OptionChosen == 2) {roomEightChoice = "FACE" + Environment.NewLine;}
+			if (room8OptionChosen == 3) {roomEightChoice = "ORGAN" + Environment.NewLine;}
+			if (room8OptionChosen == 4) {roomEightChoice = "TROPHY" + Environment.NewLine;}
 
 			// ROOM 9 - FLOWER - GIRAFFE - HUMAN - TOWER
 			string header9Text = "ROOM 9 - Rorschach Image" + Environment.NewLine;
@@ -301,13 +444,30 @@ public class rorGameManager : MonoBehaviour {
 			if (room10OptionChosen == 3) {roomTenChoice = "LOBSTER" + Environment.NewLine;}
 			if (room10OptionChosen == 4) {roomTenChoice = "SPIDER" + Environment.NewLine;}
 
+			// TIME TAKEN
+			string headerTimeText = Environment.NewLine + "TIME TAKEN - RORSCHACH TEST" + Environment.NewLine;
+			string room1TimeTakenText = "ROOM ONE TIME TAKEN: " + room1TimeTaken + Environment.NewLine;
+			string room2TimeTakenText = "ROOM TWO TIME TAKEN: " + room2TimeTaken + Environment.NewLine;
+			string room3TimeTakenText = "ROOM THREE TIME TAKEN: " + room3TimeTaken + Environment.NewLine;
+			string room4TimeTakenText = "ROOM FOUR TIME TAKEN: " + room4TimeTaken + Environment.NewLine;
+			string room5TimeTakenText = "ROOM FIVE TIME TAKEN: " + room5TimeTaken + Environment.NewLine;
+			string room6TimeTakenText = "ROOM SIX TIME TAKEN: " + room6TimeTaken + Environment.NewLine;
+			string room7TimeTakenText = "ROOM SEVEN TIME TAKEN: " + room7TimeTaken + Environment.NewLine;
+			string room8TimeTakenText = "ROOM EIGHT TIME TAKEN: " + room8TimeTaken + Environment.NewLine;
+			string room9TimeTakenText = "ROOM NINE TIME TAKEN: " + room9TimeTaken + Environment.NewLine;
+			string room10TimeTakenText = "ROOM TEN TIME TAKEN: " + room10TimeTaken + Environment.NewLine;
+
+
 			string wholeText = header1Text + roomOneChoice + Environment.NewLine + header2Text + roomTwoChoice +
 			                   Environment.NewLine + header3Text + roomThreeChoice + Environment.NewLine + header4Text + roomFourChoice +
 			                   Environment.NewLine + header5Text + roomFiveChoice + Environment.NewLine + header6Text + roomSixChoice +
 			                   Environment.NewLine + header7Text + roomSevenChoice + Environment.NewLine + header8Text + roomEightChoice +
 			                   Environment.NewLine + header9Text + roomNineChoice + Environment.NewLine + header10Text + roomTenChoice;
+			
+			string timeTakenText = headerTimeText + room1TimeTakenText + room2TimeTakenText + room3TimeTakenText + room4TimeTakenText + room5TimeTakenText +
+			                       room6TimeTakenText + room7TimeTakenText + room8TimeTakenText + room9TimeTakenText + room10TimeTakenText;
 
-			File.WriteAllText (path, wholeText);
+			File.WriteAllText (path, wholeText + timeTakenText);
 		}
 	}
 
