@@ -23,6 +23,8 @@ public class Scene_Manager : MonoBehaviour {
 			SceneManager.LoadSceneAsync ("rorIntroScene");
 		} else if (level == 5) {
 			SceneManager.LoadSceneAsync ("RorSecondScenario");
+		} else if (level == 6) {
+			SceneManager.LoadSceneAsync ("BigFiveScene");
 		}else {
 			Debug.Log ("No Scene Number matches that input - Check Script");
 		}
