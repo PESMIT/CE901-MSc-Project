@@ -18,14 +18,16 @@ public class Scene_Manager : MonoBehaviour {
 		} else if (level == 2) {
 			SceneManager.LoadSceneAsync ("colourIntroScene");
 		} else if (level == 3) {
-			SceneManager.LoadSceneAsync ("FirstScenario");
+			SceneManager.LoadSceneAsync ("colourScene");
 		} else if (level == 4) {
-			SceneManager.LoadSceneAsync ("rorIntroScene");
+			SceneManager.LoadSceneAsync ("rorschachIntroScene");
 		} else if (level == 5) {
-			SceneManager.LoadSceneAsync ("RorSecondScenario");
+			SceneManager.LoadSceneAsync ("rorschachScene");
 		} else if (level == 6) {
+			SceneManager.LoadSceneAsync ("BigFiveIntroScene");
+		} else if (level == 7) {
 			SceneManager.LoadSceneAsync ("BigFiveScene");
-		}else {
+		} else {
 			Debug.Log ("No Scene Number matches that input - Check Script");
 		}
 	}

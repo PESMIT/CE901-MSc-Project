@@ -1,0 +1,81 @@
+ROOM 1 - Q1: I am the life of the party
+NEUTRAL
+
+ROOM 2 - Q2: I feel little concern for others
+NEUTRAL
+
+ROOM 3 - Q3: I am always prepared
+NEUTRAL
+
+ROOM 4 - Q4: I get stressed out easily
+NEUTRAL
+
+ROOM 5 - Q5: I have a rich vocabulary
+NEUTRAL
+
+ROOM 6 - Q6: I don't talk a lot
+NEUTRAL
+
+ROOM 7 - Q7: I am interested in people
+NEUTRAL
+
+ROOM 8 - Q8: I leave my belongings around
+NEUTRAL
+
+ROOM 9 - Q9: I am relaxed most of the time
+NEUTRAL
+
+ROOM 10 - Q10: I have difficulty understanding abstract ideas
+NEUTRAL
+
+ROOM 11 - Q11: I feel comfortable around people
+NEUTRAL
+
+ROOM 12 - Q12: I insult people
+NEUTRAL
+
+ROOM 13 - Q13: I pay attention to details
+NEUTRAL
+
+ROOM 14 - Q14: I worry about things
+NEUTRAL
+
+ROOM 15 - Q15: I have a vivid imagination
+NEUTRAL
+
+ROOM 16 - Q16: I keep in the background
+NEUTRAL
+
+ROOM 17 - Q17: I sympathize with others' feelings
+NEUTRAL
+
+ROOM 18 - Q18: I make a mess of things
+NEUTRAL
+
+ROOM 19 - Q19: I seldom feel blue
+NEUTRAL
+
+ROOM 20 - Q20: I am not interested in abstract ideas
+NEUTRAL
+
+TIME TAKEN - BIG FIVE PERSONALITY TEST
+ROOM ONE TIME TAKEN: 00:07
+ROOM TWO TIME TAKEN: 00:06
+ROOM THREE TIME TAKEN: 00:05
+ROOM FOUR TIME TAKEN: 00:05
+ROOM FIVE TIME TAKEN: 00:05
+ROOM SIX TIME TAKEN: 00:06
+ROOM SEVEN TIME TAKEN: 00:05
+ROOM EIGHT TIME TAKEN: 00:05
+ROOM NINE TIME TAKEN: 00:05
+ROOM TEN TIME TAKEN: 00:06
+ROOM ELEVEN TIME TAKEN: 00:06
+ROOM TWELVE TIME TAKEN: 00:05
+ROOM THIRTEEN TIME TAKEN: 00:06
+ROOM FOURTEEN TIME TAKEN: 00:05
+ROOM FIFTHTEEN TIME TAKEN: 00:05
+ROOM SIXTEEN TIME TAKEN: 00:06
+ROOM SEVENTEEN TIME TAKEN: 00:05
+ROOM EIGHTEEN TIME TAKEN: 00:06
+ROOM NINETEEN TIME TAKEN: 00:05
+ROOM TWENTY TIME TAKEN: 00:06

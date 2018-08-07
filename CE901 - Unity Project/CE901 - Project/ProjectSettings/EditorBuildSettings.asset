@@ -13,20 +13,20 @@ EditorBuildSettings:
     guid: 95144922a905d22449de58fd24c8cbbf
   - enabled: 1
     path: Assets/Scenes/colourIntroScene.unity
-    guid: a3c84382b9eba9244b682acf4f778e7a
+    guid: 37512c88563209a4c959789d5e096a2c
   - enabled: 1
-    path: Assets/Scenes/FirstScenario.unity
+    path: Assets/Scenes/colourScene.unity
     guid: 05ec8485dc5113247be2ef12bc36a6c6
   - enabled: 1
-    path: Assets/Scenes/rorIntroScene.unity
-    guid: 3563cdaaca0782a4386b7e1198f3bc11
+    path: Assets/Scenes/rorschachIntroScene.unity
+    guid: 939b292edc3ee074da306fd5e6d34087
   - enabled: 1
-    path: Assets/Scenes/RorSecondScenario.unity
+    path: Assets/Scenes/rorschachScene.unity
     guid: f79936a8077b25348b2178c156605ec3
+  - enabled: 1
+    path: Assets/Scenes/BigFiveIntroScene.unity
+    guid: 78b5664be68bacc4582e13f4a2655045
   - enabled: 1
     path: Assets/Scenes/BigFiveScene.unity
     guid: 0b3299878f4f579428c588d0463616be
-  - enabled: 1
-    path: Assets/Scenes/TestingScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}

@@ -116,9 +116,9 @@ NavMeshSettings:
 --- !u!1 &120665224
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 120665228}
   - component: {fileID: 120665227}
@@ -135,27 +135,31 @@ GameObject:
 --- !u!81 &120665225
 AudioListener:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 120665224}
   m_Enabled: 1
 --- !u!124 &120665226
 Behaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 120665224}
   m_Enabled: 1
 --- !u!20 &120665227
 Camera:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 120665224}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -185,7 +189,7 @@ Camera:
 --- !u!4 &120665228
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 120665224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -198,7 +202,7 @@ Transform:
 --- !u!114 &120665229
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 120665224}
   m_Enabled: 1
@@ -209,9 +213,9 @@ MonoBehaviour:
 --- !u!1 &658988595
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 658988596}
   - component: {fileID: 658988599}
@@ -227,7 +231,7 @@ GameObject:
 --- !u!224 &658988596
 RectTransform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 658988595}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -240,13 +244,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 543, y: -198}
+  m_AnchoredPosition: {x: -5, y: -277}
   m_SizeDelta: {x: 350, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &658988597
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 658988595}
   m_Enabled: 1
@@ -288,7 +292,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -298,7 +302,7 @@ MonoBehaviour:
 --- !u!114 &658988598
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 658988595}
   m_Enabled: 1
@@ -325,15 +329,16 @@ MonoBehaviour:
 --- !u!222 &658988599
 CanvasRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 658988595}
+  m_CullTransparentMesh: 0
 --- !u!1 &794800447
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 794800448}
   - component: {fileID: 794800451}
@@ -349,7 +354,7 @@ GameObject:
 --- !u!224 &794800448
 RectTransform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 794800447}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -357,7 +362,7 @@ RectTransform:
   m_LocalScale: {x: 1600, y: 900, z: 1}
   m_Children: []
   m_Father: {fileID: 924861886}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -367,7 +372,7 @@ RectTransform:
 --- !u!64 &794800449
 MeshCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 794800447}
   m_Material: {fileID: 0}
@@ -381,7 +386,7 @@ MeshCollider:
 --- !u!23 &794800450
 MeshRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 794800447}
   m_Enabled: 1
@@ -416,16 +421,16 @@ MeshRenderer:
 --- !u!33 &794800451
 MeshFilter:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 794800447}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &872567181
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 872567182}
   - component: {fileID: 872567184}
@@ -440,7 +445,7 @@ GameObject:
 --- !u!224 &872567182
 RectTransform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 872567181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -458,7 +463,7 @@ RectTransform:
 --- !u!114 &872567183
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 872567181}
   m_Enabled: 1
@@ -491,15 +496,16 @@ MonoBehaviour:
 --- !u!222 &872567184
 CanvasRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 872567181}
+  m_CullTransparentMesh: 0
 --- !u!1 &924861882
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 924861886}
   - component: {fileID: 924861885}
@@ -515,7 +521,7 @@ GameObject:
 --- !u!114 &924861883
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 924861882}
   m_Enabled: 1
@@ -531,7 +537,7 @@ MonoBehaviour:
 --- !u!114 &924861884
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 924861882}
   m_Enabled: 1
@@ -552,7 +558,7 @@ MonoBehaviour:
 --- !u!223 &924861885
 Canvas:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 924861882}
   m_Enabled: 1
@@ -572,15 +578,15 @@ Canvas:
 --- !u!224 &924861886
 RectTransform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 924861882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 2026004860}
   - {fileID: 794800448}
+  - {fileID: 2026004860}
   - {fileID: 1056622388}
   - {fileID: 1337138993}
   - {fileID: 1957747877}
@@ -596,15 +602,15 @@ RectTransform:
 --- !u!1 &1056622387
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1056622388}
   - component: {fileID: 1056622390}
   - component: {fileID: 1056622389}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: How To Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -613,7 +619,7 @@ GameObject:
 --- !u!224 &1056622388
 RectTransform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1056622387}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -626,13 +632,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: 192}
+  m_AnchoredPosition: {x: 472, y: 309}
   m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1056622389
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1056622387}
   m_Enabled: 1
@@ -665,15 +671,16 @@ MonoBehaviour:
 --- !u!222 &1056622390
 CanvasRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1056622387}
+  m_CullTransparentMesh: 0
 --- !u!1 &1099451578
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1099451579}
   - component: {fileID: 1099451581}
@@ -688,7 +695,7 @@ GameObject:
 --- !u!224 &1099451579
 RectTransform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1099451578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -706,7 +713,7 @@ RectTransform:
 --- !u!114 &1099451580
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1099451578}
   m_Enabled: 1
@@ -739,15 +746,16 @@ MonoBehaviour:
 --- !u!222 &1099451581
 CanvasRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1099451578}
+  m_CullTransparentMesh: 0
 --- !u!1 &1281189856
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1281189857}
   - component: {fileID: 1281189859}
@@ -762,11 +770,11 @@ GameObject:
 --- !u!224 &1281189857
 RectTransform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1281189856}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1056622388}
@@ -774,13 +782,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: -218}
+  m_AnchoredPosition: {x: -2.0000007, y: -374}
   m_SizeDelta: {x: 450, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1281189858
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1281189856}
   m_Enabled: 1
@@ -809,37 +817,35 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '
-
-    You choose this option by picking up a ball with the E key when looking at it
-    from a close distance.
-
-
-    Once you have began carrying the ball, move it over to the platform in front of
-    your chosen colour/position and place it down on the pad by hitting the E key
-    again to drop the ball.
-
-
-    Once the ball is dropped the pad will light up and the teleporter will become
-    active. Stand on the teleporter when it is active to teleport to the next level'
+  m_Text: "To play this game you take the role of a traditional First-Person-Shooter
+    camera focus, wherein you see through the eyes of your avatar. \n\nThe avatar
+    moves around dependant on the direction they are facing with the W/A/S/D keys
+    and the mouse movement to face a direction.\n\nTo interact with and answer the
+    questions, you must pick up the solid red sphere which acts as your pointer. \n\nYou
+    pick up the sphere by getting close to it, looking at it and pressing the E key
+    to begin carrying the sphere. Once you have picked up the sphere, you can press
+    E again to drop it.\n\nTo answer a question, you simply pick up and drop the sphere
+    onto the platform in front of the representative answer you have chosen, the platform
+    will glow when you have made a selection."
 --- !u!222 &1281189859
 CanvasRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1281189856}
+  m_CullTransparentMesh: 0
 --- !u!1 &1337138992
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1337138993}
   - component: {fileID: 1337138995}
   - component: {fileID: 1337138994}
   m_Layer: 5
-  m_Name: Text (3)
+  m_Name: Purpose of Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -848,7 +854,7 @@ GameObject:
 --- !u!224 &1337138993
 RectTransform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1337138992}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -861,13 +867,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -515, y: 192}
+  m_AnchoredPosition: {x: -515, y: 298}
   m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1337138994
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1337138992}
   m_Enabled: 1
@@ -900,15 +906,16 @@ MonoBehaviour:
 --- !u!222 &1337138995
 CanvasRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1337138992}
+  m_CullTransparentMesh: 0
 --- !u!1 &1377330566
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1377330567}
   - component: {fileID: 1377330569}
@@ -923,11 +930,11 @@ GameObject:
 --- !u!224 &1377330567
 RectTransform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1377330566}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -51}
+  m_LocalPosition: {x: 0, y: 0, z: -51.000015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1337138993}
@@ -935,13 +942,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31, y: -282}
+  m_AnchoredPosition: {x: 31, y: -371}
   m_SizeDelta: {x: 450, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1377330568
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1377330566}
   m_Enabled: 1
@@ -970,33 +977,45 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'The purpose of this test primarily is to determine your preference between
-    two provided colour options.
+  m_Text: 'The purpose of this test is to determine a series of preferences concerning
+    colours for the user. The following preferences are taken into account:
 
 
-    The colours provided are in sets of 12, with each colour being provided a total
-    of 6 times on the left and 6 times on the right.
+    - Colour preference in general
+
+    - Colour loyalty in different pairings
+
+    - Position loyalty in left/right settings
+
+    - Time taken to make a choice
+
+    - Most chosen colour
+
+    - List of room options and colour chosen.
 
 
-    This creates a total of 42 instances where you are directly picking between two
-    colours.
+    These preferences are then recorded into statistics which can be used to represent
+    a sample of users. With seemingly a simple set of choices to make - two colours
+    in sets of seven colours total for a total of 42 individual choices which can
+    then represent 42 user-specific statistics for each of the recorded preferences.
 
 
-    The benefit of this test is such that in doing so you can determine through the
-    statistics generated a sense of preference, loyalty to colour or position and
-    even a recognisable dislike for others.'
+    This is an original survey and has no psychological basis.
+
+'
 --- !u!222 &1377330569
 CanvasRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1377330566}
+  m_CullTransparentMesh: 0
 --- !u!1 &1557614558
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1557614561}
   - component: {fileID: 1557614560}
@@ -1011,7 +1030,7 @@ GameObject:
 --- !u!114 &1557614559
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1557614558}
   m_Enabled: 1
@@ -1029,7 +1048,7 @@ MonoBehaviour:
 --- !u!114 &1557614560
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1557614558}
   m_Enabled: 1
@@ -1043,7 +1062,7 @@ MonoBehaviour:
 --- !u!4 &1557614561
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1557614558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1056,9 +1075,9 @@ Transform:
 --- !u!1 &1957747876
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1957747877}
   - component: {fileID: 1957747880}
@@ -1074,7 +1093,7 @@ GameObject:
 --- !u!224 &1957747877
 RectTransform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1957747876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1087,13 +1106,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 544, y: -364}
+  m_AnchoredPosition: {x: -7, y: -367}
   m_SizeDelta: {x: 350, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1957747878
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1957747876}
   m_Enabled: 1
@@ -1145,7 +1164,7 @@ MonoBehaviour:
 --- !u!114 &1957747879
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1957747876}
   m_Enabled: 1
@@ -1172,21 +1191,22 @@ MonoBehaviour:
 --- !u!222 &1957747880
 CanvasRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1957747876}
+  m_CullTransparentMesh: 0
 --- !u!1 &2026004859
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 2026004860}
   - component: {fileID: 2026004862}
   - component: {fileID: 2026004861}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Welcome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1195,7 +1215,7 @@ GameObject:
 --- !u!224 &2026004860
 RectTransform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2026004859}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1203,17 +1223,17 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 924861886}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: 332}
+  m_AnchoredPosition: {x: 3, y: 377}
   m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2026004861
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2026004859}
   m_Enabled: 1
@@ -1231,7 +1251,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1241,15 +1261,16 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: 'Welcome to the Colour Survey Test Scenario
+    m_LineSpacing: 0.75
+  m_Text: 'Welcome to the Colour Survey Scenario
 
 
-    In this scenario you will be tasked with selecting your prefered colour of two
-    options, one on the left and one on the right. '
+    In this scenario you will be provided a binary choice between two colours, it
+    is your job to pick your prefered colour of the two options.'
 --- !u!222 &2026004862
 CanvasRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2026004859}
+  m_CullTransparentMesh: 0
