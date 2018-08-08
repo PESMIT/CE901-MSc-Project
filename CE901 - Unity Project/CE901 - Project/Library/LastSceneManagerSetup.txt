@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/BigFiveScene.unity
+- path: Assets/Scenes/newColourScene.unity
   isLoaded: 1
   isActive: 1

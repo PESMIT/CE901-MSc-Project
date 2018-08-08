@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/colourIntroScene.unity
     guid: 37512c88563209a4c959789d5e096a2c
   - enabled: 1
-    path: Assets/Scenes/colourScene.unity
-    guid: 05ec8485dc5113247be2ef12bc36a6c6
+    path: Assets/Scenes/newColourScene.unity
+    guid: cc4baa3a644fa49448fc8ccb7546d426
   - enabled: 1
     path: Assets/Scenes/rorschachIntroScene.unity
     guid: 939b292edc3ee074da306fd5e6d34087
