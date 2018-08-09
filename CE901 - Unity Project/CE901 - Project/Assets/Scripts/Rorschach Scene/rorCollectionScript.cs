@@ -6,9 +6,8 @@ public class rorCollectionScript : MonoBehaviour {
 
 	GameObject optionPad1, optionPad2, optionPad3, optionPad4;
 	Light optionPad1Light, optionPad2Light, optionPad3Light, optionPad4Light;
-	GameObject sphere;
-	Rigidbody sphereRB;
-	GameObject player;
+	GameObject cube;
+	Rigidbody cubeRB;
 
 	public bool optionPad1_Chosen, optionPad2_Chosen, optionPad3_Chosen, optionPad4_Chosen;
 
@@ -27,9 +26,8 @@ public class rorCollectionScript : MonoBehaviour {
 		optionPad4Light = optionPad4.GetComponentInChildren<Light> ();
 
 
-		sphere = GameObject.Find ("Sphere");
-		sphereRB = sphere.GetComponent<Rigidbody> ();
-		player = GameObject.Find ("Player");
+		cube = GameObject.Find ("Cube");
+		cubeRB = cube.GetComponent<Rigidbody> ();
 
 		optionPad1_Chosen = false;
 		optionPad2_Chosen = false;
@@ -44,7 +42,7 @@ public class rorCollectionScript : MonoBehaviour {
 
 	void OnTriggerStay(Collider other)
 	{
-		if (other.name == "Sphere") {
+		if (other.name == "Cube") {
 			if (this.name == "Option Pad 1") {
 				optionPad1Light.color = Color.green;
 				optionPad2Light.color = Color.white;
@@ -107,8 +105,8 @@ public class rorCollectionScript : MonoBehaviour {
 
 	public void resetPads()
 	{
-		sphere.transform.position = new Vector3 (0, 1, 0);
-		sphereRB.velocity = new Vector3 (0, 0, 0);
+		cube.transform.position = new Vector3 (0, 1, 0);
+		cubeRB.velocity = new Vector3 (0, 0, 0);
 
 		optionPad1_Chosen = false;
 		optionPad2_Chosen = false;

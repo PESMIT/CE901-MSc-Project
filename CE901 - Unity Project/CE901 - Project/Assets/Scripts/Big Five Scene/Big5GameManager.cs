@@ -13,7 +13,6 @@ public class Big5GameManager : MonoBehaviour {
 	// Main Room Game Objects
 	Renderer mainPortrait, mainPortraitPlacard;
 	Renderer mainAChoice, mainBChoice, mainCChoice, mainDChoice, mainEChoice;
-	GameObject choiceButton;
 	GameObject player;
 
 	// Reference to Option Pad Script
@@ -59,9 +58,6 @@ public class Big5GameManager : MonoBehaviour {
 		mainCChoice = GameObject.Find ("Option Choice C Stand Text").GetComponent<Renderer>();
 		mainDChoice = GameObject.Find ("Option Choice D Stand Text").GetComponent<Renderer>();
 		mainEChoice = GameObject.Find ("Option Choice E Stand Text").GetComponent<Renderer>();
-
-		// Choice Button Tower
-		choiceButton = GameObject.Find("choiceButton");
 
 		// Game Loop Start
 		gamePhase = 1;
@@ -1165,7 +1161,7 @@ public class Big5GameManager : MonoBehaviour {
 			string room20TimeTakenText = "ROOM TWENTY TIME TAKEN: " + R20TimeTaken + Environment.NewLine;
 
 
-			string wholeText = header1Text + R1Choice + Environment.NewLine + header2Text + R2Choice +
+			string wholeText = mainTitleText + header1Text + R1Choice + Environment.NewLine + header2Text + R2Choice +
 			                   Environment.NewLine + header3Text + R3Choice + Environment.NewLine + header4Text + R4Choice +
 			                   Environment.NewLine + header5Text + R5Choice + Environment.NewLine + header6Text + R6Choice +
 			                   Environment.NewLine + header7Text + R7Choice + Environment.NewLine + header8Text + R8Choice +

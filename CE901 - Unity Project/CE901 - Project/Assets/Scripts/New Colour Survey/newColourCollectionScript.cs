@@ -8,7 +8,6 @@ public class newColourCollectionScript : MonoBehaviour {
 	Light optionPad1Light, optionPad2Light;
 	GameObject cube;
 	Rigidbody cubeRB;
-	GameObject player;
 
 	public bool optionPad1_Chosen, optionPad2_Chosen;
 
@@ -25,7 +24,6 @@ public class newColourCollectionScript : MonoBehaviour {
 
 		cube = GameObject.Find ("Cube");
 		cubeRB = cube.GetComponent<Rigidbody> ();
-		player = GameObject.Find ("Player");
 	}
 
 	void OnTriggerStay(Collider other){

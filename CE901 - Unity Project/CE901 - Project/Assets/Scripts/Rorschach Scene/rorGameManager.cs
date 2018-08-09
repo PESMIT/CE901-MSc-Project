@@ -13,7 +13,6 @@ public class rorGameManager : MonoBehaviour {
 	// Main Room Game Objects
 	Renderer mainPortrait, mainPortraitPlacard;
 	Renderer mainAChoice, mainBChoice, mainCChoice, mainDChoice;
-	GameObject choiceButton;
 	GameObject player;
 
 	// Reference to Option Pad Script
@@ -51,9 +50,6 @@ public class rorGameManager : MonoBehaviour {
 		mainBChoice = GameObject.Find ("Option Choice B Stand Text").GetComponent<Renderer>();
 		mainCChoice = GameObject.Find ("Option Choice C Stand Text").GetComponent<Renderer>();
 		mainDChoice = GameObject.Find ("Option Choice D Stand Text").GetComponent<Renderer>();
-
-		// Choice Button Tower
-		choiceButton = GameObject.Find("choiceButton");
 
 		// Game Loop Start
 		gamePhase = 1;
@@ -180,7 +176,6 @@ public class rorGameManager : MonoBehaviour {
 
 			// Timer
 			if(!R1TimeTakenCheck){
-				rorTimer -= 15.0f;
 				displayTimer ();
 				blankTimer ();
 				room1TimeTaken = rorTimerCanvas.text;
@@ -458,7 +453,7 @@ public class rorGameManager : MonoBehaviour {
 			string room10TimeTakenText = "ROOM TEN TIME TAKEN: " + room10TimeTaken + Environment.NewLine;
 
 
-			string wholeText = header1Text + roomOneChoice + Environment.NewLine + header2Text + roomTwoChoice +
+			string wholeText = mainTitleText + header1Text + roomOneChoice + Environment.NewLine + header2Text + roomTwoChoice +
 			                   Environment.NewLine + header3Text + roomThreeChoice + Environment.NewLine + header4Text + roomFourChoice +
 			                   Environment.NewLine + header5Text + roomFiveChoice + Environment.NewLine + header6Text + roomSixChoice +
 			                   Environment.NewLine + header7Text + roomSevenChoice + Environment.NewLine + header8Text + roomEightChoice +

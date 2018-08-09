@@ -1776,7 +1776,9 @@ Prefab:
       propertyPath: distance
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114307376530237984, guid: 00987ef119711a54bae0cd205afb67f1, type: 2}
+    - {fileID: 114103821196175524, guid: 00987ef119711a54bae0cd205afb67f1, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 00987ef119711a54bae0cd205afb67f1, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &727315899

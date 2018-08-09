@@ -8,7 +8,6 @@ public class Big5CollectionScript : MonoBehaviour {
 	Light optionPad1Light, optionPad2Light, optionPad3Light, optionPad4Light, optionPad5Light;
 	GameObject cube;
 	Rigidbody cubeRB;
-	GameObject player;
 
 	public bool optionPad1_Chosen, optionPad2_Chosen, optionPad3_Chosen, optionPad4_Chosen, optionPad5_Chosen;
 
@@ -32,7 +31,6 @@ public class Big5CollectionScript : MonoBehaviour {
 
 		cube = GameObject.Find ("Cube");
 		cubeRB = cube.GetComponent<Rigidbody> ();
-		player = GameObject.Find ("Player");
 
 		optionPad1_Chosen = false;
 		optionPad2_Chosen = false;

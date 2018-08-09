@@ -12,7 +12,7 @@ public class newColourGameManager : MonoBehaviour {
 	Renderer portraitA, portraitB;
 	Renderer portraitAPlacard, portraitBPlacard;
 	Renderer mainAChoice, mainBChoice;
-	GameObject choiceButton, player;
+	GameObject player;
 
 	// Reference to Collection Scripts
 	newColourCollectionScript NCCS_1, NCCS_2;
@@ -27,7 +27,7 @@ public class newColourGameManager : MonoBehaviour {
 	[HideInInspector]
 	public int R31OptionChosen, R32OptionChosen, R33OptionChosen, R34OptionChosen, R35OptionChosen, R36OptionChosen, R37OptionChosen, R38OptionChosen, R39OptionChosen, R40OptionChosen;
 	[HideInInspector]
-	public int R41OptionChosen, R42OptionChosen;
+	public int R41OptionChosen, R42OptionChosen, R43OptionChosen;
 
 	private int RonLeft, RonRight, BonLeft, BonRight, GonLeft, GonRight, YonLeft, YonRight, OonLeft, OonRight, MonLeft, MonRight, ConLeft, ConRight;
 	private int leftChosen, rightchosen;
@@ -35,6 +35,8 @@ public class newColourGameManager : MonoBehaviour {
 
 	private string R1TimeTaken, R2TimeTaken, R3TimeTaken, R4TimeTaken, R5TimeTaken, R6TimeTaken, R7TimeTaken, R8TimeTaken, R9TimeTaken, R10TimeTaken;
 	private string R11TimeTaken, R12TimeTaken, R13TimeTaken, R14TimeTaken, R15TimeTaken, R16TimeTaken, R17TimeTaken, R18TimeTaken, R19TimeTaken, R20TimeTaken;
+	private string R21TimeTaken, R22TimeTaken, R23TimeTaken, R24TimeTaken, R25TimeTaken, R26TimeTaken, R27TimeTaken, R28TimeTaken, R29TimeTaken, R30TimeTaken;
+	private string R31TimeTaken, R32TimeTaken, R33TimeTaken, R34TimeTaken, R35TimeTaken, R36TimeTaken, R37TimeTaken, R38TimeTaken, R39TimeTaken, R40TimeTaken, R41TimeTaken, R42TimeTaken;
 
 
 	// Game Loop
@@ -58,6 +60,8 @@ public class newColourGameManager : MonoBehaviour {
 
 	private bool R1TimeTakenCheck, R2TimeTakenCheck, R3TimeTakenCheck, R4TimeTakenCheck, R5TimeTakenCheck, R6TimeTakenCheck, R7TimeTakenCheck, R8TimeTakenCheck, R9TimeTakenCheck, R10TimeTakenCheck;
 	private bool R11TimeTakenCheck, R12TimeTakenCheck, R13TimeTakenCheck, R14TimeTakenCheck, R15TimeTakenCheck, R16TimeTakenCheck, R17TimeTakenCheck, R18TimeTakenCheck, R19TimeTakenCheck, R20TimeTakenCheck;
+	private bool R21TimeTakenCheck, R22TimeTakenCheck, R23TimeTakenCheck, R24TimeTakenCheck, R25TimeTakenCheck, R26TimeTakenCheck, R27TimeTakenCheck, R28TimeTakenCheck, R29TimeTakenCheck, R30TimeTakenCheck;
+	private bool R31TimeTakenCheck, R32TimeTakenCheck, R33TimeTakenCheck, R34TimeTakenCheck, R35TimeTakenCheck, R36TimeTakenCheck, R37TimeTakenCheck, R38TimeTakenCheck, R39TimeTakenCheck, R40TimeTakenCheck, R41TimeTakenCheck, R42TimeTakenCheck;
 
 
 	// Use this for initialization
@@ -71,8 +75,6 @@ public class newColourGameManager : MonoBehaviour {
 		// Choices
 		mainAChoice = GameObject.Find("Option Choice A Stand Text").GetComponent<Renderer>();
 		mainBChoice = GameObject.Find ("Option Choice B Stand Text").GetComponent<Renderer> ();
-		// Choice Button Tower
-		choiceButton = GameObject.Find("choiceButton");
 		// Game Loop Start
 		gamePhase = 1;
 		// Player Ref
@@ -109,6 +111,30 @@ public class newColourGameManager : MonoBehaviour {
 		R19TimeTaken = "";
 		R20TimeTaken = "";
 
+		R21TimeTaken = "";
+		R22TimeTaken = "";
+		R23TimeTaken = "";
+		R24TimeTaken = "";
+		R25TimeTaken = "";
+		R26TimeTaken = "";
+		R27TimeTaken = "";
+		R28TimeTaken = "";
+		R29TimeTaken = "";
+		R30TimeTaken = "";
+
+		R31TimeTaken = "";
+		R32TimeTaken = "";
+		R33TimeTaken = "";
+		R34TimeTaken = "";
+		R35TimeTaken = "";
+		R36TimeTaken = "";
+		R37TimeTaken = "";
+		R38TimeTaken = "";
+		R39TimeTaken = "";
+		R40TimeTaken = "";
+		R41TimeTaken = "";
+		R42TimeTaken = "";
+
 		// Timer Stats
 		R1TimeTakenCheck = false;
 		R2TimeTakenCheck = false;
@@ -131,6 +157,30 @@ public class newColourGameManager : MonoBehaviour {
 		R18TimeTakenCheck = false;
 		R19TimeTakenCheck = false;
 		R20TimeTakenCheck = false;
+
+		R21TimeTakenCheck = false;
+		R22TimeTakenCheck = false;
+		R23TimeTakenCheck = false;
+		R24TimeTakenCheck = false;
+		R25TimeTakenCheck = false;
+		R26TimeTakenCheck = false;
+		R27TimeTakenCheck = false;
+		R28TimeTakenCheck = false;
+		R29TimeTakenCheck = false;
+		R30TimeTakenCheck = false;
+
+		R31TimeTakenCheck = false;
+		R32TimeTakenCheck = false;
+		R33TimeTakenCheck = false;
+		R34TimeTakenCheck = false;
+		R35TimeTakenCheck = false;
+		R36TimeTakenCheck = false;
+		R37TimeTakenCheck = false;
+		R38TimeTakenCheck = false;
+		R39TimeTakenCheck = false;
+		R40TimeTakenCheck = false;
+		R41TimeTakenCheck = false;
+		R42TimeTakenCheck = false;
 	}
 
 	void TutorialTextOn(){
@@ -164,10 +214,10 @@ public class newColourGameManager : MonoBehaviour {
 	void Update () {
 		startTimer ();
 		displayTimer ();
-		//blankTimer ();
+		blankTimer ();
 
 		gameLoop ();
-		if (gamePhase > 20) {
+		if (gamePhase > 42) {
 			player.transform.position = new Vector3 (0, 15, 0);
 			writeToFile ();
 			EndOfGame ();
@@ -498,11 +548,11 @@ public class newColourGameManager : MonoBehaviour {
 			}
 			break;
 		case 21:
-			// Question 21 (Yellow and Blue)
+			// Question 21 (Yellow and Green)
 			portraitA.material = NCQuestionArray [3];
-			portraitB.material = NCQuestionArray [1];
+			portraitB.material = NCQuestionArray [2];
 			mainAChoice.material.mainTexture = NCAnswerArray [3];
-			mainBChoice.material.mainTexture = NCAnswerArray [1];
+			mainBChoice.material.mainTexture = NCAnswerArray [2];
 
 			// Timer
 			if (!R20TimeTakenCheck) {
@@ -513,13 +563,365 @@ public class newColourGameManager : MonoBehaviour {
 				R20TimeTakenCheck = true;
 			}
 			break;
+		case 22:
+			// Question 22 (Yellow and Orange)
+			portraitA.material = NCQuestionArray [3];
+			portraitB.material = NCQuestionArray [4];
+			mainAChoice.material.mainTexture = NCAnswerArray [3];
+			mainBChoice.material.mainTexture = NCAnswerArray [4];
+
+			// Timer
+			if (!R21TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R21TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R21TimeTakenCheck = true;
+			}
+			break;
+		case 23:
+			// Question 23 (Yellow and Magenta)
+			portraitA.material = NCQuestionArray [3];
+			portraitB.material = NCQuestionArray [5];
+			mainAChoice.material.mainTexture = NCAnswerArray [3];
+			mainBChoice.material.mainTexture = NCAnswerArray [5];
+
+			// Timer
+			if (!R22TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R22TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R22TimeTakenCheck = true;
+			}
+			break;
+		case 24:
+			// Question 24 (Yellow and Cyan)
+			portraitA.material = NCQuestionArray [3];
+			portraitB.material = NCQuestionArray [6];
+			mainAChoice.material.mainTexture = NCAnswerArray [3];
+			mainBChoice.material.mainTexture = NCAnswerArray [6];
+
+			// Timer
+			if (!R23TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R23TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R23TimeTakenCheck = true;
+			}
+			break;
+		case 25:
+			// Question 25 (Orange and Red)
+			portraitA.material = NCQuestionArray [4];
+			portraitB.material = NCQuestionArray [0];
+			mainAChoice.material.mainTexture = NCAnswerArray [4];
+			mainBChoice.material.mainTexture = NCAnswerArray [0];
+
+			// Timer
+			if (!R24TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R24TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R24TimeTakenCheck = true;
+			}
+			break;
+		case 26:
+			// Question 27 (Orange and Blue)
+			portraitA.material = NCQuestionArray [4];
+			portraitB.material = NCQuestionArray [1];
+			mainAChoice.material.mainTexture = NCAnswerArray [4];
+			mainBChoice.material.mainTexture = NCAnswerArray [1];
+
+			// Timer
+			if (!R25TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R25TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R25TimeTakenCheck = true;
+			}
+			break;
+		case 27:
+			// Question 27 (Orange and Green)
+			portraitA.material = NCQuestionArray [4];
+			portraitB.material = NCQuestionArray [2];
+			mainAChoice.material.mainTexture = NCAnswerArray [4];
+			mainBChoice.material.mainTexture = NCAnswerArray [2];
+
+			// Timer
+			if (!R26TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R26TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R26TimeTakenCheck = true;
+			}
+			break;
+		case 28:
+			// Question 28 (Orange and Yellow)
+			portraitA.material = NCQuestionArray [4];
+			portraitB.material = NCQuestionArray [3];
+			mainAChoice.material.mainTexture = NCAnswerArray [4];
+			mainBChoice.material.mainTexture = NCAnswerArray [3];
+
+			// Timer
+			if (!R27TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R27TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R27TimeTakenCheck = true;
+			}
+			break;
+		case 29:
+			// Question 29 (Orange and Magenta)
+			portraitA.material = NCQuestionArray [4];
+			portraitB.material = NCQuestionArray [5];
+			mainAChoice.material.mainTexture = NCAnswerArray [4];
+			mainBChoice.material.mainTexture = NCAnswerArray [5];
+
+			// Timer
+			if (!R28TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R28TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R28TimeTakenCheck = true;
+			}
+			break;
+		case 30:
+			// Question 30 (Orange and Cyan)
+			portraitA.material = NCQuestionArray [4];
+			portraitB.material = NCQuestionArray [6];
+			mainAChoice.material.mainTexture = NCAnswerArray [4];
+			mainBChoice.material.mainTexture = NCAnswerArray [6];
+
+			// Timer
+			if (!R29TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R29TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R29TimeTakenCheck = true;
+			}
+			break;
+		case 31:
+			// Question 31 (MAGENTA and RED)
+			portraitA.material = NCQuestionArray [5];
+			portraitB.material = NCQuestionArray [0];
+			mainAChoice.material.mainTexture = NCAnswerArray [5];
+			mainBChoice.material.mainTexture = NCAnswerArray [0];
+
+			// Timer
+			if (!R30TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R30TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R30TimeTakenCheck = true;
+			}
+			break;
+		case 32:
+			// Question 32 (MAGENTA and BLUE)
+			portraitA.material = NCQuestionArray [5];
+			portraitB.material = NCQuestionArray [1];
+			mainAChoice.material.mainTexture = NCAnswerArray [5];
+			mainBChoice.material.mainTexture = NCAnswerArray [1];
+
+			// Timer
+			if (!R31TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R31TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R31TimeTakenCheck = true;
+			}
+			break;
+		case 33:
+			// Question 33 (MAGENTA and GREEN)
+			portraitA.material = NCQuestionArray [5];
+			portraitB.material = NCQuestionArray [2];
+			mainAChoice.material.mainTexture = NCAnswerArray [5];
+			mainBChoice.material.mainTexture = NCAnswerArray [2];
+
+			// Timer
+			if (!R32TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R32TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R32TimeTakenCheck = true;
+			}
+			break;
+		case 34:
+			// Question 34 (MAGENTA and YELLOW)
+			portraitA.material = NCQuestionArray [5];
+			portraitB.material = NCQuestionArray [3];
+			mainAChoice.material.mainTexture = NCAnswerArray [5];
+			mainBChoice.material.mainTexture = NCAnswerArray [3];
+
+			// Timer
+			if (!R33TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R33TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R33TimeTakenCheck = true;
+			}
+			break;
+		case 35:
+			// Question 35 (MAGENTA and ORANGE)
+			portraitA.material = NCQuestionArray [5];
+			portraitB.material = NCQuestionArray [4];
+			mainAChoice.material.mainTexture = NCAnswerArray [5];
+			mainBChoice.material.mainTexture = NCAnswerArray [4];
+
+			// Timer
+			if (!R34TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R34TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R34TimeTakenCheck = true;
+			}
+			break;
+		case 36:
+			// Question 36 (MAGENTA and CYAN)
+			portraitA.material = NCQuestionArray [5];
+			portraitB.material = NCQuestionArray [6];
+			mainAChoice.material.mainTexture = NCAnswerArray [5];
+			mainBChoice.material.mainTexture = NCAnswerArray [6];
+
+			// Timer
+			if (!R35TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R35TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R35TimeTakenCheck = true;
+			}
+			break;
+		case 37:
+			// Question 37 (CYAN and RED)
+			portraitA.material = NCQuestionArray [6];
+			portraitB.material = NCQuestionArray [0];
+			mainAChoice.material.mainTexture = NCAnswerArray [6];
+			mainBChoice.material.mainTexture = NCAnswerArray [0];
+
+			// Timer
+			if (!R36TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R36TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R36TimeTakenCheck = true;
+			}
+			break;
+		case 38:
+			// Question 38 (CYAN and BLUE)
+			portraitA.material = NCQuestionArray [6];
+			portraitB.material = NCQuestionArray [1];
+			mainAChoice.material.mainTexture = NCAnswerArray [6];
+			mainBChoice.material.mainTexture = NCAnswerArray [1];
+
+			// Timer
+			if (!R37TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R37TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R37TimeTakenCheck = true;
+			}
+			break;
+		case 39:
+			// Question 39 (CYAN AND GREEN)
+			portraitA.material = NCQuestionArray [6];
+			portraitB.material = NCQuestionArray [2];
+			mainAChoice.material.mainTexture = NCAnswerArray [6];
+			mainBChoice.material.mainTexture = NCAnswerArray [2];
+
+			// Timer
+			if (!R38TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R38TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R38TimeTakenCheck = true;
+			}
+			break;
+		case 40:
+			// Question 40 (CYAN AND YELLOW)
+			portraitA.material = NCQuestionArray [6];
+			portraitB.material = NCQuestionArray [3];
+			mainAChoice.material.mainTexture = NCAnswerArray [6];
+			mainBChoice.material.mainTexture = NCAnswerArray [3];
+
+			// Timer
+			if (!R39TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R39TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R39TimeTakenCheck = true;
+			}
+			break;
+		case 41:
+			// Question 41 (CYAN AND ORANGE)
+			portraitA.material = NCQuestionArray [6];
+			portraitB.material = NCQuestionArray [4];
+			mainAChoice.material.mainTexture = NCAnswerArray [6];
+			mainBChoice.material.mainTexture = NCAnswerArray [4];
+
+			// Timer
+			if (!R40TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R40TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R40TimeTakenCheck = true;
+			}
+			break;
+		case 42:
+			// Question 42 (CYAN AND MAGENTA)
+			portraitA.material = NCQuestionArray [6];
+			portraitB.material = NCQuestionArray [5];
+			mainAChoice.material.mainTexture = NCAnswerArray [6];
+			mainBChoice.material.mainTexture = NCAnswerArray [5];
+
+			// Timer
+			if (!R41TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R41TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R41TimeTakenCheck = true;
+			}
+			break;
+		case 43:
+			// Question 43 (END)
+			portraitA.material = NCQuestionArray [6];
+			portraitB.material = NCQuestionArray [5];
+			mainAChoice.material.mainTexture = NCAnswerArray [6];
+			mainBChoice.material.mainTexture = NCAnswerArray [5];
+
+			// Timer
+			if (!R42TimeTakenCheck) {
+				displayTimer ();
+				blankTimer ();
+				R42TimeTaken = NCTimerCanvas.text;
+				resetTimer ();
+				R42TimeTakenCheck = true;
+			}
+			break;
 		}
 	}
 
 	void OnTriggerStay(Collider other){
 		if (other.name == "Player") {
 			if (Input.GetKeyDown (KeyCode.E)) {
-				if (gamePhase <= 21 && (NCCS_1.optionPad1_Chosen || NCCS_2.optionPad2_Chosen)) {
+				if (gamePhase <= 43 && (NCCS_1.optionPad1_Chosen || NCCS_2.optionPad2_Chosen)) {
 					checkCollection ();
 					NCCS_1.resetPads ();
 					NCCS_2.resetPads ();
@@ -614,9 +1016,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementBlue ("right");
 				gamePhase = 2;
 			}
-		}
-		// RED OR GREEN
-		else if (gamePhase == 2) {
+		} else if (gamePhase == 2) { // RED OR GREEN
 			if (NCCS_1.optionPad1_Chosen) {
 				R2OptionChosen = 1;
 				incrementRed ("left");
@@ -626,9 +1026,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementGreen ("right");
 				gamePhase = 3;
 			}
-		}
-		// RED OR YELLOW
-		else if (gamePhase == 3) {
+		} else if (gamePhase == 3) { // RED OR YELLOW
 			if (NCCS_1.optionPad1_Chosen) {
 				R3OptionChosen = 1;
 				incrementRed ("left");
@@ -638,9 +1036,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementYellow ("right");
 				gamePhase = 4;
 			}
-		}
-		// RED OR ORANGE
-		else if (gamePhase == 4) {
+		} else if (gamePhase == 4) { // RED OR ORANGE
 			if (NCCS_1.optionPad1_Chosen) {
 				R4OptionChosen = 1;
 				incrementRed ("left");
@@ -650,9 +1046,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementOrange ("right");
 				gamePhase = 5;
 			}
-		} 
-		// RED OR MAGENTA
-		else if (gamePhase == 5) {
+		} else if (gamePhase == 5) { // RED OR MAGENTA
 			if (NCCS_1.optionPad1_Chosen) {
 				R5OptionChosen = 1;
 				incrementRed ("left");
@@ -662,9 +1056,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementMagenta ("right");
 				gamePhase = 6;
 			}
-		} 
-		// RED OR CYAN
-		else if (gamePhase == 6) {
+		} else if (gamePhase == 6) { // RED OR CYAN
 			if (NCCS_1.optionPad1_Chosen) {
 				R6OptionChosen = 1;
 				incrementRed ("left");
@@ -674,9 +1066,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementCyan ("right");
 				gamePhase = 7;
 			}
-		} 
-		// BLUE OR RED
-		else if (gamePhase == 7) {
+		} else if (gamePhase == 7) { // BLUE OR RED
 			if (NCCS_1.optionPad1_Chosen) {
 				R7OptionChosen = 1;
 				incrementBlue ("left");
@@ -686,9 +1076,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementRed ("right");
 				gamePhase = 8;
 			}
-		}
-		// BLUE OR GREEN
-		else if (gamePhase == 8) {
+		} else if (gamePhase == 8) { // BLUE OR GREEN
 			if (NCCS_1.optionPad1_Chosen) {
 				R8OptionChosen = 1;
 				incrementBlue ("left");
@@ -698,9 +1086,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementGreen ("right");
 				gamePhase = 9;
 			}
-		} 
-		// BLUE OR YELLOW
-		else if (gamePhase == 9) {
+		} else if (gamePhase == 9) { // BLUE OR YELLOW
 			if (NCCS_1.optionPad1_Chosen) {
 				R9OptionChosen = 1;
 				incrementBlue ("left");
@@ -710,9 +1096,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementYellow ("right");
 				gamePhase = 10;
 			}
-		} 
-		// BLUE OR ORANGE
-		else if (gamePhase == 10) {
+		} else if (gamePhase == 10) { // BLUE OR ORANGE
 			if (NCCS_1.optionPad1_Chosen) {
 				R10OptionChosen = 1;
 				incrementBlue ("left");
@@ -722,9 +1106,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementOrange ("right");
 				gamePhase = 11;
 			}
-		} 
-		// BLUE OR MAGENTA
-		else if (gamePhase == 11) {
+		} else if (gamePhase == 11) { // BLUE OR MAGENTA
 			if (NCCS_1.optionPad1_Chosen) {
 				R11OptionChosen = 1;
 				incrementBlue ("left");
@@ -734,9 +1116,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementMagenta ("right");
 				gamePhase = 12;
 			}
-		} 
-		// BLUE OR CYAN
-		else if (gamePhase == 12) {
+		} else if (gamePhase == 12) { // BLUE OR CYAN
 			if (NCCS_1.optionPad1_Chosen) {
 				R12OptionChosen = 1;
 				incrementBlue ("left");
@@ -746,9 +1126,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementCyan ("right");
 				gamePhase = 13;
 			}
-		} 
-		// GREEN OR RED
-		else if (gamePhase == 13) {
+		} else if (gamePhase == 13) { // GREEN OR RED
 			if (NCCS_1.optionPad1_Chosen) {
 				R13OptionChosen = 1;
 				incrementGreen ("left");
@@ -758,9 +1136,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementRed ("right");
 				gamePhase = 14;
 			}
-		} 
-		// GREEN OR BLUE
-		else if (gamePhase == 14) {
+		} else if (gamePhase == 14) { // GREEN OR BLUE
 			if (NCCS_1.optionPad1_Chosen) {
 				R14OptionChosen = 1;
 				incrementGreen ("left");
@@ -770,9 +1146,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementBlue ("right");
 				gamePhase = 15;
 			}
-		} 
-		// GREEN OR YELLOW
-		else if (gamePhase == 15) {
+		} else if (gamePhase == 15) { // GREEN OR YELLOW
 			if (NCCS_1.optionPad1_Chosen) {
 				R15OptionChosen = 1;
 				incrementGreen ("left");
@@ -782,9 +1156,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementYellow ("right");
 				gamePhase = 16;
 			}
-		} 
-		// GREEN OR ORANGE
-		else if (gamePhase == 16) {
+		} else if (gamePhase == 16) { // GREEN OR ORANGE
 			if (NCCS_1.optionPad1_Chosen) {
 				R16OptionChosen = 1;
 				incrementGreen ("left");
@@ -794,9 +1166,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementOrange ("right");
 				gamePhase = 17;
 			}
-		} 
-		// GREEN OR MAGENTA
-		else if (gamePhase == 17) {
+		} else if (gamePhase == 17) { // GREEN OR MAGENTA
 			if (NCCS_1.optionPad1_Chosen) {
 				R17OptionChosen = 1;
 				incrementGreen ("left");
@@ -806,9 +1176,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementMagenta ("right");
 				gamePhase = 18;
 			}
-		} 
-		// GREEN OR CYAN
-		else if (gamePhase == 18) {
+		} else if (gamePhase == 18) { // GREEN OR CYAN
 			if (NCCS_1.optionPad1_Chosen) {
 				R18OptionChosen = 1;
 				incrementGreen ("left");
@@ -818,9 +1186,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementCyan ("right");
 				gamePhase = 19;
 			}
-		} 
-		// YELLOW OR RED
-		else if (gamePhase == 19) {
+		} else if (gamePhase == 19) { // YELLOW OR RED
 			if (NCCS_1.optionPad1_Chosen) {
 				R19OptionChosen = 1;
 				incrementYellow ("left");
@@ -830,9 +1196,7 @@ public class newColourGameManager : MonoBehaviour {
 				incrementRed ("right");
 				gamePhase = 20;
 			}
-		} 
-		// YELLOW OR BLUE
-		else if (gamePhase == 20) {
+		} else if (gamePhase == 20) { // YELLOW OR BLUE
 			if (NCCS_1.optionPad1_Chosen) {
 				R20OptionChosen = 1;
 				incrementYellow ("left");
@@ -842,16 +1206,228 @@ public class newColourGameManager : MonoBehaviour {
 				incrementBlue ("right");
 				gamePhase = 21;
 			}
-		} else if (gamePhase == 21) {
+		} else if (gamePhase == 21) { // YELLOW OR GREEN
 			if (NCCS_1.optionPad1_Chosen) {
 				R21OptionChosen = 1;
+				incrementYellow ("left");
 				gamePhase = 22;
 			} else if (NCCS_2.optionPad2_Chosen) {
 				R21OptionChosen = 2;
+				incrementGreen ("right");
 				gamePhase = 22;
 			}
+		} else if (gamePhase == 22) { // YELLOW or ORANGE
+			if (NCCS_1.optionPad1_Chosen) {
+				R22OptionChosen = 1;
+				incrementYellow ("left");
+				gamePhase = 23;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R22OptionChosen = 2;
+				incrementOrange ("right");
+				gamePhase = 23;
+			}
+		} else if (gamePhase == 23) { // YELLOW OR MAGENTA
+			if (NCCS_1.optionPad1_Chosen) {
+				R23OptionChosen = 1;
+				incrementYellow ("left");
+				gamePhase = 24;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R23OptionChosen = 2;
+				incrementMagenta ("right");
+				gamePhase = 24;
+			}
+		} else if (gamePhase == 24) { // YELLOW OR CYAN
+			if (NCCS_1.optionPad1_Chosen) {
+				R24OptionChosen = 1;
+				incrementYellow ("left");
+				gamePhase = 25;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R24OptionChosen = 2;
+				incrementCyan ("right");
+				gamePhase = 25;
+			}
+		} else if (gamePhase == 25) { // ORANGE OR RED
+			if (NCCS_1.optionPad1_Chosen) {
+				R25OptionChosen = 1;
+				incrementOrange ("left");
+				gamePhase = 26;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R25OptionChosen = 2;
+				incrementYellow ("right");
+				gamePhase = 26;
+			}
+		} else if (gamePhase == 26) { // ORANGE OR BLUE
+			if (NCCS_1.optionPad1_Chosen) {
+				R26OptionChosen = 1;
+				incrementOrange ("left");
+				gamePhase = 27;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R26OptionChosen = 2;
+				incrementBlue ("right");
+				gamePhase = 27;
+			}
+		} else if (gamePhase == 27) { // ORANGE OR GREEN
+			if (NCCS_1.optionPad1_Chosen) {
+				R27OptionChosen = 1;
+				incrementOrange ("left");
+				gamePhase = 28;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R27OptionChosen = 2;
+				incrementGreen ("right");
+				gamePhase = 28;
+			}
+		} else if (gamePhase == 28) { // ORANGE OR YELLOW
+			if (NCCS_1.optionPad1_Chosen) {
+				R28OptionChosen = 1;
+				incrementOrange ("left");
+				gamePhase = 29;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R28OptionChosen = 2;
+				incrementYellow ("right");
+				gamePhase = 29;
+			}
+		} else if (gamePhase == 29) { // ORANGE OR MAGENTA
+			if (NCCS_1.optionPad1_Chosen) {
+				R29OptionChosen = 1;
+				incrementOrange ("left");
+				gamePhase = 30;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R29OptionChosen = 2;
+				incrementMagenta ("right");
+				gamePhase = 30;
+			}
+		} else if (gamePhase == 30) { // ORANGE OR CYAN
+			if (NCCS_1.optionPad1_Chosen) {
+				R30OptionChosen = 1;
+				incrementOrange ("left");
+				gamePhase = 31;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R30OptionChosen = 2;
+				incrementCyan ("right");
+				gamePhase = 31;
+			}
+		} else if (gamePhase == 31) { // MAGENTA or RED
+			if (NCCS_1.optionPad1_Chosen) {
+				R31OptionChosen = 1;
+				incrementMagenta ("left");
+				gamePhase = 32;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R31OptionChosen = 2;
+				incrementRed("right");
+				gamePhase = 32;
+			}
+		} else if (gamePhase == 32) { // MAGENTA or BLUE
+			if (NCCS_1.optionPad1_Chosen) {
+				R32OptionChosen = 1;
+				incrementMagenta("left");
+				gamePhase = 33;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R32OptionChosen = 2;
+				incrementBlue ("right");
+				gamePhase = 33;
+			}
+		} else if (gamePhase == 33) { // MAGENTA or GREEN
+			if (NCCS_1.optionPad1_Chosen) {
+				R33OptionChosen = 1;
+				incrementMagenta("left");
+				gamePhase = 34;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R33OptionChosen = 2;
+				incrementGreen("right");
+				gamePhase = 34;
+			}
+		} else if (gamePhase == 34) { // MAGENTA or YELLOW
+			if (NCCS_1.optionPad1_Chosen) {
+				R34OptionChosen = 1;
+				incrementMagenta("left");
+				gamePhase = 35;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R34OptionChosen = 2;
+				incrementBlue ("right");
+				gamePhase = 35;
+			}
+		} else if (gamePhase == 35) { // MAGENTA or ORANGE
+			if (NCCS_1.optionPad1_Chosen) {
+				R35OptionChosen = 1;
+				incrementMagenta("left");
+				gamePhase = 36;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R35OptionChosen = 2;
+				incrementOrange ("right");
+				gamePhase = 36;
+			}
+		} else if (gamePhase == 36) { // MAGENTA or CYAN
+			if (NCCS_1.optionPad1_Chosen) {
+				R36OptionChosen = 1;
+				incrementMagenta("left");
+				gamePhase = 37;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R36OptionChosen = 2;
+				incrementCyan ("right");
+				gamePhase = 37;
+			}
+		} else if (gamePhase == 37) { // CYAN or RED
+			if (NCCS_1.optionPad1_Chosen) {
+				R37OptionChosen = 1;
+				incrementCyan("left");
+				gamePhase = 38;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R37OptionChosen = 2;
+				incrementRed ("right");
+				gamePhase = 38;
+			}
+		} else if (gamePhase == 38) { // CYAN or BLUE
+			if (NCCS_1.optionPad1_Chosen) {
+				R38OptionChosen = 1;
+				incrementCyan("left");
+				gamePhase = 39;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R38OptionChosen = 2;
+				incrementBlue ("right");
+				gamePhase = 39;
+			}
+		} else if (gamePhase == 39) { // CYAN or GREEN
+			if (NCCS_1.optionPad1_Chosen) {
+				R39OptionChosen = 1;
+				incrementCyan("left");
+				gamePhase = 40;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R39OptionChosen = 2;
+				incrementGreen ("right");
+				gamePhase = 40;
+			}
+		} else if (gamePhase == 40) { // CYAN or YELLOW
+			if (NCCS_1.optionPad1_Chosen) {
+				R40OptionChosen = 1;
+				incrementCyan("left");
+				gamePhase = 41;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R40OptionChosen = 2;
+				incrementYellow ("right");
+				gamePhase = 41;
+			}
+		} else if (gamePhase == 41) { // CYAN or ORANGE
+			if (NCCS_1.optionPad1_Chosen) {
+				R41OptionChosen = 1;
+				incrementCyan("left");
+				gamePhase = 42;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R41OptionChosen = 2;
+				incrementOrange ("right");
+				gamePhase = 42;
+			}
+		} else if (gamePhase == 42) { // CYAN or MAGENTA
+			if (NCCS_1.optionPad1_Chosen) {
+				R42OptionChosen = 1;
+				incrementCyan("left");
+				gamePhase = 43;
+			} else if (NCCS_2.optionPad2_Chosen) {
+				R42OptionChosen = 2;
+				incrementMagenta ("right");
+				gamePhase = 43;
+			}
 		}
-	}
+	} 
 
 	void writeToFile(){
 		// INPUT WRITER
@@ -961,6 +1537,116 @@ public class newColourGameManager : MonoBehaviour {
 			string R20Choice = "";
 			if (R20OptionChosen == 1) {R20Choice = "YELLOW" + Environment.NewLine;}
 			if (R20OptionChosen == 2) {R20Choice = "BLUE" + Environment.NewLine;}
+			// ROOM 21 - YELLOW OR GREEN
+			string H21Text = "ROOM 21 - Q21 - YELLOW OR GREEN" + Environment.NewLine;
+			string R21Choice = "";
+			if (R21OptionChosen == 1) {R21Choice = "YELLOW" + Environment.NewLine;}
+			if (R21OptionChosen == 2) {R21Choice = "GREEN" + Environment.NewLine;}
+			// ROOM 22 - YELLOW OR GREEN
+			string H22Text = "ROOM 22 - Q22 - YELLOW OR ORANGE" + Environment.NewLine;
+			string R22Choice = "";
+			if (R22OptionChosen == 1) {R22Choice = "YELLOW" + Environment.NewLine;}
+			if (R22OptionChosen == 2) {R22Choice = "ORANGE" + Environment.NewLine;}
+			// ROOM 23 - YELLOW OR MAGENTA
+			string H23Text = "ROOM 23 - Q23 - YELLOW OR MAGENTA" + Environment.NewLine;
+			string R23Choice = "";
+			if (R23OptionChosen == 1) {R23Choice = "YELLOW" + Environment.NewLine;}
+			if (R23OptionChosen == 2) {R23Choice = "MAGENTA" + Environment.NewLine;}
+			// ROOM 24 - YELLOW OR CYAN
+			string H24Text = "ROOM 24 - Q24 - YELLOW OR CYAN" + Environment.NewLine;
+			string R24Choice = "";
+			if (R24OptionChosen == 1) {R24Choice = "YELLOW" + Environment.NewLine;}
+			if (R24OptionChosen == 2) {R24Choice = "CYAN" + Environment.NewLine;}
+			// ROOM 25 - ORANGE OR RED
+			string H25Text = "ROOM 25 - Q25 - ORANGE OR RED" + Environment.NewLine;
+			string R25Choice = "";
+			if (R25OptionChosen == 1) {R25Choice = "ORANGE" + Environment.NewLine;}
+			if (R25OptionChosen == 2) {R25Choice = "RED" + Environment.NewLine;}
+			// ROOM 26 - ORANGE OR BLUE
+			string H26Text = "ROOM 26 - Q26 - ORANGE OR BLUE" + Environment.NewLine;
+			string R26Choice = "";
+			if (R26OptionChosen == 1) {R26Choice = "ORANGE" + Environment.NewLine;}
+			if (R26OptionChosen == 2) {R26Choice = "BLUE" + Environment.NewLine;}
+			// ROOM 27 - ORANGE OR GREEN
+			string H27Text = "ROOM 27 - Q27 - ORANGE OR GREEN" + Environment.NewLine;
+			string R27Choice = "";
+			if (R27OptionChosen == 1) {R27Choice = "ORANGE" + Environment.NewLine;}
+			if (R27OptionChosen == 2) {R27Choice = "GREEN" + Environment.NewLine;}
+			// ROOM 28 - ORANGE OR YELLOW
+			string H28Text = "ROOM 28 - Q28 - ORANGE OR YELLOW" + Environment.NewLine;
+			string R28Choice = "";
+			if (R28OptionChosen == 1) {R28Choice = "ORANGE" + Environment.NewLine;}
+			if (R28OptionChosen == 2) {R28Choice = "YELLOW" + Environment.NewLine;}
+			// ROOM 29 - ORANGE OR MAGENTA
+			string H29Text = "ROOM 29 - Q29 - ORANGE OR MAGENTA" + Environment.NewLine;
+			string R29Choice = "";
+			if (R29OptionChosen == 1) {R29Choice = "ORANGE" + Environment.NewLine;}
+			if (R29OptionChosen == 2) {R29Choice = "MAGENTA" + Environment.NewLine;}
+			// ROOM 30 - ORANGE OR MAGENTA
+			string H30Text = "ROOM 30 - Q30 - ORANGE OR CYAN" + Environment.NewLine;
+			string R30Choice = "";
+			if (R30OptionChosen == 1) {R30Choice = "ORANGE" + Environment.NewLine;}
+			if (R30OptionChosen == 2) {R30Choice = "CYAN" + Environment.NewLine;}
+			// ROOM 31 - MAGENTA OR RED
+			string H31Text = "ROOM 31 - Q31 - MAGENTA OR RED" + Environment.NewLine;
+			string R31Choice = "";
+			if (R31OptionChosen == 1) {R31Choice = "MAGENTA" + Environment.NewLine;}
+			if (R31OptionChosen == 2) {R31Choice = "RED" + Environment.NewLine;}
+			// ROOM 32 - MAGENTA OR BLUE
+			string H32Text = "ROOM 32 - Q32 - MAGENTA OR BLUE" + Environment.NewLine;
+			string R32Choice = "";
+			if (R32OptionChosen == 1) {R32Choice = "MAGENTA" + Environment.NewLine;}
+			if (R32OptionChosen == 2) {R32Choice = "BLUE" + Environment.NewLine;}
+			// ROOM 33 - MAGENTA OR GREEN
+			string H33Text = "ROOM 33 - Q33 - MAGENTA OR GREEN" + Environment.NewLine;
+			string R33Choice = "";
+			if (R33OptionChosen == 1) {R33Choice = "MAGENTA" + Environment.NewLine;}
+			if (R33OptionChosen == 2) {R33Choice = "GREEN" + Environment.NewLine;}
+			// ROOM 34 - MAGENTA OR YELLOW
+			string H34Text = "ROOM 34 - Q34 - MAGENTA OR YELLOW" + Environment.NewLine;
+			string R34Choice = "";
+			if (R34OptionChosen == 1) {R34Choice = "MAGENTA" + Environment.NewLine;}
+			if (R34OptionChosen == 2) {R34Choice = "YELLOW" + Environment.NewLine;}
+			// ROOM 35 - MAGENTA OR ORANGE
+			string H35Text = "ROOM 35 - Q35 - MAGENTA OR ORANGE" + Environment.NewLine;
+			string R35Choice = "";
+			if (R35OptionChosen == 1) {R35Choice = "MAGENTA" + Environment.NewLine;}
+			if (R35OptionChosen == 2) {R35Choice = "ORANGE" + Environment.NewLine;}
+			// ROOM 36 - MAGENTA OR CYAN
+			string H36Text = "ROOM 36 - Q36 - MAGENTA OR CYAN" + Environment.NewLine;
+			string R36Choice = "";
+			if (R36OptionChosen == 1) {R36Choice = "MAGENTA" + Environment.NewLine;}
+			if (R36OptionChosen == 2) {R36Choice = "CYAN" + Environment.NewLine;}
+			// ROOM 37 - CYAN OR RED
+			string H37Text = "ROOM 37 - Q37 - CYAN OR RED" + Environment.NewLine;
+			string R37Choice = "";
+			if (R37OptionChosen == 1) {R37Choice = "CYAN" + Environment.NewLine;}
+			if (R37OptionChosen == 2) {R37Choice = "RED" + Environment.NewLine;}
+			// ROOM 38 - CYAN OR BLUE
+			string H38Text = "ROOM 38 - Q38 - CYAN OR BLUE" + Environment.NewLine;
+			string R38Choice = "";
+			if (R38OptionChosen == 1) {R38Choice = "CYAN" + Environment.NewLine;}
+			if (R38OptionChosen == 2) {R38Choice = "BLUE" + Environment.NewLine;}
+			// ROOM 39 - CYAN OR GREEN
+			string H39Text = "ROOM 39 - Q39 - CYAN OR GREEN" + Environment.NewLine;
+			string R39Choice = "";
+			if (R39OptionChosen == 1) {R39Choice = "CYAN" + Environment.NewLine;}
+			if (R39OptionChosen == 2) {R39Choice = "GREEN" + Environment.NewLine;}
+			// ROOM 40 - CYAN OR YELLOW
+			string H40Text = "ROOM 40 - Q40 - CYAN OR YELLOW" + Environment.NewLine;
+			string R40Choice = "";
+			if (R40OptionChosen == 1) {R40Choice = "CYAN" + Environment.NewLine;}
+			if (R40OptionChosen == 2) {R40Choice = "YELLOW" + Environment.NewLine;}
+			// ROOM 41 - CYAN OR ORANGE
+			string H41Text = "ROOM 41 - Q41 - CYAN OR ORANGE" + Environment.NewLine;
+			string R41Choice = "";
+			if (R41OptionChosen == 1) {R41Choice = "CYAN" + Environment.NewLine;}
+			if (R41OptionChosen == 2) {R41Choice = "ORANGE" + Environment.NewLine;}
+			// ROOM 42 - CYAN OR MAGENTA
+			string H42Text = "ROOM 42 - Q42 - CYAN OR MAGENTA" + Environment.NewLine;
+			string R42Choice = "";
+			if (R42OptionChosen == 1) {R42Choice = "CYAN" + Environment.NewLine;}
+			if (R42OptionChosen == 2) {R42Choice = "MAGENTA" + Environment.NewLine;}
 
 			// TIME TAKEN
 			string headerTimeText = Environment.NewLine + "TIME TAKEN - COLOUR SURVEY" + Environment.NewLine;
@@ -984,6 +1670,29 @@ public class newColourGameManager : MonoBehaviour {
 			string R18TimeTakenText = "ROOM 18 TIME TAKEN: " + R18TimeTaken + Environment.NewLine;
 			string R19TimeTakenText = "ROOM 19 TIME TAKEN: " + R19TimeTaken + Environment.NewLine;
 			string R20TimeTakenText = "ROOM 20 TIME TAKEN: " + R20TimeTaken + Environment.NewLine;
+			string R21TimeTakenText = "ROOM 21 TIME TAKEN: " + R21TimeTaken + Environment.NewLine;
+			string R22TimeTakenText = "ROOM 22 TIME TAKEN: " + R22TimeTaken + Environment.NewLine;
+			string R23TimeTakenText = "ROOM 23 TIME TAKEN: " + R23TimeTaken + Environment.NewLine;
+			string R24TimeTakenText = "ROOM 24 TIME TAKEN: " + R24TimeTaken + Environment.NewLine;
+			string R25TimeTakenText = "ROOM 25 TIME TAKEN: " + R25TimeTaken + Environment.NewLine;
+			string R26TimeTakenText = "ROOM 26 TIME TAKEN: " + R26TimeTaken + Environment.NewLine;
+			string R27TimeTakenText = "ROOM 27 TIME TAKEN: " + R27TimeTaken + Environment.NewLine;
+			string R28TimeTakenText = "ROOM 28 TIME TAKEN: " + R28TimeTaken + Environment.NewLine;
+			string R29TimeTakenText = "ROOM 29 TIME TAKEN: " + R29TimeTaken + Environment.NewLine;
+			string R30TimeTakenText = "ROOM 30 TIME TAKEN: " + R30TimeTaken + Environment.NewLine;
+			string R31TimeTakenText = "ROOM 31 TIME TAKEN: " + R31TimeTaken + Environment.NewLine;
+			string R32TimeTakenText = "ROOM 32 TIME TAKEN: " + R32TimeTaken + Environment.NewLine;
+			string R33TimeTakenText = "ROOM 33 TIME TAKEN: " + R33TimeTaken + Environment.NewLine;
+			string R34TimeTakenText = "ROOM 34 TIME TAKEN: " + R34TimeTaken + Environment.NewLine;
+			string R35TimeTakenText = "ROOM 35 TIME TAKEN: " + R35TimeTaken + Environment.NewLine;
+			string R36TimeTakenText = "ROOM 36 TIME TAKEN: " + R36TimeTaken + Environment.NewLine;
+			string R37TimeTakenText = "ROOM 37 TIME TAKEN: " + R37TimeTaken + Environment.NewLine;
+			string R38TimeTakenText = "ROOM 38 TIME TAKEN: " + R38TimeTaken + Environment.NewLine;
+			string R39TimeTakenText = "ROOM 39 TIME TAKEN: " + R39TimeTaken + Environment.NewLine;
+			string R40TimeTakenText = "ROOM 40 TIME TAKEN: " + R40TimeTaken + Environment.NewLine;
+			string R41TimeTakenText = "ROOM 41 TIME TAKEN: " + R41TimeTaken + Environment.NewLine;
+			string R42TimeTakenText = "ROOM 42 TIME TAKEN: " + R42TimeTaken + Environment.NewLine;
+
 
 			// Colours Chosen
 			string headerColoursChosen = Environment.NewLine + "COLOURS CHOSEN" + Environment.NewLine;
@@ -1020,11 +1729,22 @@ public class newColourGameManager : MonoBehaviour {
 			                   H9Text + R9Choice + Environment.NewLine + H10Text + R10Choice + Environment.NewLine + H11Text + R11Choice + Environment.NewLine +
 			                   H12Text + R12Choice + Environment.NewLine + H13Text + R13Choice + Environment.NewLine + H14Text + R14Choice + Environment.NewLine +
 			                   H15Text + R15Choice + Environment.NewLine + H16Text + R16Choice + Environment.NewLine + H17Text + R17Choice + Environment.NewLine +
-			                   H18Text + R18Choice + Environment.NewLine + H19Text + R19Choice + Environment.NewLine + H20Text + R20Choice + Environment.NewLine;
+			                   H18Text + R18Choice + Environment.NewLine + H19Text + R19Choice + Environment.NewLine + H20Text + R20Choice + Environment.NewLine +
+			                   H21Text + R21Choice + Environment.NewLine + H22Text + R22Choice + Environment.NewLine + H23Text + R23Choice + Environment.NewLine +
+			                   H24Text + R24Choice + Environment.NewLine + H25Text + R25Choice + Environment.NewLine + H26Text + R26Choice + Environment.NewLine +
+			                   H27Text + R27Choice + Environment.NewLine + H28Text + R28Choice + Environment.NewLine + H29Text + R29Choice + Environment.NewLine +
+			                   H30Text + R30Choice + Environment.NewLine + H31Text + R31Choice + Environment.NewLine + H32Text + R32Choice + Environment.NewLine +
+			                   H33Text + R33Choice + Environment.NewLine + H34Text + R34Choice + Environment.NewLine + H35Text + R35Choice + Environment.NewLine +
+			                   H36Text + R36Choice + Environment.NewLine + H37Text + R37Choice + Environment.NewLine + H38Text + R38Choice + Environment.NewLine +
+			                   H39Text + R39Choice + Environment.NewLine + H40Text + R40Choice + Environment.NewLine + H41Text + R41Choice + Environment.NewLine +
+			                   H42Text + R42Choice + Environment.NewLine;
 
 			string timeTakenText = headerTimeText + R1TimeTakenText + R2TimeTakenText + R3TimeTakenText + R4TimeTakenText + R5TimeTakenText + R6TimeTakenText + R7TimeTakenText +
 			                       R8TimeTakenText + R9TimeTakenText + R10TimeTakenText + R11TimeTakenText + R12TimeTakenText + R13TimeTakenText + R14TimeTakenText + R15TimeTakenText +
-			                       R16TimeTakenText + R17TimeTakenText + R18TimeTakenText + R19TimeTakenText + R20TimeTakenText;
+			                       R16TimeTakenText + R17TimeTakenText + R18TimeTakenText + R19TimeTakenText + R20TimeTakenText + R21TimeTakenText + R22TimeTakenText + R23TimeTakenText +
+			                       R24TimeTakenText + R25TimeTakenText + R26TimeTakenText + R27TimeTakenText + R28TimeTakenText + R29TimeTakenText + R30TimeTakenText + R31TimeTakenText +
+			                       R32TimeTakenText + R33TimeTakenText + R34TimeTakenText + R35TimeTakenText + R36TimeTakenText + R37TimeTakenText + R38TimeTakenText + R39TimeTakenText +
+			                       R40TimeTakenText + R41TimeTakenText + R42TimeTakenText;
 
 			string colourText = headerColoursChosen + redColoursChosen + blueColourChosen + greenColourChosen + yellowColourChosen + orangeColourChosen + magentaColourChosen + cyanColourChosen;
 			string colourSideText = headerColoursSideChosen + redOnLeft + blueOnLeft + greenOnLeft + yellowOnLeft + orangeOnLeft + magentaOnLeft +
