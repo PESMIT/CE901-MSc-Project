@@ -14,6 +14,9 @@ public class newColourGameManager : MonoBehaviour {
 	Renderer mainAChoice, mainBChoice;
 	GameObject player;
 
+	// Noise References
+	public AudioClip positiveNoise, negativeNoise;
+
 	// Reference to Collection Scripts
 	newColourCollectionScript NCCS_1, NCCS_2;
 
@@ -218,7 +221,7 @@ public class newColourGameManager : MonoBehaviour {
 
 		gameLoop ();
 		if (gamePhase > 42) {
-			player.transform.position = new Vector3 (0, 15, 0);
+			player.transform.position = new Vector3 (0, 21, 0);
 			writeToFile ();
 			EndOfGame ();
 			Invoke ("backToMainMenu", 2.5f);
@@ -923,6 +926,11 @@ public class newColourGameManager : MonoBehaviour {
 			if (Input.GetKeyDown (KeyCode.E)) {
 				if (gamePhase <= 43 && (NCCS_1.optionPad1_Chosen || NCCS_2.optionPad2_Chosen)) {
 					checkCollection ();
+					this.GetComponent<AudioSource> ().PlayOneShot (positiveNoise);
+					NCCS_1.resetPads ();
+					NCCS_2.resetPads ();
+				} else {
+					this.GetComponent<AudioSource> ().PlayOneShot (negativeNoise);
 					NCCS_1.resetPads ();
 					NCCS_2.resetPads ();
 				}

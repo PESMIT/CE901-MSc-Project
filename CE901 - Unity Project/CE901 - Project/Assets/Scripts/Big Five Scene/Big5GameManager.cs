@@ -18,6 +18,9 @@ public class Big5GameManager : MonoBehaviour {
 	// Reference to Option Pad Script
 	Big5CollectionScript B5CS_1, B5CS_2, B5CS_3, B5CS_4, B5CS_5;
 
+	// Positive and Negative Noises
+	public AudioClip positiveNoise, negativeNoise;
+
 	// Record Keeping
 	public int R1OptionChosen, R2OptionChosen, R3OptionChosen, R4OptionChosen, R5OptionChosen; 
 	public int R6OptionChosen, R7OptionChosen, R8OptionChosen, R9OptionChosen, R10OptionChosen; 
@@ -172,7 +175,7 @@ public class Big5GameManager : MonoBehaviour {
 		gameLoop ();
 
 		if (gamePhase > 20) {
-			player.transform.position = new Vector3 (0, 15, 0);
+			player.transform.position = new Vector3 (0, 22, 0);
 			writeToFile ();
 			EndOfGame ();
 			Invoke ("backToMainMenu", 2.5f);
@@ -587,7 +590,15 @@ public class Big5GameManager : MonoBehaviour {
 		if (other.name == "Player") {
 			if (Input.GetKeyDown (KeyCode.E)) {
 				if (gamePhase <= 21 && (B5CS_1.optionPad1_Chosen || B5CS_2.optionPad2_Chosen || B5CS_3.optionPad3_Chosen || B5CS_4.optionPad4_Chosen || B5CS_5.optionPad5_Chosen)) {
+					this.GetComponent<AudioSource> ().PlayOneShot (positiveNoise);
 					checkCollection ();
+					B5CS_1.resetPads ();
+					B5CS_2.resetPads ();
+					B5CS_3.resetPads ();
+					B5CS_4.resetPads ();
+					B5CS_5.resetPads ();
+				} else {
+					this.GetComponent<AudioSource> ().PlayOneShot (negativeNoise);
 					B5CS_1.resetPads ();
 					B5CS_2.resetPads ();
 					B5CS_3.resetPads ();

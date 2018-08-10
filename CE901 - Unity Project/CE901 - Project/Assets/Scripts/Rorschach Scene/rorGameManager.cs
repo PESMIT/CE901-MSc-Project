@@ -15,11 +15,16 @@ public class rorGameManager : MonoBehaviour {
 	Renderer mainAChoice, mainBChoice, mainCChoice, mainDChoice;
 	GameObject player;
 
+	// Noise References
+	public AudioClip positiveNoise, negativeNoise;
+
 	// Reference to Option Pad Script
 	rorCollectionScript rorCS_1, rorCS_2, rorCS_3, rorCS_4;
 
 	// Record Keeping
+	[HideInInspector]
 	public int room1OptionChosen, room2OptionChosen, room3OptionChosen, room4OptionChosen, room5OptionChosen; 
+	[HideInInspector]
 	public int room6OptionChosen, room7OptionChosen, room8OptionChosen, room9OptionChosen, room10OptionChosen; 
 	private string room1TimeTaken, room2TimeTaken, room3TimeTaken, room4TimeTaken, room5TimeTaken, room6TimeTaken, room7TimeTaken, room8TimeTaken, room9TimeTaken, room10TimeTaken;
 
@@ -141,7 +146,7 @@ public class rorGameManager : MonoBehaviour {
 		gameLoop ();
 
 		if (gamePhase > 10) {
-			player.transform.position = new Vector3 (0, 15, 0);
+			player.transform.position = new Vector3 (0, 21, 0);
 			writeToFile ();
 			EndOfGame ();
 			Invoke ("backToMainMenu", 2.5f);
@@ -345,6 +350,13 @@ public class rorGameManager : MonoBehaviour {
 			if (Input.GetKeyDown (KeyCode.E)) {
 				if (gamePhase <= 10 && (rorCS_1.optionPad1_Chosen || rorCS_2.optionPad2_Chosen || rorCS_3.optionPad3_Chosen || rorCS_4.optionPad4_Chosen)) {
 					checkCollection ();
+					this.GetComponent<AudioSource> ().PlayOneShot (positiveNoise);
+					rorCS_1.resetPads ();
+					rorCS_2.resetPads ();
+					rorCS_3.resetPads ();
+					rorCS_4.resetPads ();
+				} else {
+					this.GetComponent<AudioSource> ().PlayOneShot (negativeNoise);
 					rorCS_1.resetPads ();
 					rorCS_2.resetPads ();
 					rorCS_3.resetPads ();
