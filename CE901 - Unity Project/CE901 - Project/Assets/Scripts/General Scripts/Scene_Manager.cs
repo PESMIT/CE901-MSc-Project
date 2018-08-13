@@ -29,6 +29,8 @@ public class Scene_Manager : MonoBehaviour {
 			SceneManager.LoadSceneAsync ("BigFiveIntroScene");
 		} else if (level == 8) {
 			SceneManager.LoadSceneAsync ("BigFiveScene");
+		} else if (level == 9) {
+			SceneManager.LoadSceneAsync ("backgroundAndCreditsScene");
 		} else {
 			Debug.Log ("No Scene Number matches that input - Check Script");
 		}

@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BigFiveScene.unity
     guid: 0b3299878f4f579428c588d0463616be
+  - enabled: 1
+    path: Assets/Scenes/backgroundAndCreditsScene.unity
+    guid: 99375ce07b95dc8459165f169ba90f45
   m_configObjects: {}
